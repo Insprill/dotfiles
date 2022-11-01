@@ -18,7 +18,7 @@ general {
   "markup"="pango"
 }
 
-order += "disk /"
+#order += "disk /"
 #order += "wireless _first_"
 order += "ethernet _first_"
 #order += "battery all"
