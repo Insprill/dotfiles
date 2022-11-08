@@ -1,0 +1,37 @@
+icons_format = "{icon}"
+
+[icons]
+icons = "awesome6"
+
+[[block]]
+block = "net"
+interval = 2
+format = " ^icon_net_down $speed_down.eng(3,B,K) ^icon_net_up $speed_up.eng(3,B,K) "
+
+[[block]]
+block = "cpu"
+interval = 2
+
+[[block]]
+block = "memory"
+interval = 5
+format = " $icon $mem_total_used_percents.eng(2) "
+format_alt = " $icon_swap $swap_used_percents.eng(2) "
+
+[[block]]
+block = "sound"
+max_vol = 150
+show_volume_when_muted = true
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "time"
+interval = 1
+format = " $icon %H:%M:%S "
+
+[[block]]
+block = "time"
+interval = 1
+format = "  %a. %m.%d.%Y "
