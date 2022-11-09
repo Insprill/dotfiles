@@ -334,14 +334,7 @@ mode "$mode_system" {
 ##############################
 
 exec --no-startup-id feh --no-fehbg --bg-fill $wallpaper
-exec --no-startup-id conky
 exec --no-startup-id dunst
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
-exec --no-startup-id desktop-items
-exec --no-startup-id nm-applet
-exec --no-startup-id pamac-tray
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id picom -b
 exec_always --no-startup-id setcursor
 exec_always --no-startup-id numlockx on
