@@ -12,6 +12,7 @@ set $preferredTerminalEmulator /usr/bin/alacritty
 set $preferredBrowser /usr/bin/firefox-developer-edition
 set $preferredFileManager /usr/bin/dolphin
 set $preferredGuiPackageManager /usr/bin/pamac-manager
+set $preferredScreenCaptureTool /usr/bin/flameshot gui
 
 
 #####################
@@ -30,11 +31,13 @@ bindsym $super+F1 exec $preferredBrowser;focus
 bindsym $super+F2 exec $preferredFileManager;focus
 bindsym $super+F4 exec $preferredGuiPackageManager;focus
 
-### Start a Terminal Emulator: ###
+# Screen capture
+bindsym Print exec --no-startup-id $preferredScreenCaptureTool
 
+# Open preferred terminal
 bindsym $super+Return exec $preferredTerminalEmulator
 
-# Just incase anything goes wrong with Alacritty
+# Open default terminal (just incase anything goes wrong with Alacritty)
 bindsym $super+t exec xfce4-terminal
 
 # set font
