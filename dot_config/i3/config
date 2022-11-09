@@ -333,7 +333,7 @@ mode "$mode_system" {
 ### Autostart Applications ###
 ##############################
 
-exec --no-startup-id feh --no-fehbg --bg-fill $wallpaper
+exec --no-startup-id sleep 1 && feh --no-fehbg --bg-fill $wallpaper
 exec --no-startup-id dunst
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec_always --no-startup-id setcursor
