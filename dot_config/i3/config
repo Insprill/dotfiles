@@ -9,7 +9,7 @@ set $alt Mod1
 exec --no-startup-id xrandr --output DP-2 --primary
 
 # Picom
-exec --no-startup-id sleep 3 && picom -CGb --experimental-backends
+exec --no-startup-id sleep 3 && picom -b
 
 ################################
 ### Commonly Used Variables: ###
