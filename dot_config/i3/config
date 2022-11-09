@@ -11,6 +11,7 @@ set $wallpaper ~/.local/share/backgrounds/mountains.jpg
 set $preferredTerminalEmulator /usr/bin/alacritty
 set $preferredBrowser /usr/bin/firefox-developer-edition
 set $preferredFileManager /usr/bin/dolphin
+set $preferredGuiPackageManager /usr/bin/pamac-manager
 
 
 #####################
@@ -27,6 +28,7 @@ set $alt Mod1
 
 bindsym $super+F1 exec $preferredBrowser;focus
 bindsym $super+F2 exec $preferredFileManager;focus
+bindsym $super+F4 exec $preferredGuiPackageManager;focus
 
 ### Start a Terminal Emulator: ###
 
@@ -325,6 +327,7 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 
 ##############################
 ### Autostart Applications ###
