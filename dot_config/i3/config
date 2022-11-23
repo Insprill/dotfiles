@@ -6,7 +6,7 @@
 ### Commonly Used Variables ###
 ###############################
 
-set $wallpaper ~/.local/share/backgrounds/mountains.jpg
+set $wallpaper ~/.local/share/backgrounds/mountain_hiker.jpg
 
 set $preferredTerminalEmulator /usr/bin/alacritty
 set $preferredBrowser /usr/bin/firefox-developer-edition
