@@ -239,7 +239,7 @@ for_window [class="Xfburn"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [class="garuda-welcome"] floating enable
 # Custom ones
-for_window [class="MultiMC"] floating enable
+for_window [class="PrismLauncher"] floating enable
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 1
