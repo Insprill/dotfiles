@@ -1,7 +1,7 @@
 icons_format = "{icon}"
 
 [icons]
-icons = "awesome5"
+icons = "material-nf"
 
 [[block]]
 block = "net"
@@ -31,5 +31,5 @@ format = " $icon %H:%M:%S "
 
 [[block]]
 block = "time"
-interval = 1
+interval = 10
 format = "  %a. %m.%d.%Y "
