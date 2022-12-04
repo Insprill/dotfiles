@@ -218,6 +218,7 @@ for_window [class="garuda-welcome"] floating enable
 for_window [class="PrismLauncher"] floating enable
 for_window [class="Gcolor3"] floating enable
 for_window [class="unityhub"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 for_window [class=".*"] border pixel 1
 
