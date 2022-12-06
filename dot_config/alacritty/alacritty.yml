@@ -66,7 +66,7 @@ window:
   title: Alacritty@Garuda
 
   # Opacity
-  opacity: 0.7
+  opacity: 0.8
 
   # Window class (Linux/BSD only):
   #class:
@@ -164,11 +164,11 @@ font:
 draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  primary:
+    background: '#161925'
+    foreground: '#C3C7D1'
 
     # Bright and dim foreground colors
     #
