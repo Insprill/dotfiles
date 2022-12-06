@@ -68,16 +68,12 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-#change volume
-#bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
-#bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
-#bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 # music control
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl prev
-bindsym XF86AudioPlay exec playerctl toggle
-bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 # kill focused window
 bindsym $super+c kill
@@ -219,6 +215,7 @@ for_window [class="PrismLauncher"] floating enable
 for_window [class="Gcolor3"] floating enable
 for_window [class="unityhub"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Bitwarden"] floating enable
 
 for_window [class=".*"] border pixel 1
 
