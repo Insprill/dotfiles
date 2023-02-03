@@ -6,7 +6,7 @@ icons = "material-nf"
 [[block]]
 block = "net"
 interval = 2
-format = " ^icon_net_down $speed_down.eng(3,b,Ki) ^icon_net_up $speed_up.eng(3,b,Ki) "
+format = " ^icon_net_down $speed_down.eng(prefix:Ki) ^icon_net_up $speed_up.eng(prefix:Ki) "
 
 [[block]]
 block = "cpu"
@@ -14,7 +14,7 @@ interval = 2
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used_percents.eng(2) "
+format = " $icon $mem_used_percents.eng(w:2) "
 
 [[block]]
 block = "sound"
