@@ -27,9 +27,9 @@ cmd = "pavucontrol"
 [[block]]
 block = "time"
 interval = 1
-format = " $icon %H:%M:%S "
+format = " $icon $timestamp.datetime(f:'%H:%M:%S') "
 
 [[block]]
 block = "time"
 interval = 10
-format = "  %a. %m.%d.%Y "
+format = "  $timestamp.datetime(f:'%a. %m.%d.%Y') "
