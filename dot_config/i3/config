@@ -49,11 +49,11 @@ floating_modifier $super
 # hide/unhide i3status bar
 bindsym $super+m bar mode toggle
 
-# start dmenu (a program launcher)
-bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=20'"
-
-# start rofi (a program launcher) change modus Ctrl + Tab
+# start rofi
 bindsym $super+d exec rofi -show drun
+
+# start rofi (calc mode)
+bindsym $super+c exec rofi -show calc -modi calc -no-show-match -no-sort -no-history
 
 # Lock screen
 bindsym $super+l exec i3lock-fancy-rapid 5 5
@@ -76,7 +76,6 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 # kill focused window
-bindsym $super+c kill
 bindsym $super+q kill
 
 # change focus

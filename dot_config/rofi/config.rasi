@@ -2,8 +2,7 @@ configuration {
         sort: true;
         sorting-method: "fzf";
         matching: "fuzzy";
-        modi: "drun,window,run,ssh,combi";
-        font: "Source Code Pro 12";
+        modi: "drun,window";
         terminal: "alacritty";
 }
 
