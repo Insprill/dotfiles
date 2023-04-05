@@ -4,6 +4,10 @@ icons_format = "{icon}"
 icons = "material-nf"
 
 [[block]]
+block = "music"
+format = " $icon {$combo.str(max_w:175) |}"
+
+[[block]]
 block = "net"
 interval = 2
 format = " ^icon_net_down $speed_down.eng(prefix:Ki) ^icon_net_up $speed_up.eng(prefix:Ki) "
