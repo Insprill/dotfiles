@@ -13,6 +13,7 @@ set $preferredBrowser /usr/bin/firefox-developer-edition
 set $preferredFileManager /usr/bin/dolphin
 set $preferredGuiPackageManager /usr/bin/pamac-manager
 set $preferredScreenCaptureTool /usr/bin/flameshot gui
+set $colorPicker /usr/bin/gcolor3
 
 
 #####################
@@ -29,7 +30,8 @@ set $alt Mod1
 
 bindsym $super+F1 exec $preferredBrowser;focus
 bindsym $super+F2 exec $preferredFileManager;focus
-bindsym $super+F4 exec $preferredGuiPackageManager;focus
+bindsym $super+F3 exec $colorPicker;focus
+bindsym $super+F4 exec $preferredBrowser https://chat.openai.com/;focus
 
 # Screen capture
 bindsym Print exec --no-startup-id $preferredScreenCaptureTool
