@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Aliases
+alias cat='bat'
 alias dir='dir --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -24,6 +25,9 @@ PATH=$PATH:$HOME/bin
 
 # PIP
 PATH=$PATH:$HOME/.local/bin
+
+# Jetbrains
+path=$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts
 
 # Cargo
 . "$HOME/.cargo/env"
