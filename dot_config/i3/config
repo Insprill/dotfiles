@@ -6,7 +6,7 @@
 ### Commonly Used Variables ###
 ###############################
 
-set $wallpaper ~/.local/share/backgrounds/mountain_hiker.jpg
+set $wallpaper ~/.local/share/backgrounds/dracula-wallpaper/second-collection/leaves/dracula-leaves-6272a4-dark.png
 
 set $preferredTerminalEmulator /usr/bin/alacritty
 set $preferredBrowser /usr/bin/firefox-developer-edition
@@ -296,7 +296,7 @@ mode "$mode_system" {
 ### Autostart Applications ###
 ##############################
 
-exec --no-startup-id sleep 1 && feh --no-fehbg --bg-fill $wallpaper
+exec_always --no-startup-id sleep 1 && feh --no-fehbg --bg-fill $wallpaper
 exec --no-startup-id dunst
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
