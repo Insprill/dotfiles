@@ -7,6 +7,7 @@ local lint = null_ls.builtins.diagnostics
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 local sources = {
   action.eslint_d,
+  format.beautysh,
   format.cbfmt,
   format.csharpier,
   format.deno_fmt, -- JS,TS,JSX,TSX,JSON

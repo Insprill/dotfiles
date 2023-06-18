@@ -25,6 +25,7 @@ M.nvimtree = {
 M.treesitter = {
   -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
   ensure_installed = {
+    "bash",
     "c_sharp",
     "css",
     "dockerfile",
@@ -48,13 +49,15 @@ M.mason = {
   -- :Mason
   ensure_installed = {
     -- LSP
+    "bash-language-server",
     "csharp-language-server",
+    "css-lsp",
     "docker-compose-language-service",
     "dockerfile-language-server",
     "grammarly-languageserver",
     "json-lsp",
+    "powershell-editor-services",
     "rust-analyzer",
-    -- "omnisharp",
     "svelte-language-server",
     "tailwindcss-language-server",
     "typescript-language-server",
@@ -62,6 +65,7 @@ M.mason = {
     -- Actions
     "eslint_d",
     -- Formatting
+    "beautysh",
     "cbfmt",
     "csharpier",
     "prettierd",
