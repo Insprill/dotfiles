@@ -1,11 +1,4 @@
-/*
- * ROFI color theme
- *
- * Based on Something Found in the Internet
- *
- * User: Contributors
- * Copyright: *!
- */
+/*Dracula theme based on the Purple official rofi theme*/
 
 configuration {
   display-run: " ";
@@ -18,64 +11,126 @@ configuration {
 }
 
 * {
-  bg: #282a36;
-  bg-alt: #44475a;
-
-  fg: #f8f8f2;
-
-  blue: #6272a4;
-  purple: #bd93f9;
-
-  background-color: @bg;
-
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+    foreground: #f8f8f2;
+    background-color: #282a36;
+    active-background: #6272a4;
+    urgent-background: #ff5555;
+    urgent-foreground: #282a36;
+    selected-background: @active-background;
+    selected-urgent-background: @urgent-background;
+    selected-active-background: @active-background;
+    separatorcolor: @active-background;
+    bordercolor: @active-background;
 }
 
-element {
-  padding: 12;
-  text-color: @blue;
+#window {
+    background-color: @background-color;
+    border:           3;
+    border-radius:    6;
+    border-color:     @bordercolor;
+    padding:          15;
 }
-
-element selected {
-  text-color: @purple;
+#mainbox {
+    border:  0;
+    padding: 0;
 }
-
-element-text {
-  background-color: inherit;
-  text-color: inherit;
+#message {
+    border:       0px;
+    border-color: @separatorcolor;
+    padding:      1px;
 }
-
-entry {
-  background-color: @blue;
-  padding: 12 0 12 3;
-  text-color: @fg;
+#textbox {
+    text-color: @foreground;
 }
-
-textbox {
-  padding: 12;
-  text-color: @blue;
+#listview {
+    fixed-height: 0;
+    border:       0px;
+    border-color: @bordercolor;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px ;
 }
-
-inputbar {
-  children: [prompt, entry];
+#element {
+    border:  0;
+    padding: 3px ;
 }
-
-listview {
-  columns: 1;
-  lines: 8;
+#element.normal.normal {
+    background-color: @background-color;
+    text-color:       @foreground;
 }
-
-prompt {
-  background-color: @blue;
-  enabled: true;
-  font: "FontAwesome 12";
-  padding: 12 0 0 12;
-  text-color: @fg;
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
 }
-
-window {
-  transparency: "real";
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @foreground;
+}
+#element.selected.normal {
+    background-color: @selected-background;
+    text-color:       @foreground;
+}
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @foreground;
+}
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @foreground;
+}
+#element.alternate.normal {
+    background-color: @background-color;
+    text-color:       @foreground;
+}
+#element.alternate.urgent {
+    background-color: @urgent-background;
+    text-color:       @foreground;
+}
+#element.alternate.active {
+    background-color: @active-background;
+    text-color:       @foreground;
+}
+#scrollbar {
+    width:        2px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+#sidebar {
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+}
+#button.selected {
+    background-color: @selected-background;
+    text-color:       @foreground;
+}
+#inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+}
+#case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+#entry {
+    spacing:    0;
+    text-color: @foreground;
+}
+#prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ">";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
 }
