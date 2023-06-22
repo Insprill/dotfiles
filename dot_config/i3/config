@@ -225,6 +225,7 @@ for_window [class="unityhub"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Bitwarden"] floating enable
 for_window [class="unitymodmanager.exe"] floating enable
+for_window [title="Starting Unity..."] floating enable
 
 for_window [class=".*"] border pixel 1
 
