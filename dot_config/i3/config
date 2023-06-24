@@ -37,6 +37,10 @@ bindsym $super+F4 exec $preferredBrowser https://chat.openai.com/;focus
 bindsym Print exec --no-startup-id $preferredScreenCaptureTool
 bindsym $super+Print exec --no-startup-id ~/bin/window-screenshot
 
+# OCR
+# not working
+bindsym $super+o exec ~/bin/ocr
+
 # Open preferred terminal
 bindsym $super+Return exec $preferredTerminalEmulator
 
@@ -56,7 +60,7 @@ bindsym $super+m bar mode toggle
 bindsym $super+d exec rofi -show drun
 
 # start rofi (calc mode)
-bindsym $super+c exec rofi -show calc -modi calc -no-show-match -no-sort -no-history -calc-command "echo -n '{result}' | xclip -selection clipboard"
+bindsym $super+c exec rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | xclip -selection clipboard"
 
 # Lock screen
 bindsym $super+l exec i3lock-fancy-rapid 5 5
