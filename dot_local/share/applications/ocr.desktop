@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=/home/insprill/bin/ocr
+Name=OCR
+Path=/home/insprill/bin
+Type=Application
+Categories=Application;;
