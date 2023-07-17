@@ -6,7 +6,7 @@ local lspconfig = require "lspconfig"
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local servers = {
   "bashls",
-  "csharp_ls",
+--  "csharp_ls", -- Setup later
   "cssls",
   "docker_compose_language_service",
   "dockerls",
@@ -26,3 +26,12 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.csharp_ls.setup {
+  handlers = {
+    ["textDocument/definition"] = require('custom.csharpls_extended.lua.csharpls_extended').handler,
+  },
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
