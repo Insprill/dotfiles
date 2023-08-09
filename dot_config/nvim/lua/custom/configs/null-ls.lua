@@ -11,6 +11,7 @@ local sources = {
   format.cbfmt,
   format.csharpier,
   format.deno_fmt, -- JS,TS,JSX,TSX,JSON
+  format.lua_format,
   format.prettierd,
   format.rustfmt,
   format.rustywind,
@@ -18,6 +19,7 @@ local sources = {
   lint.deno_lint, -- JS/TS
   lint.eslint_d,
   lint.jsonlint,
+  lint.luacheck,
   lint.yamllint,
 }
 

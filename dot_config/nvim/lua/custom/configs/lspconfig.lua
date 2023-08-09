@@ -12,6 +12,7 @@ local servers = {
   "dockerls",
   "grammarly",
   "jsonls",
+  "lua_ls",
   "powershell_es",
   "rust_analyzer",
   "svelte",
