@@ -2,7 +2,7 @@ configuration {
         sort: true;
         sorting-method: "fzf";
         matching: "fuzzy";
-        modi: "drun,window";
+        modi: "drun";
         terminal: "alacritty";
 }
 
