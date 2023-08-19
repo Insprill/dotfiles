@@ -1,6 +1,8 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Theme
+include catppuccin-mocha
 
 ###############################
 ### Commonly Used Variables ###
@@ -45,7 +47,7 @@ bindsym $super+o exec ~/bin/ocr
 bindsym $super+Return exec $preferredTerminalEmulator
 
 # Open default terminal (just incase anything goes wrong with Alacritty)
-bindsym $super+x exec xfce4-terminal
+bindsym $super+x exec kitty
 
 # set font
 font pango: source code pro 10
@@ -182,19 +184,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 bindsym $super+r mode "resize"
-
-
-##############
-### Colors ###
-##############
-# class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-
-client.background       #F8F8F2
 
 
 #################

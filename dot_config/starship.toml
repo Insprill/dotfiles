@@ -1,28 +1,68 @@
+palette = "catppuccin_mocha"
+
 [gcloud]
 disabled = true
 
 [aws]
-style = "bold #ffb86c"
+style = "bold peach"
 
 [character]
-error_symbol = "[λ](bold #ff5555)"
-success_symbol = "[λ](bold #50fa7b)"
+error_symbol = "[λ](bold red)"
+success_symbol = "[λ](bold green)"
 
 [cmd_duration]
-style = "bold #f1fa8c"
+style = "bold yellow"
 
 [directory]
-style = "bold #50fa7b"
+style = "bold green"
 
 [git_branch]
-style = "bold #ff79c6"
+style = "bold pink"
 
 [git_status]
-style = "bold #ff5555"
+style = "bold red"
 
 [hostname]
-style = "bold #bd93f9"
+style = "bold mauve"
 
 [username]
 format = "[$user]($style) on "
-style_user = "bold #8be9fd"
+style_user = "bold sapphine"
+
+[palettes.dracula]
+peach = "#ffb86c" # Orange
+red = "#ff5555"
+green = "#50fa7b"
+yellow = "#f1fa8c"
+mauve = "#bd96f9" # Purple
+pink = "#ff79c6"
+sapphire = "#8be9fd" # Cyan
+
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
