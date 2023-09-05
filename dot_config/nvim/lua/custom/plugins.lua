@@ -17,6 +17,9 @@ local plugins = {
     "ThePrimeagen/vim-be-good",
     lazy = false
   },
+  -- {
+    -- "mfussenegger/nvim-jdtls",
+  -- },
 
   -- override plugin configs
   {
