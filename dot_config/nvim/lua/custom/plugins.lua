@@ -10,6 +10,23 @@ local plugins = {
     "saecki/crates.nvim",
   },
   {
+    "vuki656/package-info.nvim",
+    dependencies = {
+      'MunifTanjim/nui.nvim'
+    },
+    keys = {
+      {
+        "<leader>nu",
+        "<cmd>lua require('package-info').update()<cr>",
+        desc = "Update Dependencies",
+        silent = true,
+        noremap = true
+      }
+    },
+    opts = overrides.package_info,
+    lazy = false
+  },
+  {
     "andweeb/presence.nvim",
     lazy = false
   },
@@ -17,9 +34,6 @@ local plugins = {
     "ThePrimeagen/vim-be-good",
     lazy = false
   },
-  -- {
-    -- "mfussenegger/nvim-jdtls",
-  -- },
 
   -- override plugin configs
   {

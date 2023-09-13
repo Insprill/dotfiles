@@ -32,7 +32,7 @@ M.treesitter = {
     "fish",
     "git_config",
     "git_rebase",
-    "gitattribute",
+    "gitattributes",
     "gitignore",
     "html",
     "ini",
@@ -40,6 +40,7 @@ M.treesitter = {
     "javascript",
     "json",
     "lua",
+    "python",
     "markdown",
     "markdown_inline",
     "regex",
@@ -85,6 +86,10 @@ M.mason = {
     "jsonlint",
     "yamllint",
   }
+}
+
+M.package_info = {
+  package_manager = "pnpm"
 }
 
 return M
