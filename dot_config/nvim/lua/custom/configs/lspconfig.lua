@@ -14,6 +14,7 @@ local servers = {
   "jdtls",
   "jsonls",
   "lua_ls",
+  "kotlin_language_server",
   "powershell_es",
   "rust_analyzer",
   "svelte",
