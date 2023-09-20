@@ -10,11 +10,12 @@ include catppuccin-mocha
 
 set $wallpaper ~/.local/share/backgrounds/ready_or_not.jpg
 
-set $preferredTerminalEmulator /usr/bin/alacritty
-set $preferredBrowser /usr/bin/firefox-developer-edition
-set $preferredFileManager /usr/bin/dolphin
-set $preferredGuiPackageManager /usr/bin/pamac-manager
-set $preferredScreenCaptureTool /usr/bin/flameshot gui
+set $terminal /usr/bin/alacritty
+set $backupTerminal /usr/bin/kitty
+set $browser /usr/bin/firefox-developer-edition
+set $fileManager /usr/bin/dolphin
+set $guiPackageManager /usr/bin/pamac-manager
+set $screenshotTool /usr/bin/flameshot gui
 set $colorPicker /usr/bin/gcolor3
 
 
@@ -30,24 +31,24 @@ set $alt Mod1
 ### Commonly Used Application Keybinds ###
 ##########################################
 
-bindsym $super+F1 exec $preferredBrowser;focus
-bindsym $super+e exec $preferredFileManager;focus
+bindsym $super+b exec $browser;focus
+bindsym $super+e exec $fileManager;focus
 bindsym $super+p exec $colorPicker;focus
-bindsym $super+F4 exec $preferredBrowser https://chat.openai.com/;focus
+bindsym $super+Shift+a exec $browser https://chat.openai.com/;focus
 
 # Screen capture
-bindsym Print exec --no-startup-id $preferredScreenCaptureTool
+bindsym Print exec --no-startup-id $screenshotTool
 bindsym $super+Print exec --no-startup-id ~/bin/window-screenshot
 
 # OCR
 # not working
-bindsym $super+o exec ~/bin/ocr
+bindsym $super+o exec --no-startup-id $terminal -T hidden -e ~/bin/ocr
 
 # Open preferred terminal
-bindsym $super+Return exec $preferredTerminalEmulator
+bindsym $super+Return exec $terminal
 
 # Open default terminal (just incase anything goes wrong with Alacritty)
-bindsym $super+x exec kitty
+bindsym $super+x exec $backupTerminal
 
 # set font
 font pango: source code pro 10
@@ -145,6 +146,8 @@ bindsym $super+5 workspace 5
 bindsym $super+6 workspace 6
 bindsym $super+7 workspace 7
 bindsym $super+8 workspace 10
+bindsym $super+Control+9 workspace 8
+bindsym $super+Control+0 workspace 9
 
 # move focused container to workspace
 bindsym $super+Shift+1 move container to workspace 1
@@ -155,6 +158,8 @@ bindsym $super+Shift+5 move container to workspace 5
 bindsym $super+Shift+6 move container to workspace 6
 bindsym $super+Shift+7 move container to workspace 7
 bindsym $super+Shift+8 move container to workspace 10
+bindsym $super+Shift+Control+9 move container to workspace 8
+bindsym $super+Shift+Control+0 move container to workspace 9
 
 # Move to workspace with focused container
 bindsym $alt+Shift+1 move container to workspace 1; workspace 1
@@ -164,12 +169,14 @@ bindsym $alt+Shift+4 move container to workspace 4; workspace 4
 bindsym $alt+Shift+5 move container to workspace 5; workspace 5
 bindsym $alt+Shift+6 move container to workspace 6; workspace 6
 bindsym $alt+Shift+7 move container to workspace 7; workspace 7
-bindsym $alt+Shift+8 move container to workspace 8; workspace 10
+bindsym $alt+Shift+8 move container to workspace 10; workspace 10
+bindsym $alt+Shift+Control+9 move container to workspace 8; workspace 8
+bindsym $alt+Shift+Control+0 move container to workspace 9; workspace 9
 
 # Bind workspaces to monitors
 workspace 1 output DP-2
-workspace 8 output DP-1
-workspace 9 output DP-3
+workspace 8 output DP-0
+workspace 9 output DP-4
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+Shift+r restart
@@ -211,18 +218,19 @@ bar {
 ### Window Specific Settings ###
 ################################
 
-for_window [class="GParted"] floating enable
-for_window [class="Lxappearance"] floating enable
 for_window [class="Garuda Settings Manager"] floating enable
+for_window [class="garuda-welcome"] floating enable
+for_window [class="Gcolor3"] floating enable
+for_window [title="Godot Engine - Project Manager"] floating enable
+for_window [class="GParted"] floating enable
+for_window [title="hidden"] move scratchpad
+for_window [class="Nwg-look"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pamac-updater"] floating enable
-for_window [class="qt5ct"] floating enable
-for_window [class="garuda-welcome"] floating enable
-for_window [class="PrismLauncher"] floating enable
-for_window [class="Gcolor3"] floating enable
-for_window [class="unityhub"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="Bitwarden"] floating enable
+for_window [class="PrismLauncher"] floating enable
+for_window [class="qt5ct"] floating enable
+for_window [class="unityhub"] floating enable
 for_window [class="unitymodmanager.exe"] floating enable
 for_window [title="Starting Unity..."] floating enable
 
