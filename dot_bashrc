@@ -1,26 +1,13 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # Aliases
-alias dir='dir --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
-alias hw='hwinfo --short'
-alias tarnow='tar -acf '
-alias untar='tar -zxvf '
-alias vdir='vdir --color=auto'
-alias wget='wget -c '
-alias ls='ls --color=auto'
+alias ls='eza --icons --hyperlink'
 
-PS1='[\u@\h \W]\$ '
-
-# Local bin
+# Bins
 PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.cargo/bin
 
-# Cargo
-. "$HOME/.cargo/env"
+# Starship
+eval "$(starship init bash)"
