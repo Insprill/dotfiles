@@ -1,0 +1,33 @@
+set $color_rosewater #f5e0dc
+set $color_flamingo  #f2cdcd
+set $color_pink      #f5c2e7
+set $color_mauve     #cba6f7
+set $color_red       #f38ba8
+set $color_maroon    #eba0ac
+set $color_peach     #fab387
+set $color_green     #a6e3a1
+set $color_teal      #94e2d5
+set $color_sky       #89dceb
+set $color_sapphire  #74c7ec
+set $color_blue      #89b4fa
+set $color_lavender  #b4befe
+set $color_text      #cdd6f4
+set $color_subtext1  #bac2de
+set $color_subtext0  #a6adc8
+set $color_overlay2  #9399b2
+set $color_overlay1  #7f849c
+set $color_overlay0  #6c7086
+set $color_surface2  #585b70
+set $color_surface1  #45475a
+set $color_surface0  #313244
+set $color_base      #1e1e2e
+set $color_mantle    #181825
+set $color_crust     #11111b
+
+# class                   border          bground     text         indicator        child border
+client.focused            $color_mauve    $color_base $color_text  $color_rosewater $color_mauve
+client.focused_inactive   $color_surface2 $color_base $color_text  $color_rosewater $color_surface2
+client.unfocused          $color_surface0 $color_base $color_text  $color_rosewater $color_surface0
+client.urgent             $color_peach    $color_base $color_peach $color_overlay0  $color_peach
+client.placeholder        $color_overlay0 $color_base $color_text  $color_overlay0  $color_overlay0
+client.background         $color_base
