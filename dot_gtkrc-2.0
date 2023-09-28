@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/insprill/.gtkrc-2.0.mine"
-gtk-theme-name="Catppuccin-Mocha-Standard-Mauve-dark"
+gtk-theme-name="Catppuccin-Mocha-Standard-Mauve-Dark"
 gtk-icon-theme-name="BeautyLine"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="Sweet-cursors"
