@@ -63,6 +63,7 @@ M.mason = {
     "css-lsp",
     "docker-compose-language-service",
     "dockerfile-language-server",
+    "gradle-language-server",
     "grammarly-languageserver",
     "jdtls",
     "json-lsp",
