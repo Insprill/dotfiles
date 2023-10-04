@@ -2,6 +2,7 @@ set -U fish_greeting
 
 # Aliases
 alias ls="eza --icons --hyperlink"
+alias pacdiff="sudo env DIFFPROG='nvim -d' pacdiff"
 
 # Bins
 fish_add_path $HOME/bin
