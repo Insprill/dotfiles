@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# Parse command line options.
+while getopts "i:s:t:h" opt; do
+  case $opt in
+    i)
+      CLIENT_ID="$OPTARG"
+      ;;
+    s)
+      CLIENT_SECRET="$OPTARG"
+      ;;
+    t)
+      SCP_TARGET="$OPTARG"
+      ;;
+    h)
+      echo "Usage: $0 [-i client_id] [-s client_secret] [-t scp_target]" >&2
+      exit 1
+      ;;
+  esac
+done
+
+[[ -z $CLIENT_ID || -z $CLIENT_SECRET ]] && { echo "Client ID and Client Secret must be provided! (Run with -h to see available options)" ; exit 1 ; }
+
+# Base64 encode the client ID and secret.
+BASIC_AUTH=$(echo -n "$CLIENT_ID:$CLIENT_SECRET" | base64 -w 0)
+
+# Obtain an access token.
+TOKEN_RESPONSE=$(curl -s -X POST -H "Authorization: Basic $BASIC_AUTH" -d grant_type=client_credentials https://accounts.spotify.com/api/token)
+TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
+
+[[ $TOKEN -gt 32 ]] && { echo "Failed to get Spotify token! Are your Client ID & Secret correct?" ; exit 1 ; }
+
+# Base URL for Spotify API
+SPOTIFY_API_BASE="https://api.spotify.com/v1"
+
+# Iterate over each zip file in the current directory.
+for zip_file in *.zip; do
+    # Create a temporary directory.
+    TMP_DIR=$(mktemp -d)
+
+    # Unzip the content into the temporary directory.
+    unzip "$zip_file" -d "$TMP_DIR"
+
+    # Extract the Spotify link from the text file.
+    SPOTIFY_LINK=$(grep -Eo 'https://open\.spotify\.com/album/[a-zA-Z0-9]+' "$TMP_DIR"/*.txt)
+
+    # Extract the album ID from the Spotify link.
+    ALBUM_ID=$(echo "$SPOTIFY_LINK" | awk -F'/' '{print $NF}')
+
+    [[ -z $ALBUM_ID ]] && { echo "Failed to find Spotify Album ID!" ; exit 1 ; }
+
+    # Fetch the album and artist name from the Spotify API.
+    ALBUM_INFO=$(curl -s -H "Authorization: Bearer $TOKEN" "$SPOTIFY_API_BASE/albums/$ALBUM_ID")
+    ALBUM_NAME=$(echo "$ALBUM_INFO" | jq -r '.name')
+    ARTIST_NAME=$(echo "$ALBUM_INFO" | jq -r '.artists[0].name' | tr -d '/')
+
+    [[ -z $ALBUM_NAME ]] && { echo "Failed to find album name for album $ALBUM_ID!" ; exit 1 ; }
+    [[ -z $ARTIST_NAME ]] && { echo "Failed to find artist name for album $ALBUM_ID!" ; exit 1 ; }
+
+    # Create a directory for the album.
+    mkdir -p "$ARTIST_NAME/$ALBUM_NAME"
+
+    # Process .ogg files with ffmpeg.
+    for f in "$TMP_DIR"/*.ogg; do
+        ffmpeg -i "$f" -vn -c:a copy -y "$ARTIST_NAME/$ALBUM_NAME/$(basename "$f")"
+    done
+
+    if [[ ! -z $SCP_TARGET ]]; then
+        # Copy the processed files using scp.
+        scp -r "$ARTIST_NAME/$ALBUM_NAME" "$SCP_TARGET/$ARTIST_NAME/"
+    fi
+
+    # Remove the temporary directory.
+    rm -rf "$TMP_DIR"
+done
