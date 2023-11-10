@@ -5,7 +5,7 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "modules-left": ["wlr/workspaces"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/media"],
   "modules-right": ["tray", "network", "cpu", "memory", "pulseaudio", "clock"],
 
