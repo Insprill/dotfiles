@@ -1,0 +1,2 @@
+"killall -SIGUSR1 gpu-screen-recorder"
+  Alt + F10

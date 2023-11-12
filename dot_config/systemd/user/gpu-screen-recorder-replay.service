@@ -1,0 +1,9 @@
+[Unit]
+Description=GPU Screen Recorder (Instant Replay)
+
+[Service]
+ExecStart=/home/insprill/bin/start_gpu_recorder_replay.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
