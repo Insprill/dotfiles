@@ -11,6 +11,7 @@ local sources = {
   format.cbfmt,
   format.csharpier,
   format.deno_fmt, -- JS,TS,JSX,TSX,JSON
+  format.gofmt,
   format.lua_format,
   format.prettierd,
   format.rustfmt,
