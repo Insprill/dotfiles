@@ -1,0 +1,176 @@
+#!/bin/bash
+
+essentials=(
+    "yay" # Must be first
+    "alacritty-git" # Primary terminal
+    "btop" # Resource monitor
+    "chezmoi" # Dotfile management
+    "conky" # X system stats
+    "dolphin" # File manager
+    "eza" # ls on crack
+    "fish" # Shell
+    "firefox-developer-edition" # W browser
+    "flameshot" # X screenshots
+    "gcolor3" # Color picker
+    "i3lock-fancy-rapid-git" 
+    "i3status-rust-git"
+    "kitty" # Backup terminal
+    "meson" # Required to build i3
+    "ninja" # Required to build i3
+    "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
+    "nwg-look" # GTK theme picker
+    "paru" # AUR helper
+    "pavucontrol" # Audio settings
+    "picom-git" # X compositor
+    "rofi-lbonn-wayland" # Rofi with Wayland support
+    "rofi-calc" # Rofi calculator
+    "starship" # Shell prompt
+    "ungoogled-chromium" # L browser
+    "wine-ge-custom" # Better Wine
+    "winetricks"
+)
+amdcpu=( # https://wiki.archlinux.org/title/Ryzen
+    "amducode"
+)
+amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
+    "mesa"
+    "lib32-mesa"
+    "xf86-video-amdgpu"
+    "libva-mesa-driver"
+    "lib32-libva-mesa-driver"
+    "mesa-vdpau"
+    "lib32-mesa-vdpau"
+)
+catppuccin=(
+    "catppuccin-gtk-theme-mocha"
+    "kvantum-theme-catppuccin-git"
+    "sddm-theme-catppuccin-git"
+)
+development=(
+    "go"
+    "jetbrains-toolbox"
+    "neovim"
+    "rustup"
+    "visual-studio-code-bin"
+)
+gaming=(
+    "discord" # 🤓
+    "gamemode" # Optimizations for games
+    "mangohud" # Performance overlay
+    "steam" # Good guy Valve
+    "steam-native-runtime"
+    "proton-ge-custom" # Better Proton
+    "protontricks-git"
+    "xone-dkms-git" # Xbox controllers
+    "xone-dongle-firmware" # Wireless Xbox controller dongle
+)
+nvidia=( # https://wiki.archlinux.org/title/NVIDIA
+    "nvidia-dkms"
+    "nvidia-settings"
+    "nvidia-utils"
+    "lib32-nvidia-utils"
+    "opencl-nvidia"
+    "lib32-opencl-nvidia"
+    "libva-nvidia-driver-git"
+)
+hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
+    "hyprland"
+    "gamescope"
+    "hyprpaper" # Desktop background
+    "hyprpicker" # Color picker
+    "polkit-kde-agent" # Authentication
+    "qt5-wayland" # QT5 Wayland support
+    "qt6-wayland" # QT6 Wayland support
+    "waybar-hyprland-git"
+    "xdg-desktop-portal-hyprland" # Screen sharing
+)
+
+groups_list=(
+    essentials
+    amdcpu
+    amdgpu
+    catppuccin
+    development
+    gaming
+    nvidia
+    hyprland
+)
+
+dry_run=false
+if [[ "$1" == "--dry-run" ]]; then
+    dry_run=true
+    echo "Dry run mode - no installations will be performed."
+fi
+
+check_install_method() {
+    if pacman -Si "$1" &> /dev/null; then
+        echo "pacman"
+    else
+        echo "yay"
+    fi
+}
+
+install_packages() {
+    for pkg in "$@"; do
+        install_method=$(check_install_method "$pkg")
+        if $dry_run; then
+            echo "[DRY RUN] Would install $pkg using $install_method."
+        else
+            if [ "$install_method" = "pacman" ]; then
+                sudo pacinstall --yolo "$pkg"
+            else
+                yay --devel --sudoloop --use-ask --clean-after --noconfirm "$pkg"
+            fi
+        fi
+    done
+}
+
+display_choices() {
+    echo "Available groups to install:"
+    for i in "${!groups_list[@]}"; do
+        echo "$((i+1))) ${groups_list[i]}"
+    done
+}
+
+list_group_packages() {
+    local group_idx=$(( $1 - 1 ))
+    local group_name=${groups_list[$group_idx]}
+    local -n group_ref=$group_name
+    echo "Packages in $group_name:"
+    for pkg in "${group_ref[@]}"; do
+        echo "  - $pkg"
+    done
+}
+
+process_choice() {
+    local confirm
+    for choice in "$@"; do
+        list_group_packages "$choice"
+    done
+
+    read -p "Proceed with installation? (y/N): " confirm
+    if [[ "$confirm" =~ ^[Yy]$ ]]; then
+        echo "Updating system..."
+        if [ ! $dry_run ]; then
+            sudo pacman -Syu
+            yay -Syu
+        fi
+        for choice in "$@"; do
+            local group_idx=$(( $choice - 1 ))
+            local group_name=${groups_list[$group_idx]}
+            local -n group_ref=$group_name
+            echo "Installing $group_name..."
+            install_packages "${group_ref[@]}"
+        done
+    else
+        echo "Installation cancelled."
+    fi
+}
+
+display_choices
+read -p "Enter the numbers of the groups you want to install (e.g., 1 2): " input
+selected_choices=($input)
+
+process_choice "${selected_choices[@]}"
+
+echo "Installation complete."
