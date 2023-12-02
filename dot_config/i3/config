@@ -38,7 +38,7 @@ bindsym $super+Shift+a exec $browser https://chat.openai.com/;focus
 
 # Screen capture
 bindsym Print exec --no-startup-id $screenshotTool
-bindsym $super+Print exec --no-startup-id ~/bin/window-screenshot
+bindsym $super+Print exec --no-startup-id ~/bin/x-window-screenshot
 
 # OCR
 # not working
