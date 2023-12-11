@@ -14,7 +14,6 @@ set $terminal /usr/bin/alacritty
 set $backupTerminal /usr/bin/kitty
 set $browser /usr/bin/firefox-developer-edition
 set $fileManager /usr/bin/dolphin
-set $guiPackageManager /usr/bin/pamac-manager
 set $screenshotTool /usr/bin/flameshot gui
 set $colorPicker /usr/bin/gcolor3
 
@@ -174,9 +173,9 @@ bindsym $alt+Shift+Control+9 move container to workspace 8; workspace 8
 bindsym $alt+Shift+Control+0 move container to workspace 9; workspace 9
 
 # Bind workspaces to monitors
-workspace 1 output DP-2
-workspace 8 output DP-0
-workspace 9 output DP-4
+workspace 1 output DisplayPort-1
+workspace 8 output DisplayPort-2
+workspace 9 output DisplayPort-0
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+Shift+r restart
@@ -310,9 +309,11 @@ mode "$mode_system" {
 ### Autostart Applications ###
 ##############################
 
-exec_always --no-startup-id sleep 1 && feh --no-fehbg --bg-fill $wallpaper
+exec_always --no-startup-id sleep 0.5 && feh --no-fehbg --bg-fill $wallpaper
 exec --no-startup-id dunst
+exec --no-startup-id sleep 0.5 && conky -d
+exec --no-startup-id picom --daemon
+exec --no-startup-id sleep 0.1 && ~/.screenlayout/main.sh
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id setcursor
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 exec_always --no-startup-id numlockx on

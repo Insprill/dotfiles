@@ -3,34 +3,55 @@
 essentials=(
     "yay" # Must be first
     "alacritty-git" # Primary terminal
+    "bat" # cat on steroids
+    "beautyline" # Icon
+    "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
     "chezmoi" # Dotfile management
-    "conky" # X system stats
+    "dex" # Autostart desktop files
     "dolphin" # File manager
+    "dunst" # Notifications
     "eza" # ls on crack
     "fish" # Shell
     "firefox-developer-edition" # W browser
     "flameshot" # X screenshots
     "gcolor3" # Color picker
-    "i3lock-fancy-rapid-git" 
-    "i3status-rust-git"
+    "jq" # Json processing
     "kitty" # Backup terminal
-    "meson" # Required to build i3
-    "ninja" # Required to build i3
+    "kvantum" # QT theme picker
+    "kwallet-pam" # Unlock wallet
+    "kwalletmanager"
+    "mkinitcpo" # Must be before the kernel
+    "linux-zen" # W kernel
+    "linux-zen-headers" # W kernel headers
+    "libva-utils"
+    "neovim" # Editor
+    "nerd-fonts-git" # Fonts
+    "nomacs" # Image viewer
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
+    "pacseek" # Util for looking up packages
     "paru" # AUR helper
     "pavucontrol" # Audio settings
-    "picom-git" # X compositor
+    "polkit-kde-agent" # Authentication
+    "ripgrep" # Grep on cocaine
     "rofi-lbonn-wayland" # Rofi with Wayland support
     "rofi-calc" # Rofi calculator
+    "sddm" # Display manager
     "starship" # Shell prompt
+    "sweet-cursor-theme-git" # Cursor
     "ungoogled-chromium" # L browser
     "wine-ge-custom" # Better Wine
     "winetricks"
+    "vulkan-tools"
+    "vdpauinfo"
+    "qt5ct" # QT theming
+    "qt5-graphicaleffects" # SDDM theme stuff
+    "qt5-svg" # More SDDM theme stuff
+    "qt5-quickcontrols2" # Guess what? Even more SDDM theme stuff!
 )
 amdcpu=( # https://wiki.archlinux.org/title/Ryzen
-    "amducode"
+    "amd-ucode"
 )
 amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "mesa"
@@ -40,22 +61,26 @@ amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "lib32-libva-mesa-driver"
     "mesa-vdpau"
     "lib32-mesa-vdpau"
+    "vulkan-radeon"
+    "lib32-vulkan-radeon"
 )
 catppuccin=(
     "catppuccin-gtk-theme-mocha"
+    "catppuccin-cursors-mocha"
     "kvantum-theme-catppuccin-git"
     "sddm-theme-catppuccin-git"
 )
 development=(
+    "github-cli"
     "go"
     "jetbrains-toolbox"
-    "neovim"
     "rustup"
     "visual-studio-code-bin"
 )
 gaming=(
     "discord" # 🤓
     "gamemode" # Optimizations for games
+    "gpu-screen-recorder-gtk-git" # Basically shadowplay
     "mangohud" # Performance overlay
     "steam" # Good guy Valve
     "steam-native-runtime"
@@ -63,6 +88,22 @@ gaming=(
     "protontricks-git"
     "xone-dkms-git" # Xbox controllers
     "xone-dongle-firmware" # Wireless Xbox controller dongle
+)
+i3=(
+    "arandr" # Monitor config
+    "i3" # Window manager
+    "i3lock-fancy-rapid-git" # Pretty lock screen
+    "i3status-rust-git" # RUUUUST
+    "feh" # Desktop background
+    "numlockx" # Enable numlock
+    "picom-git" # X compositor
+    "conky" # X system stats
+    "meson" # Required to build i3
+    "ninja" # Required to build i3
+    "xclip" # Clipboard stuff
+)
+intelcpu=(
+    "intel-ucode"
 )
 nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "nvidia-dkms"
@@ -74,15 +115,15 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "libva-nvidia-driver-git"
 )
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
-    "hyprland"
+    "hyprland" # Based
     "gamescope"
     "hyprpaper" # Desktop background
     "hyprpicker" # Color picker
-    "polkit-kde-agent" # Authentication
     "qt5-wayland" # QT5 Wayland support
     "qt6-wayland" # QT6 Wayland support
     "waybar-hyprland-git"
     "xdg-desktop-portal-hyprland" # Screen sharing
+    "xorg-xeyes" # Useful for debugging XWayland issues
 )
 
 groups_list=(
@@ -92,6 +133,8 @@ groups_list=(
     catppuccin
     development
     gaming
+    i3
+    intelcpu
     nvidia
     hyprland
 )
@@ -119,7 +162,7 @@ install_packages() {
             if [ "$install_method" = "pacman" ]; then
                 sudo pacinstall --yolo "$pkg"
             else
-                yay --devel --sudoloop --use-ask --clean-after --noconfirm "$pkg"
+                yay --devel --sudoloop --useask --cleanafter --noconfirm -S "$pkg"
             fi
         fi
     done
