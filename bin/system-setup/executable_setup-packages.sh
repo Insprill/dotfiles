@@ -16,6 +16,7 @@ essentials=(
     "firefox-developer-edition" # W browser
     "flameshot" # X screenshots
     "gcolor3" # Color picker
+    "gnome-keyring" # Keyring
     "jq" # Json processing
     "kitty" # Backup terminal
     "kvantum" # QT theme picker
@@ -130,7 +131,9 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "qt5-wayland" # QT5 Wayland support
     "qt6-wayland" # QT6 Wayland support
     "waybar-hyprland-git"
-    "xdg-desktop-portal-hyprland" # Screen sharing
+    "wl-clipboard" # xclip but wayland
+    "xdg-desktop-portal-hyprland"
+    "xdg-desktop-portal-gtk"
     "xorg-xeyes" # Useful for debugging XWayland issues
 )
 
