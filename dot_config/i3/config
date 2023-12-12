@@ -313,6 +313,7 @@ exec_always --no-startup-id sleep 0.5 && ~/bin/i3-set-background $wallpaper
 exec --no-startup-id dunst
 exec --no-startup-id sleep 0.5 && conky -d
 exec --no-startup-id picom --daemon
+exec --no-startup-id xbindkeys
 exec --no-startup-id sleep 0.1 && ~/.screenlayout/main.sh
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
