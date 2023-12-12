@@ -21,19 +21,25 @@ essentials=(
     "kvantum" # QT theme picker
     "kwallet-pam" # Unlock wallet
     "kwalletmanager"
-    "mkinitcpo" # Must be before the kernel
+    "mkinitcpio" # Must be before the kernel
     "linux-zen" # W kernel
     "linux-zen-headers" # W kernel headers
     "libva-utils"
+    "neofetch"
     "neovim" # Editor
     "nerd-fonts-git" # Fonts
     "nomacs" # Image viewer
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
+    "p7zip" # 7z
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
     "pavucontrol" # Audio settings
     "polkit-kde-agent" # Authentication
+    "qt5ct" # QT theming
+    "qt5-graphicaleffects" # SDDM theme stuff
+    "qt5-svg" # More SDDM theme stuff
+    "qt5-quickcontrols2" # Guess what? Even more SDDM theme stuff!
     "ripgrep" # Grep on cocaine
     "rofi-lbonn-wayland" # Rofi with Wayland support
     "rofi-calc" # Rofi calculator
@@ -41,14 +47,11 @@ essentials=(
     "starship" # Shell prompt
     "sweet-cursor-theme-git" # Cursor
     "ungoogled-chromium" # L browser
-    "wine-ge-custom" # Better Wine
-    "winetricks"
     "vulkan-tools"
     "vdpauinfo"
-    "qt5ct" # QT theming
-    "qt5-graphicaleffects" # SDDM theme stuff
-    "qt5-svg" # More SDDM theme stuff
-    "qt5-quickcontrols2" # Guess what? Even more SDDM theme stuff!
+    "wine-ge-custom" # Better Wine
+    "winetricks"
+    "zip"
 )
 amdcpu=( # https://wiki.archlinux.org/title/Ryzen
     "amd-ucode"
@@ -71,11 +74,15 @@ catppuccin=(
     "sddm-theme-catppuccin-git"
 )
 development=(
-    "github-cli"
-    "go"
-    "jetbrains-toolbox"
-    "rustup"
-    "visual-studio-code-bin"
+    "dotnet-sdk" # C#
+    "github-cli" # Easy way to login to GitHub with Git
+    "go" # Inferior to Rust
+    "jetbrains-toolbox" # IntelliJ/Rider/CLion/Feet
+    "luarocks" # Neovim config editing
+    "npm" # Installing Neovim plugins
+    "pnpm" # Better than npm
+    "rustup" # RUUUUST
+    "visual-studio-code-bin" # Notepad+++
 )
 gaming=(
     "discord" # 🤓
@@ -100,9 +107,10 @@ i3=(
     "conky" # X system stats
     "meson" # Required to build i3
     "ninja" # Required to build i3
+    "xbindkeys" # Clipping
     "xclip" # Clipboard stuff
 )
-intelcpu=(
+intelcpu=( # https://wiki.archlinux.org/title/Microcode#Loading_microcode
     "intel-ucode"
 )
 nvidia=( # https://wiki.archlinux.org/title/NVIDIA
@@ -116,7 +124,7 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
 )
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "hyprland" # Based
-    "gamescope"
+    "gamescope" # Valve magic
     "hyprpaper" # Desktop background
     "hyprpicker" # Color picker
     "qt5-wayland" # QT5 Wayland support
