@@ -8,7 +8,7 @@ include catppuccin-mocha
 ### Commonly Used Variables ###
 ###############################
 
-set $wallpaper ~/.local/share/backgrounds/ready_or_not.jpg
+set $wallpaper ~/.local/share/backgrounds
 
 set $terminal /usr/bin/alacritty
 set $backupTerminal /usr/bin/kitty
@@ -309,7 +309,7 @@ mode "$mode_system" {
 ### Autostart Applications ###
 ##############################
 
-exec_always --no-startup-id sleep 0.5 && feh --no-fehbg --bg-fill $wallpaper
+exec_always --no-startup-id sleep 0.5 && ~/bin/i3-set-background $wallpaper
 exec --no-startup-id dunst
 exec --no-startup-id sleep 0.5 && conky -d
 exec --no-startup-id picom --daemon
