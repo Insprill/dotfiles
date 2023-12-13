@@ -38,6 +38,7 @@ bindsym $super+Shift+a exec $browser https://chat.openai.com/;focus
 # Screen capture
 bindsym Print exec --no-startup-id $screenshotTool
 bindsym $super+Print exec --no-startup-id ~/bin/x-window-screenshot
+bindsym Alt+F10 exec --no-startup-id killall -SIGUSR1 gpu-screen-recorder
 
 # OCR
 # not working
@@ -54,9 +55,6 @@ font pango: source code pro 10
 
 # Use Mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
-
-# hide/unhide i3status bar
-bindsym $super+m bar mode toggle
 
 # start rofi
 bindsym $super+d exec rofi -show drun

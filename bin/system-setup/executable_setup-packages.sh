@@ -108,7 +108,6 @@ i3=(
     "conky" # X system stats
     "meson" # Required to build i3
     "ninja" # Required to build i3
-    "xbindkeys" # Clipping
     "xclip" # Clipboard stuff
 )
 intelcpu=( # https://wiki.archlinux.org/title/Microcode#Loading_microcode
