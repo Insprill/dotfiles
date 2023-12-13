@@ -1,0 +1,2 @@
+sudo ln -s ~/bin/etc/pacman.d/hooks/vencord-pre.hook /etc/pacman.d/hooks/vencord-pre.hook
+sudo ln -s ~/bin/etc/pacman.d/hooks/vencord-post.hook /etc/pacman.d/hooks/vencord-post.hook
