@@ -8,6 +8,7 @@ essentials=(
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
     "chezmoi" # Dotfile management
+    "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
     "dolphin" # File manager
     "dunst" # Notifications
