@@ -83,6 +83,7 @@ development=(
     "luarocks" # Neovim config editing
     "npm" # Installing Neovim plugins
     "pnpm" # Better than npm
+    "powershell" # W
     "rustup" # RUUUUST
     "visual-studio-code-bin" # Notepad+++
 )
