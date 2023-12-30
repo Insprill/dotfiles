@@ -1,2 +1,3 @@
 sudo ln -s ~/bin/etc/pacman.d/hooks/vencord-pre.hook /etc/pacman.d/hooks/vencord-pre.hook
 sudo ln -s ~/bin/etc/pacman.d/hooks/vencord-post.hook /etc/pacman.d/hooks/vencord-post.hook
+sudo ln -s ~/X11/xorg.conf.d/50-mouse.conf /etc/X11/xorg.conf.d/50-mouse.conf

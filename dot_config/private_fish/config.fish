@@ -9,5 +9,8 @@ fish_add_path $HOME/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.cargo/bin
 
-# Starship
+# Zoxide https://github.com/ajeetdsouza/zoxide
+zoxide init fish | source
+
+# Starship https://starship.rs/
 starship init fish | source
