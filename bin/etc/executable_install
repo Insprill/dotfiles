@@ -1,3 +1,8 @@
 sudo ln -s ~/bin/etc/pacman.d/hooks/vencord-pre.hook /etc/pacman.d/hooks/vencord-pre.hook
 sudo ln -s ~/bin/etc/pacman.d/hooks/vencord-post.hook /etc/pacman.d/hooks/vencord-post.hook
-sudo ln -s ~/X11/xorg.conf.d/50-mouse.conf /etc/X11/xorg.conf.d/50-mouse.conf
+
+sudo ln -s ~/bin/etc/X11/xorg.conf.d/50-mouse.conf /etc/X11/xorg.conf.d/50-mouse.conf
+
+sudo ln -s ~/bin/etc/systemd/system/uni-sync.service /etc/systemd/system/uni-sync.service
+sudo ln -s ~/bin/etc/systemd/system/uni-sync.timer /etc/systemd/system/uni-sync.timer
+
