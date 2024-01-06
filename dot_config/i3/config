@@ -8,7 +8,7 @@ include catppuccin-mocha
 ### Commonly Used Variables ###
 ###############################
 
-set $wallpaper ~/.local/share/backgrounds
+set $wallpaper ~/Pictures/wallpapers
 
 set $terminal /usr/bin/alacritty
 set $backupTerminal /usr/bin/kitty
