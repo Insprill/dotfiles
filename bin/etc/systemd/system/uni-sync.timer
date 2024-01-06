@@ -2,8 +2,8 @@
 Description=Uni-Sync Timer
 
 [Timer]
-OnBootSec=15min
-OnUnitActiveSec=1w
+OnBootSec=1min
+OnUnitActiveSec=1min
 
 [Install]
 WantedBy=timers.target
