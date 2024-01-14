@@ -114,6 +114,7 @@ i3=(
     "meson" # Required to build i3
     "ninja" # Required to build i3
     "xclip" # Clipboard stuff
+    "xorg-xev" # Keybind debugging
 )
 intelcpu=( # https://wiki.archlinux.org/title/Microcode#Loading_microcode
     "intel-ucode"

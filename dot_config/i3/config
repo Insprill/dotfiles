@@ -81,6 +81,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym Ctrl+$alt+Shift+underscore exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # kill focused window
 bindsym $super+q kill
