@@ -1,121 +1,106 @@
 @import url("./catppuccin-mocha.css");
 
 * {
-  /* border: none; */
-  /* border-radius: 0; */
-  font-family: "MesloLGS NF";
-  font-weight: bold;
+  font-family: "MesloLGS Nerd Font";
   font-size: 12px;
-  min-height: 0;
+  margin-top: 1px;
+  /* Hyprland gaps handles bottom margin */
+  /* https://github.com/Alexays/Waybar/issues/1611 */
+  padding: 0;
+  min-height: 0px;
 }
+
+/*
+ Common
+*/
+
+#clock,
+#cpu,
+#custom-media,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#temperature,
+#workspaces {
+  margin-left: 4px;
+  margin-right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+  color: @text;
+  background: @base;
+}
+
+/*
+ Overrides
+*/
 
 window#waybar {
   background: transparent;
 }
 
-tooltip {
-  background: @base;
-  opacity: 0.8;
-  border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: @mauve;
-}
-
-tooltip label {
-  color: @text;
-}
-
 #workspaces {
-  margin-left: 25px;
-  margin-right: 10px;
-  border-bottom-left-radius: 1.0em;
-  border-bottom-right-radius: 1.0em;
+  color: @text;
+  background: @base;
 }
 
 #workspaces button {
-  padding: 5px;
-  color: #313244;
-  margin-right: 5px;
+  color: @text;
 }
 
 #workspaces button.active {
-  color: #a6adc8;
+  color: @text;
 }
 
 #workspaces button.focused {
-  color: #a6adc8;
-  background: #eba0ac;
-  border-radius: 10px;
+  color: @text;
+  background: @red;
 }
 
 #workspaces button.urgent {
-  color: #11111b;
-  background: #a6e3a1;
-  border-radius: 10px;
-}
-
-#workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
-  border-radius: 10px;
-}
-
-
-#custom-media,
-#cpu,
-#disk,
-#memory,
-#clock,
-#pulseaudio,
-#network,
-#tray,
-#temperature,
-#workspaces,
-#backlight {
-  background: @base;
-  opacity: 0.8;
-  padding-left: 1.0em;
-  padding-right: 1.0em;
-}
-
-#cpu.warning,
-#memory.warning {
-  color: @yellow;
-}
-
-#cpu.critical,
-#memory.critical {
-  color: @red;
+  color: @base;
+  background: @green;
 }
 
 #network {
-  padding-left: 1.25em;
-}
-
-#clock {
-  padding-right: 1.25em;
-  margin-right: 2.0em;
-  border-bottom-right-radius: 1.0em;
-  color: @green;
-}
-
-#network {
-  border-bottom-left-radius: 1.0em;
-}
-
-#custom-media {
-  border-bottom-left-radius: 1.0em;
-  border-bottom-right-radius: 1.0em;
-  color: @cyan;
+  color: @base;
+  background: @lavender;
 }
 
 #pulseaudio {
-  color: @purple;
+  color: @base;
+  background: @yellow;
+}
+
+#clock {
+  color: @base;
+  background: @green;
+}
+
+#memory {
+  color: @base;
+  background: @mauve;
+}
+
+#cpu {
+  color: @base;
+  background: @sky;
 }
 
 #tray {
-  margin-right: 75px;
-  border-bottom-left-radius: 1.0em;
-  border-bottom-right-radius: 1.0em;
+  color: @text;
+  background: @base;
+}
+
+#custom-media {
+  color: @base;
+  background: @sky;
+}
+
+/* https://github.com/Alexays/Waybar/issues/282 :pain: */
+#custom-media:hover {
+  background: @sapphire;
 }

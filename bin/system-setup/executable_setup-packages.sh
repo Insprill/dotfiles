@@ -128,14 +128,15 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "libva-nvidia-driver-git"
 )
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
-    "hyprland" # Based
+    "hyprland-git" # Based
     "gamescope" # Valve magic
-    "hyprpaper" # Desktop background
+    "grimblast-git" # Screenshots
     "hyprpicker" # Color picker
     "qt5-wayland" # QT5 Wayland support
     "qt6-wayland" # QT6 Wayland support
-    "waybar-hyprland-git"
+    "waybar-git"
     "wl-clipboard" # xclip but wayland
+    "wpaperd" # Desktop background
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal-gtk"
     "xorg-xeyes" # Useful for debugging XWayland issues

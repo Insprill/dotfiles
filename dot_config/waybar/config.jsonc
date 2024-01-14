@@ -10,7 +10,7 @@
   "modules-right": ["tray", "network", "cpu", "memory", "pulseaudio", "clock"],
 
   "clock": {
-    "format": "{:%m-%d-%y %H:%M:%S}",
+    "format": "\uf017  {:%m-%d-%y %H:%M:%S}",
     "interval": 1,
     "tooltip": true,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -21,11 +21,11 @@
       "on-scroll": 1,
       "on-click-right": "mode",
       "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+        "months": "<span color='#f9e2af'><b>{}</b></span>",
+        "days": "<span color='#b4befe'><b>{}</b></span>",
+        "weeks": "<span color='#94e2d5'><b>W{}</b></span>",
+        "weekdays": "<span color='#fab387'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
       }
     },
     "actions": {
@@ -48,7 +48,7 @@
   },
 
   "custom/media": {
-    "exec": "/usr/bin/python3 /home/insprill/.config/waybar/custom_modules/mediaplayer.py",
+    "exec": "/usr/bin/python3 ~/.config/waybar/custom_modules/mediaplayer.py",
     "format": "{}",
     "return-type": "json",
     "on-click": "playerctl play-pause",
@@ -58,7 +58,7 @@
 
   "memory": {
     "interval": 2,
-    "format": "\ue266 {}%",
+    "format": "\ue266  {}%",
     "tooltip": true,
     "tooltip-format": "Memory - {used:0.1f}GB used",
     "states": {
@@ -70,13 +70,13 @@
 
   "network": {
     "interval": 2,
-    "format": "\udb81\udc8d {ipaddr}  \uf019 {bandwidthDownBits}  \uf093 {bandwidthUpBits}",
+    "format": "\udb81\udc8d  {ipaddr} | \uf019  {bandwidthDownBits}  \uf093 {bandwidthUpBits}",
     "on-click": "alacritty -e btop"
   },
 
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "",
+    "format": "{icon}  {volume}%",
+    "format-muted": " ",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
