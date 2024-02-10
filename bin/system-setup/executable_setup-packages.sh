@@ -47,6 +47,7 @@ essentials=(
     "rofi-lbonn-wayland" # Rofi with Wayland support
     "rofi-calc" # Rofi calculator
     "sddm" # Display manager
+    "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
     "sweet-cursor-theme-git" # Cursor
     "ungoogled-chromium" # L browser
@@ -142,6 +143,12 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "xdg-desktop-portal-gtk"
     "xorg-xeyes" # Useful for debugging XWayland issues
 )
+insprill=( # Stuff I use that I doubt anyone else cares about
+    "authy"
+    "thunderbird"
+    "unityhub"
+    "vesktop"
+)
 
 groups_list=(
     essentials
@@ -154,6 +161,7 @@ groups_list=(
     intelcpu
     nvidia
     hyprland
+    insprill
 )
 
 dry_run=false
