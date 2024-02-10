@@ -11,3 +11,4 @@ if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
     echo -e "\n$PACMAN_REPO" | sudo tee -a /etc/pacman.conf
 fi
 
+sudo pacman -Syu
