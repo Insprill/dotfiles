@@ -18,6 +18,8 @@ local servers = {
   "lua_ls",
   -- "kotlin_language_server", -- Doesn't like Gradle build scripts :/
   "powershell_es",
+  "pylyzer",
+  "ruff_lsp",
   -- "rust_analyzer", -- Setup later
   "svelte",
   "tailwindcss",

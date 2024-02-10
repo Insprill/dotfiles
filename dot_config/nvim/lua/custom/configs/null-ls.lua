@@ -14,8 +14,9 @@ local sources = {
   format.gofmt,
   format.lua_format,
   format.prettierd,
+  format.ruff, -- Python
   format.rustfmt,
-  format.rustywind,
+  format.rustywind, -- Tailwind CSS
   lint.actionlint, -- GitHub Actions
   lint.deno_lint, -- JS/TS
   lint.eslint_d,

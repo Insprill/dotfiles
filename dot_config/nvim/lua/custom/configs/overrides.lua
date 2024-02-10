@@ -73,6 +73,7 @@ M.mason = {
     "luacheck",
     "kotlin-language-server",
     "powershell-editor-services",
+    "pylyzer",
     "rust-analyzer",
     "svelte-language-server",
     "tailwindcss-language-server",
@@ -85,6 +86,8 @@ M.mason = {
     "cbfmt",
     "csharpier",
     "prettierd",
+    "ruff",
+    "ruff-lsp",
     "rustywind",
     -- Linting
     "actionlint",
