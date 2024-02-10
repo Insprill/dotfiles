@@ -80,6 +80,9 @@ catppuccin=(
     "sddm-theme-catppuccin-git"
 )
 development=(
+    "docker"
+    "docker-buildx"
+    "docker-compose"
     "dotnet-sdk" # C#
     "github-cli" # Easy way to login to GitHub with Git
     "git"
@@ -147,6 +150,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
 )
 insprill=( # Stuff I use that I doubt anyone else cares about
     "authy"
+    "feishin-bin"
     "thunderbird"
     "unityhub"
     "vesktop"
