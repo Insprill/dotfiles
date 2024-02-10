@@ -1,0 +1,23 @@
+[user]
+        name = Pierce Thompson
+        email = insprill@gmail.com
+        signingkey = AAD2CDB6ACB129C5!
+[commit]
+        gpgsign = true
+[init]
+        defaultBranch = master
+[reset]
+        quiet = true
+[tag]
+        gpgsign = true
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+        credentialStore = gpg
+[core]
+        editor = nvim
+        autocrlf = input
+[push]
+        autoSetupRemote = true
+[mergetool "unityyamlmerge"]
+        trustExitCode = false
+        cmd = '/home/insprill/.local/share/Unity/Hub/Editor/2019.4.40f1/Editor/Data/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
