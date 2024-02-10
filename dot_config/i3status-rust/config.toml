@@ -31,6 +31,11 @@ button = "left"
 cmd = "pavucontrol"
 
 [[block]]
+block = "sound"
+device_kind = "source"
+format = " $icon "
+
+[[block]]
 block = "time"
 interval = 1
 format = " $icon $timestamp.datetime(f:'%H:%M:%S') "
