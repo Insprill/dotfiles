@@ -82,6 +82,8 @@ catppuccin=(
 development=(
     "dotnet-sdk" # C#
     "github-cli" # Easy way to login to GitHub with Git
+    "git"
+    "git-lfs"
     "go" # Inferior to Rust
     "jetbrains-toolbox" # IntelliJ/Rider/CLion/Feet
     "luarocks" # Neovim config editing

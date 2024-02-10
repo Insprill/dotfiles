@@ -134,6 +134,8 @@ then
     # Install the default Rust toolchain
     echo "Installing the default Rust toolchain"
     rustup toolchain install stable
+    # Setup Git LFS
+    git lfs install
 fi
 
 # Enable clipping
