@@ -67,6 +67,10 @@ then
     fi
 fi
 
+# Rebuild bat cache (update themes)
+echo "Rebuilding bat cache"
+bat cache --build
+
 # Update GRUB config (theme, microcode)
 echo "Updating the GRUB config"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
