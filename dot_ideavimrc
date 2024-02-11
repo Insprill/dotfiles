@@ -1,0 +1,24 @@
+let mapleader=" "
+
+""" Options
+set relativenumber
+set number
+set clipboard+=unnamed
+set ignorecase
+set smartcase
+
+
+""" Keys
+nnoremap <leader>fm :action ReformatCode<CR>
+nnoremap <leader>/ :action CommentByLineComment<CR>
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
+nnoremap <leader>x :action CloseEditor<CR>
+nnoremap <C-s> :action SaveAll<CR>
+nnoremap gr :action ShowUsages<CR>
+nnoremap <Tab> :action NextTab<CR>
+nnoremap <S-Tab> :action PreviousTab<CR>
+
+
+""" Plugins
+set sneak
+set quickscope
