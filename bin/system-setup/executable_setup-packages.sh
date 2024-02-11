@@ -12,6 +12,7 @@ essentials=(
     "dex" # Autostart desktop files
     "dolphin" # File manager
     "dunst" # Notifications
+    "dust" # du on crack
     "eza" # ls on crack
     "fish" # Shell
     "firefox-developer-edition" # W browser
@@ -90,6 +91,7 @@ development=(
     "go" # Inferior to Rust
     "jetbrains-toolbox" # IntelliJ/Rider/CLion/Feet
     "luarocks" # Neovim config editing
+    "namcap" # Validating PKGBUILDs
     "npm" # Installing Neovim plugins
     "pnpm" # Better than npm
     "powershell" # W
