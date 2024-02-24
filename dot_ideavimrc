@@ -10,7 +10,7 @@ set smartcase
 
 """ Keys
 nnoremap <leader>fm :action ReformatCode<CR>
-nnoremap <leader>/ :action CommentByLineComment<CR>
+noremap <leader>/ :action CommentByLineComment<CR>
 nnoremap <leader>e :action ActivateProjectToolWindow<CR>
 nnoremap <leader>x :action CloseEditor<CR>
 nnoremap <C-s> :action SaveAll<CR>
