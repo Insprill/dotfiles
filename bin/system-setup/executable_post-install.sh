@@ -92,10 +92,18 @@ set_env_var() {
     fi
 }
 echo "Setting system-wide environment variables"
-set_env_var "QT_QPA_PLATFORMTHEME" "qt5ct"
-set_env_var "QT_STYLE_OVERRIDE" "kvantum"
+set_env_var "QT_QPA_PLATFORMTHEME" "qt6ct"
 set_env_var "BROWSER" "firefox-developer-edition"
 set_env_var "EDITOR" "nvim"
+
+# Copy Kvantum, qt6ct, and GTK setting to the root user
+echo "Copying themes to root user"
+## QT
+sudo cp -r ~/.config/Kvantum/ /root/.config/
+sudo cp -r ~/.config/qt6ct/ /root/.config/
+## GTK
+sudo cp -r ~/.config/gtk-3.0/ /root/.config/
+sudo cp -r ~/.gtkrc-2.0 /root/
 
 # Setup development stuff
 read -p "Do you want to setup some development related things? (git, vscode, etc) [y/N] " -n 1 -r

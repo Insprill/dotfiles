@@ -22,7 +22,7 @@ essentials=(
     "icoutils" # Creating desktop files for Wine applications
     "jq" # Json processing
     "kitty" # Backup terminal
-    "kvantum" # QT theme picker
+    "kvantum" # QT6 theme picker
     "kwallet-pam" # Unlock wallet
     "kwalletmanager"
     "mkinitcpio" # Must be before the kernel
@@ -40,7 +40,7 @@ essentials=(
     "paru" # AUR helper
     "pavucontrol" # Audio settings
     "polkit-kde-agent" # Authentication
-    "qt5ct" # QT theming
+    "qt6ct" # QT theming
     "qt5-graphicaleffects" # SDDM theme stuff
     "qt5-svg" # More SDDM theme stuff
     "qt5-quickcontrols2" # Guess what? Even more SDDM theme stuff!
