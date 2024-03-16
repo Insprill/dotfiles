@@ -9,7 +9,7 @@ set smartcase
 
 
 """ Keys
-nnoremap <leader>fm :action ReformatCode<CR>
+noremap <leader>fm :action ReformatCode<CR>
 noremap <leader>/ :action CommentByLineComment<CR>
 nnoremap <leader>e :action ActivateProjectToolWindow<CR>
 nnoremap <leader>x :action CloseEditor<CR>
