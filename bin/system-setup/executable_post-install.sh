@@ -101,6 +101,7 @@ echo "Copying themes to root user"
 ## QT
 sudo cp -r ~/.config/Kvantum/ /root/.config/
 sudo cp -r ~/.config/qt6ct/ /root/.config/
+sudo cp -r ~/.config/qt5ct/ /root/.config/
 ## GTK
 sudo cp -r ~/.config/gtk-3.0/ /root/.config/
 sudo cp -r ~/.gtkrc-2.0 /root/

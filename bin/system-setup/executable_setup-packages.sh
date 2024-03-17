@@ -40,7 +40,8 @@ essentials=(
     "paru" # AUR helper
     "pavucontrol" # Audio settings
     "polkit-kde-agent" # Authentication
-    "qt6ct" # QT theming
+    "qt6ct" # QT6 theming
+    "qt5ct" # QT5 theming
     "qt5-graphicaleffects" # SDDM theme stuff
     "qt5-svg" # More SDDM theme stuff
     "qt5-quickcontrols2" # Guess what? Even more SDDM theme stuff!
