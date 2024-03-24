@@ -38,7 +38,7 @@
   },
 
   "cpu": {
-    "interval": 5,
+    "interval": 2,
     "format": "\udb83\udf86  {usage}%",
     "states": {
       "warning": 50,
