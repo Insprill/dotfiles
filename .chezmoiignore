@@ -43,4 +43,5 @@ bin/
 {{ if ne .chezmoi.os "windows" }}
 AppData/
 init.reg
+desktop.ini
 {{ end }}
