@@ -41,5 +41,5 @@ bin/
 
 # Windows-only
 {{ if ne .chezmoi.os "windows" }}
-
+AppData/
 {{ end }}
