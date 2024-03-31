@@ -44,4 +44,6 @@ bin/
 AppData/
 init.reg
 desktop.ini
+komorebi.json
+applications.yaml
 {{ end }}
