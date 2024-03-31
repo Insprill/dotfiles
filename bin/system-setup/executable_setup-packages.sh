@@ -8,6 +8,7 @@ essentials=(
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
     "chezmoi" # Dotfile management
+    "compsize" # View BTRFS compression ratios
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
     "dolphin" # File manager
@@ -20,6 +21,7 @@ essentials=(
     "gcolor3" # Color picker
     "gnome-keyring" # Keyring
     "icoutils" # Creating desktop files for Wine applications
+    "iotop" # Disk monitor
     "jq" # Json processing
     "kitty" # Backup terminal
     "kvantum" # QT6 theme picker
@@ -31,6 +33,7 @@ essentials=(
     "libva-utils"
     "neofetch"
     "neovim" # Editor
+    "neovide" # Editor but Rust
     "nerd-fonts-git" # Fonts
     "nomacs" # Image viewer
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
@@ -108,6 +111,7 @@ gaming=(
     "steam-native-runtime"
     "proton-ge-custom" # Better Proton
     "protontricks-git"
+    "protonup-qt" # GUI for managing Proton versions
     "xone-dkms-git" # Xbox controllers
     "xone-dongle-firmware" # Wireless Xbox controller dongle
 )
