@@ -3,7 +3,7 @@
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 
 #Enter:: ; Win + Enter
-    Run, alacritty.exe --working-directory C:/
+    Run, alacritty.exe --working-directory "%USERPROFILE%"
     Sleep, 150
     WinActivate, Alacritty
 return
