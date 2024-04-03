@@ -1,0 +1,7 @@
+function LsEza { eza --icons --hyperlink }
+Set-Alias -Name ls -Value LsEza
+
+function GitYeet { git push -f }
+Set-Alias -Name yeet -Value GitYeet
+
+Invoke-Expression (&starship init powershell)

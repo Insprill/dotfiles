@@ -20,6 +20,7 @@ LICENSE
 .config/pacseek/
 .config/paru/
 .config/picom.conf
+.config/powershell/
 .config/qt5ct/
 .config/qt6ct/
 .config/rofi/
@@ -42,8 +43,9 @@ bin/
 # Windows-only
 {{ if ne .chezmoi.os "windows" }}
 AppData/
-init.reg
-desktop.ini
-komorebi.json
+Documents/PowerShell/
 applications.yaml
+desktop.ini
+init.reg
+komorebi.json
 {{ end }}
