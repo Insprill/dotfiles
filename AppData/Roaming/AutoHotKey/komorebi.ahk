@@ -2,7 +2,12 @@
 #NoTrayIcon ; Don't show a tray icon
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 
-#+r::Run komorebic reload-configuration,, Hide
+#+r:: ;
+  Run komorebic reload-configuration,, Hide
+  Process, Close, Zebar.exe
+  Run, %A_AppData%\Microsoft\Windows\Start Menu\Programs\Startup\zebar.bat
+return
+
 #+Space::Run komorebic toggle-float,, Hide
 
 ; Move focus with Super + h/j/k/l
