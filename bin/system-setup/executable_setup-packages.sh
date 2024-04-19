@@ -160,7 +160,7 @@ insprill=( # Stuff I use that I doubt anyone else cares about
     "feishin-bin"
     "thunderbird"
     "unityhub"
-    "vesktop"
+    "vesktop-bin"
 )
 
 groups_list=(
