@@ -1,4 +1,4 @@
-local utils = require("custom.csharpls_extended.lua.csharpls_extended.utils")
+local utils = require("plugins.csharpls_extended.lua.csharpls_extended.utils")
 --local lsp_util = require 'vim.lsp.util'
 
 --local pickers = require("telescope.pickers")
