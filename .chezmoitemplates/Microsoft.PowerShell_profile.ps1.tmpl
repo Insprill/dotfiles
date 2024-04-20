@@ -4,4 +4,7 @@ Set-Alias -Name ls -Value LsEza
 function GitYeet { git push -f }
 Set-Alias -Name yeet -Value GitYeet
 
+function RemoveRecursiveForce { if ($args.length -gt 0) { Remove-Item $args[0] -Recurse -Force } }
+Set-Alias -Name rmrf -Value RemoveRecursiveForce
+
 Invoke-Expression (&starship init powershell)
