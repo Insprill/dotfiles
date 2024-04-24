@@ -101,6 +101,7 @@ development=(
     "powershell" # W
     "rustup" # RUUUUST
     "visual-studio-code-bin" # Notepad+++
+    "yarn" # Worse than pnpm
 )
 gaming=(
     "discord" # 🤓
