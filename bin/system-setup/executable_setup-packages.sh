@@ -35,6 +35,7 @@ essentials=(
     "neovim" # Editor
     "neovide" # Editor but Rust
     "nerd-fonts-git" # Fonts
+    "nmap" # Network shenanigans
     "nomacs" # Image viewer
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
