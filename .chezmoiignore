@@ -48,4 +48,5 @@ applications.yaml
 desktop.ini
 init.reg
 komorebi.json
+setup.ps1
 {{ end }}
