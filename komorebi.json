@@ -21,7 +21,7 @@
       ]
     }
   ],
-  "global_work_area_offset": { "bottom": 0, "left": 0, "right": 0, "top": 0 }, // Set the top and bottom offset to the zebar height. Only set the top if there's no taskbar.
+  "global_work_area_offset": { "bottom": 0, "left": 0, "right": 0, "top": 0 },
   "float_rules": [
     {
       "kind": "Exe",
