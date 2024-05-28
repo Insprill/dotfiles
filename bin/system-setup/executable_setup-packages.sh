@@ -44,18 +44,19 @@ essentials=(
     "paru" # AUR helper
     "pavucontrol" # Audio settings
     "polkit-kde-agent" # Authentication
+    "popsicle" # USB flasher
     "qt6ct" # QT6 theming
     "qt5ct" # QT5 theming
     "qt5-graphicaleffects" # SDDM theme stuff
     "qt5-svg" # More SDDM theme stuff
     "qt5-quickcontrols2" # Guess what? Even more SDDM theme stuff!
     "ripgrep" # Grep on cocaine
-    "rofi-lbonn-wayland" # Rofi with Wayland support
+    "rofi-wayland" # Rofi with Wayland support
     "rofi-calc" # Rofi calculator
     "sddm" # Display manager
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
-    "sweet-cursor-theme-git" # Cursor
+    "capitaine-cursors" # Cursor
     "ungoogled-chromium" # L browser
     "vulkan-tools"
     "vdpauinfo"
@@ -99,7 +100,7 @@ development=(
     "namcap" # Validating PKGBUILDs
     "npm" # Installing Neovim plugins
     "pnpm" # Better than npm
-    "powershell" # W
+    "powershell-bin" # W
     "rustup" # RUUUUST
     "visual-studio-code-bin" # Notepad+++
     "yarn" # Worse than pnpm
@@ -111,7 +112,7 @@ gaming=(
     "mangohud" # Performance overlay
     "steam" # Good guy Valve
     "steam-native-runtime"
-    "proton-ge-custom" # Better Proton
+    "proton-ge-custom-bin" # Better Proton
     "protontricks-git"
     "protonup-qt" # GUI for managing Proton versions
     "xone-dkms-git" # Xbox controllers
