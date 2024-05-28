@@ -77,6 +77,7 @@ amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "lib32-libva-mesa-driver"
     "mesa-vdpau"
     "lib32-mesa-vdpau"
+    "rocm-smi-lib" # Let btop access GPU info
     "vulkan-radeon"
     "lib32-vulkan-radeon"
 )
