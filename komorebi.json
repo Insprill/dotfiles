@@ -14,13 +14,6 @@
     "stack": "#cba6f7",
     "monocle": "#cba6f7"
   },
-  "monitors": [
-    {
-      "workspaces": [
-        { "name": "I", "layout": "UltrawideVerticalStack" }
-      ]
-    }
-  ],
   "global_work_area_offset": { "bottom": 0, "left": 0, "right": 0, "top": 0 },
   "float_rules": [
     {
