@@ -28,6 +28,7 @@ return {
         "dockerfile-language-server",
         "gopls",
         "html-lsp",
+        "hyprls", -- https://github.com/mason-org/mason-registry/pull/5612/files
         "json-lsp",
         "lua-language-server",
         "powershell-editor-services",
@@ -107,10 +108,10 @@ return {
 
   -- Custom Plugins
 
-  {
-    "github/copilot.vim",
-    lazy = false,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  -- },
 
   {
     "saecki/crates.nvim",

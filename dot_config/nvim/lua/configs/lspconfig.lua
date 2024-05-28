@@ -15,6 +15,7 @@ local servers = {
   "dockerls",
   "gopls",
   "grammarly",
+  "hyprls",
   "jsonls",
   "lua_ls",
   "powershell_es",
@@ -68,4 +69,7 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
   on_init = on_init,
   on_attach = on_attach,
+  -- on_attach = function(client, bufnr)
+  --   vim.lsp.inlay_hint.enable(bufnr)
+  -- end,
 }
