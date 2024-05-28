@@ -1,10 +1,17 @@
 function LsEza { eza --icons --hyperlink }
 Set-Alias -Name ls -Value LsEza
 
-function GitYeet { git push -f }
-Set-Alias -Name yeet -Value GitYeet
+function GitForcePush { git push -f }
+Set-Alias -Name yeet -Value GitForcePush
+
+function GitPush { git push }
+Set-Alias -Name shipit -Value GitPush
+
+function GitAddAndContinueRebase { git add . && git rebase --continue }
+Set-Alias -Name sure -Value GitAddAndContinueRebase
 
 function RemoveRecursiveForce { if ($args.length -gt 0) { Remove-Item $args[0] -Recurse -Force } }
 Set-Alias -Name rmrf -Value RemoveRecursiveForce
 
 Invoke-Expression (&starship init powershell)
+
