@@ -1,0 +1,8 @@
+* {
+    background:     #1e1e2e; // Base
+    background-alt: #313244; // Surface 0
+    foreground:     #cdd6f3; // Text
+    selected:       #cba6f7; // Mauve
+    active:         #ABE9B3FF; // ?
+    urgent:         #F28FADFF; // ?
+}
