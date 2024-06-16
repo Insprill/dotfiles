@@ -87,6 +87,7 @@ return {
         "markdown_inline",
         "nix",
         "python",
+        "rasi",
         "regex",
         "requirements", -- pip requirements
         "rust",
@@ -112,6 +113,11 @@ return {
   --   "github/copilot.vim",
   --   lazy = false,
   -- },
+
+  {
+    "Fymyte/rasi.vim",
+    ft = { "rasi" },
+  },
 
   {
     "saecki/crates.nvim",
