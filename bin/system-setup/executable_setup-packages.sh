@@ -57,12 +57,14 @@ essentials=(
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
     "capitaine-cursors" # Cursor
+    "ueberzugpp" # Show images in terminals
     "ungoogled-chromium" # L browser
     "vulkan-tools"
     "vdpauinfo"
     "wine-ge-custom" # Better Wine
     "wine-mono" # Mono support for Wine
     "winetricks"
+    "yazi" # W terminal file browser
     "zip"
     "zoxide" # cd on crack
 )
