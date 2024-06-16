@@ -5,6 +5,8 @@ essentials=(
     "alacritty-git" # Primary terminal
     "bat" # cat on steroids
     "beautyline" # Icon
+    "bluez" # Bluetooth
+    "bluez-utils"
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
     "chezmoi" # Dotfile management
@@ -52,7 +54,7 @@ essentials=(
     "qt5-quickcontrols2" # Guess what? Even more SDDM theme stuff!
     "ripgrep" # Grep on cocaine
     "rofi-wayland" # Rofi with Wayland support
-    "rofi-calc" # Rofi calculator
+    "rofi-calc-git" # Rofi calculator
     "sddm" # Display manager
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
@@ -65,6 +67,7 @@ essentials=(
     "wine-mono" # Mono support for Wine
     "winetricks"
     "yazi" # W terminal file browser
+    "yt-dlp" # we do a little trolling
     "zip"
     "zoxide" # cd on crack
 )
@@ -118,8 +121,7 @@ gaming=(
     "proton-ge-custom-bin" # Better Proton
     "protontricks-git"
     "protonup-qt" # GUI for managing Proton versions
-    "xone-dkms-git" # Xbox controllers
-    "xone-dongle-firmware" # Wireless Xbox controller dongle
+    "xpadneo" # Wireles xbox controller support
 )
 i3=(
     "arandr" # Monitor config
