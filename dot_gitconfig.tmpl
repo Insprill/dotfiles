@@ -1,41 +1,49 @@
 [user]
-  name = Pierce Thompson
-  email = insprill@gmail.com
-  signingkey = AAD2CDB6ACB129C5!
+	name = Pierce Thompson
+	email = pierce@insprill.net
+	signingkey = AAD2CDB6ACB129C5!
 [commit]
-  gpgsign = true
+	gpgsign = true
 [init]
-  defaultBranch = master
+	defaultBranch = master
 [reset]
-  quiet = true
+ 	quiet = true
 [tag]
-  gpgsign = true
+ 	gpgsign = true
 {{ if ne .chezmoi.os "windows" }}
-  helper = /usr/lib/git-core/git-credential-libsecret
-  credentialStore = gpg
+	helper = /usr/lib/git-core/git-credential-libsecret
+	credentialStore = gpg
 {{ end }}
 [core]
 {{ if ne .chezmoi.os "windows" }}
-  editor = nvim
+	editor = nvim
 {{ else }}
-  editor = 'C:\\\\Program Files\\\\Microsoft VS Code\\\\Code.exe'
+	editor = 'C:\\\\Program Files\\\\Microsoft VS Code\\\\Code.exe'
 {{ end }}
-  autocrlf = input
+	autocrlf = input
 [push]
-  autoSetupRemote = true
+	autoSetupRemote = true
 [diff]
-  wsErrorHighlight = all
+	wsErrorHighlight = all
 [merge]
-  tool = unityyamlmerge
+	tool = unityyamlmerge
 [mergetool "unityyamlmerge"]
-  trustExitCode = false
+	trustExitCode = false
 {{ if ne .chezmoi.os "windows" }}
-  cmd = '/home/insprill/.local/share/Unity/Hub/Editor/2019.4.40f1/Editor/Data/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+	cmd = '/home/insprill/.local/share/Unity/Hub/Editor/2019.4.40f1/Editor/Data/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
 {{ else }}
-  cmd = 'C:/Program Files/Unity/Hub/Editor/2019.4.40f1/Editor/Data/Tools/UnityYAMLMerge.exe' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+	cmd = 'C:/Program Files/Unity/Hub/Editor/2019.4.40f1/Editor/Data/Tools/UnityYAMLMerge.exe' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
 {{ end }}
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+{{ if ne .chezmoi.os "windows" }}
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+{{ end }}
