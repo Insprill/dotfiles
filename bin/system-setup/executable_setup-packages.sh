@@ -150,7 +150,11 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "libva-nvidia-driver-git"
 )
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
-    "hyprland-git" # Based
+    "hyprutils-git"
+    "hyprlang-git"
+    "hyprcursor-git"
+    "hyprwayland-scanner-git"
+    "hyprland-git" # Based (above are required otherwise hyprland-git sometimes won't build)
     "gamescope" # Valve magic
     "grimblast-git" # Screenshots
     "hyprpicker" # Color picker
