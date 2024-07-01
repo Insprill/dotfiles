@@ -9,6 +9,7 @@
   "border_offset": -1,
   "active_window_border": true,
   "inactive_window_border": true,
+  "border_implementation": "Windows",
   "active_window_border_width": 3,
   "active_window_border_colours": {
     "single": "#cba6f7",
