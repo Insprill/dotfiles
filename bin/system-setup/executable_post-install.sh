@@ -30,7 +30,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     # Load the kernel module
     echo "Adding Kernel modules"
-    NVIDIA_KERNEL_MODULES="nvidia mvidia_modeset nvidia_uvm nvidia_drm"
+    NVIDIA_KERNEL_MODULES="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
     grep -q $NVIDIA_KERNEL_MODULES /etc/mkinitcpio.conf || sudo sed -i "/^MODULES=/s/)/ $NVIDIA_KERNEL_MODULES)/" /etc/mkinitcpio.conf
 fi
 
