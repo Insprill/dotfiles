@@ -106,6 +106,14 @@ sudo cp -r ~/.config/qt5ct/ /root/.config/
 sudo cp -r ~/.config/gtk-3.0/ /root/.config/
 sudo cp -r ~/.gtkrc-2.0 /root/
 
+# Hyprland plugins
+hyprpm update
+# Per-monitor workspaces
+hyprpm add https://github.com/Duckonaut/split-monitor-workspaces
+hyprpm enable split-monitor-workspaces
+
+hyprpm reload
+
 # Setup development stuff
 read -p "Do you want to setup some development related things? (git, vscode, etc) [y/N] " -n 1 -r
 echo # Newline
