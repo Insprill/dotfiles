@@ -143,38 +143,19 @@ bindsym $super+4 workspace 4
 bindsym $super+5 workspace 5
 bindsym $super+6 workspace 6
 bindsym $super+7 workspace 7
-bindsym $super+8 workspace 10
-bindsym $super+Control+9 workspace 8
-bindsym $super+Control+0 workspace 9
-
-# move focused container to workspace
-bindsym $super+Shift+1 move container to workspace 1
-bindsym $super+Shift+2 move container to workspace 2
-bindsym $super+Shift+3 move container to workspace 3
-bindsym $super+Shift+4 move container to workspace 4
-bindsym $super+Shift+5 move container to workspace 5
-bindsym $super+Shift+6 move container to workspace 6
-bindsym $super+Shift+7 move container to workspace 7
-bindsym $super+Shift+8 move container to workspace 10
-bindsym $super+Shift+Control+9 move container to workspace 8
-bindsym $super+Shift+Control+0 move container to workspace 9
+bindsym $super+8 workspace 8
+bindsym $super+9 workspace 9
 
 # Move to workspace with focused container
-bindsym $alt+Shift+1 move container to workspace 1; workspace 1
-bindsym $alt+Shift+2 move container to workspace 2; workspace 2
-bindsym $alt+Shift+3 move container to workspace 3; workspace 3
-bindsym $alt+Shift+4 move container to workspace 4; workspace 4
-bindsym $alt+Shift+5 move container to workspace 5; workspace 5
-bindsym $alt+Shift+6 move container to workspace 6; workspace 6
-bindsym $alt+Shift+7 move container to workspace 7; workspace 7
-bindsym $alt+Shift+8 move container to workspace 10; workspace 10
-bindsym $alt+Shift+Control+9 move container to workspace 8; workspace 8
-bindsym $alt+Shift+Control+0 move container to workspace 9; workspace 9
-
-# Bind workspaces to monitors
-workspace 1 output DisplayPort-1
-workspace 8 output DisplayPort-2
-workspace 9 output DisplayPort-0
+bindsym $super+Shift+1 move container to workspace 1; workspace 1
+bindsym $super+Shift+2 move container to workspace 2; workspace 2
+bindsym $super+Shift+3 move container to workspace 3; workspace 3
+bindsym $super+Shift+4 move container to workspace 4; workspace 4
+bindsym $super+Shift+5 move container to workspace 5; workspace 5
+bindsym $super+Shift+6 move container to workspace 6; workspace 6
+bindsym $super+Shift+7 move container to workspace 7; workspace 7
+bindsym $super+Shift+8 move container to workspace 8; workspace 8
+bindsym $super+Shift+9 move container to workspace 9; workspace 9
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+Shift+r restart
