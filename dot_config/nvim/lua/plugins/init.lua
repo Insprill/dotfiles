@@ -2,53 +2,14 @@ return {
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
+    opts = require "configs.conform",
   },
 
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
-  },
-
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        -- LSP
-        "bash-language-server",
-        "clang-format",
-        "csharp-language-server",
-        "css-lsp",
-        "docker-compose-language-service",
-        "dockerfile-language-server",
-        "gopls",
-        "html-lsp",
-        "hyprls", -- https://github.com/mason-org/mason-registry/pull/5612/files
-        "json-lsp",
-        "lua-language-server",
-        "powershell-editor-services",
-        "pylyzer",
-        "rust-analyzer",
-        "svelte-language-server",
-        "tailwindcss-language-server",
-        "typescript-language-server",
-        "yaml-language-server",
-        -- Formatting
-        "beautysh",
-        "black",
-        "cbfmt",
-        "csharpier",
-        "eslint_d",
-        "prettierd",
-        "rustywind",
-        "stylua",
-      },
-    },
   },
 
   {
