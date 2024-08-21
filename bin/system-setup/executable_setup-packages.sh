@@ -154,6 +154,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "hyprlang-git"
     "hyprcursor-git"
     "hyprwayland-scanner-git"
+    "aquamarine-git"
     "hyprland-git" # Based (above are required otherwise hyprland-git sometimes won't build)
     "gamescope" # Valve magic
     "grimblast-git" # Screenshots
@@ -163,7 +164,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "waybar-git"
     "wl-clipboard" # xclip but wayland
     "wpaperd" # Desktop background
-    "xdg-desktop-portal-hyprland"
+    "xdg-desktop-portal-hyprland-git"
     "xdg-desktop-portal-gtk"
     "xorg-xeyes" # Useful for debugging XWayland issues
 )
