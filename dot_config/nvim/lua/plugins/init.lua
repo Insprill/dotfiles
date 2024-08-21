@@ -142,9 +142,6 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     opts = {
-      filters = {
-        dotfiles = false,
-      },
       git = {
         enable = true,
         ignore = false,
