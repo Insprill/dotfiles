@@ -108,6 +108,7 @@ development=(
     "pnpm" # Better than npm
     "powershell-bin" # W
     "rustup" # RUUUUST
+    "tokei" # Epic line counts
     "visual-studio-code-bin" # Notepad+++
     "yarn" # Worse than pnpm
 )
