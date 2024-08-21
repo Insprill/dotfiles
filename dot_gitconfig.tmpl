@@ -7,9 +7,9 @@
 [init]
 	defaultBranch = master
 [reset]
- 	quiet = true
+	quiet = true
 [tag]
- 	gpgsign = true
+	gpgsign = true
 {{ if ne .chezmoi.os "windows" }}
 	helper = /usr/lib/git-core/git-credential-libsecret
 	credentialStore = gpg
@@ -23,6 +23,8 @@
 	autocrlf = input
 [push]
 	autoSetupRemote = true
+[pull]
+	rebase = true
 [diff]
 	wsErrorHighlight = all
 [merge]
