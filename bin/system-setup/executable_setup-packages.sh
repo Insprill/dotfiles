@@ -17,6 +17,7 @@ essentials=(
     "dunst" # Notifications
     "dust" # du on crack
     "eza" # ls on crack
+    "fastfetch" # New neofetch
     "fish" # Shell
     "firefox-developer-edition" # W browser
     "flameshot" # X screenshots
@@ -33,7 +34,6 @@ essentials=(
     "linux-zen" # W kernel
     "linux-zen-headers" # W kernel headers
     "libva-utils"
-    "neofetch"
     "neovim" # Editor
     "neovide" # Editor but Rust
     "nerd-fonts-git" # Fonts
@@ -65,7 +65,6 @@ essentials=(
     "vdpauinfo"
     "wine-ge-custom" # Better Wine
     "wine-mono" # Mono support for Wine
-    "winetricks"
     "yazi" # W terminal file browser
     "yt-dlp" # we do a little trolling
     "zip"
@@ -77,6 +76,7 @@ amdcpu=( # https://wiki.archlinux.org/title/Ryzen
 amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "mesa"
     "lib32-mesa"
+    "mesa-utils"
     "xf86-video-amdgpu"
     "libva-mesa-driver"
     "lib32-libva-mesa-driver"
@@ -106,6 +106,7 @@ development=(
     "namcap" # Validating PKGBUILDs
     "npm" # Installing Neovim plugins
     "pnpm" # Better than npm
+    "posting" # Terminal API client
     "powershell-bin" # W
     "rustup" # RUUUUST
     "tokei" # Epic line counts
@@ -120,9 +121,8 @@ gaming=(
     "steam" # Good guy Valve
     "steam-native-runtime"
     "proton-ge-custom-bin" # Better Proton
-    "protontricks-git"
     "protonup-qt" # GUI for managing Proton versions
-    "xpadneo" # Wireles xbox controller support
+    "xpadneo-dkms-git" # Wireles xbox controller support
 )
 i3=(
     "arandr" # Monitor config
@@ -170,7 +170,6 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "xorg-xeyes" # Useful for debugging XWayland issues
 )
 insprill=( # Stuff I use that I doubt anyone else cares about
-    "authy"
     "feishin-bin"
     "thunderbird"
     "unityhub"
