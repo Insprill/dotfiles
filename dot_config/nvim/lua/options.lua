@@ -7,6 +7,11 @@ local g = vim.g
 o.cursorlineopt = "both"
 o.relativenumber = true
 
+-- Windows-specific options
+if jit.os == "Windows" then
+  o.shell = "pwsh"
+end
+
 -- Auto-reload
 vim.cmd [[
   autocmd FocusGained,BufEnter * checktime
