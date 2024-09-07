@@ -22,7 +22,7 @@ local servers = {
   -- "rust_analyzer", -- Setup later
   "svelte",
   "tailwindcss",
-  "tsserver",
+  "ts_ls",
   "yamlls",
 }
 
