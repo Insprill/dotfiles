@@ -168,9 +168,11 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "xdg-desktop-portal-hyprland-git"
     "xdg-desktop-portal-gtk"
     "xorg-xeyes" # Useful for debugging XWayland issues
+    "xorg-xhost" # Fixes GParted not opening
 )
 insprill=( # Stuff I use that I doubt anyone else cares about
     "feishin-bin"
+    "spek"
     "thunderbird"
     "unityhub"
     "vesktop-bin"
