@@ -11,6 +11,7 @@
 [tag]
 	gpgsign = true
 {{ if ne .chezmoi.os "windows" }}
+[credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
 	credentialStore = gpg
 {{ end }}
