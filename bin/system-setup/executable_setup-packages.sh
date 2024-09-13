@@ -175,6 +175,7 @@ insprill=( # Stuff I use that I doubt anyone else cares about
     "spek"
     "thunderbird"
     "unityhub"
+    "gconf" # Required for Unity to work
     "vesktop-bin"
 )
 
