@@ -133,9 +133,24 @@ if ($selection) {
   ProcessChoice($selection)
 }
 
-Write-Host "Creating FanControl symlinks"
+Write-Host "Creating symlinks"
 $roamingPath = [System.Environment]::GetFolderPath('ApplicationData')
-New-Item -Path 'C:\Program Files (x86)\FanControl\Configurations' -ItemType SymbolicLink -Value "$roamingPath'\FanControl\Configurations'"
-New-Item -Path 'C:\Program Files (x86)\FanControl\Plugins' -ItemType SymbolicLink -Value "$roamingPath\FanControl\Plugins"
+$symLinks = @{
+    'C:\Program Files (x86)\FanControl\Configurations' = "$roamingPath\FanControl\Configurations"
+    'C:\Program Files (x86)\FanControl\Plugins' = "$roamingPath\FanControl\Plugins"
+}
+
+foreach ($path in $symLinks.Keys) {
+    if (Test-Path $path) {
+        Write-Warning "Path $path already exists. Skipping creation of symlink."
+    } else {
+        try {
+            New-Item -Path $path -ItemType SymbolicLink -Value $symLinks[$path]
+            Write-Host "Created symlink: $path -> $($symLinks[$path])"
+        } catch {
+            Write-Error "Failed to create symlink for $path. Error: $_"
+        }
+    }
+}
 
 Pause
