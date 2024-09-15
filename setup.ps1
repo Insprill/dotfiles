@@ -22,6 +22,7 @@ $essentials = @{
     "Microsoft.PowerToys",
     "Mozilla.Firefox",
     "nomacs.nomacs",
+    "Python.Python.3.9", # Required for FanControl's liquidctl plugin
     "Rem0o.FanControl",
     "RamenSoftware.Windhawk",
     "REALiX.HWiNFO",
@@ -132,6 +133,9 @@ if ($selection) {
   $selection = $selection.Split(" ") | ForEach-Object { $groups[$_] }
   ProcessChoice($selection)
 }
+
+Write-Host "Installing liquidctl"
+C:\Users\Insprill\AppData\Local\Programs\Python\Python39\python.exe -m pip install liquidctl
 
 Write-Host "Creating symlinks"
 $roamingPath = [System.Environment]::GetFolderPath('ApplicationData')
