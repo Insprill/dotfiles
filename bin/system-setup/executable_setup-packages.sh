@@ -49,9 +49,8 @@ essentials=(
     "popsicle" # USB flasher
     "qt6ct" # QT6 theming
     "qt5ct" # QT5 theming
-    "qt5-graphicaleffects" # SDDM theme stuff
-    "qt5-svg" # More SDDM theme stuff
-    "qt5-quickcontrols2" # Guess what? Even more SDDM theme stuff!
+    "qt6-declarative" # SDDM theme stuff
+    "qt6-svg" # More SDDM theme stuff
     "ripgrep" # Grep on cocaine
     "rofi-wayland" # Rofi with Wayland support
     "rofi-calc-git" # Rofi calculator
@@ -164,7 +163,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "qt6-wayland" # QT6 Wayland support
     "waybar-git"
     "wl-clipboard" # xclip but wayland
-    "wpaperd" # Desktop background
+    "waypaper" # Desktop background
     "xdg-desktop-portal-hyprland-git"
     "xdg-desktop-portal-gtk"
     "xorg-xeyes" # Useful for debugging XWayland issues
