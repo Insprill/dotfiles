@@ -14,6 +14,9 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require 'nvim-treesitter.install'.compilers = { "zig", "clang", "gcc" }
+    end,
     opts = {
       -- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages
       ensure_installed = {
