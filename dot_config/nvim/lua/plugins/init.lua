@@ -22,12 +22,6 @@ return {
   },
 
   {
-    "nvim-treesitter/nvim-treesitter",
-    config = require("configs.treesitter").config,
-    opts = require("configs.treesitter").opts,
-  },
-
-  {
     "vuki656/package-info.nvim",
     dependencies = {
       "MunifTanjim/nui.nvim",
@@ -71,6 +65,13 @@ return {
     "nvim-tree/nvim-tree.lua",
     opts = require "configs.nvim-tree",
   },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    -- config = require("configs.treesitter").config,
+    opts = require("configs.treesitter").opts,
+  },
+
 
   {
     "lewis6991/gitsigns.nvim",
