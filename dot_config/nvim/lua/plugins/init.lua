@@ -13,9 +13,14 @@ return {
   },
 
   {
+    "seblj/roslyn.nvim",
+    ft = "cs",
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     config = function()
-      require 'nvim-treesitter.install'.compilers = { "zig", "clang", "gcc" }
+      require 'nvim-treesitter.install'.compilers = { "clang", "gcc" }
     end,
     opts = {
       -- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages

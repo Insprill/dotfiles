@@ -3,12 +3,11 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- :help lspconfig-all | https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- :help lspconfig-all | https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 local servers = {
   "bashls",
   "clangd",
   --  "crates", -- Setup later
-  --  "csharp_ls", -- Setup later
   "cssls",
   "docker_compose_language_service",
   "dockerls",
@@ -44,16 +43,6 @@ require("crates").setup {
     completion = true,
     hover = true,
   },
-}
-
--- C# | Add support for decompilation
-lspconfig.csharp_ls.setup {
-  handlers = {
-    ["textDocument/definition"] = require("plugins.csharpls_extended.lua.csharpls_extended").handler,
-  },
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
 }
 
 -- Rust | Enable all features by default
