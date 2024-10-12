@@ -1,4 +1,4 @@
-local options = {
+return {
   -- :help conform-formatters | https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
   formatters_by_ft = {
     -- Configs
@@ -29,5 +29,3 @@ local options = {
   --   lsp_fallback = true,
   -- },
 }
-
-return options
