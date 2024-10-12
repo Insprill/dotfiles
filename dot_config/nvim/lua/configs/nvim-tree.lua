@@ -1,4 +1,11 @@
 return {
+  filesystem_watchers = {
+    ignore_dirs = {
+      "node_modules",
+      "Library",
+      "Temp",
+    },
+  },
   git = {
     enable = true,
     ignore = false,
