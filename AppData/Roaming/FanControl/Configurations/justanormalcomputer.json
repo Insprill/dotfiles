@@ -1,5 +1,5 @@
 {
-  "__VERSION__": "199",
+  "__VERSION__": "206",
   "Main": {
     "Controls": [
       {
@@ -159,8 +159,8 @@
           "Name": "GPU",
           "OneWayHysteresis": false,
           "Points": [
-            "30,9.920888888888896",
-            "50,9.920888888888896",
+            "30,15",
+            "50,15",
             "60.020088515019296,20.054222222222222",
             "70.1,30.187555555555562",
             "80.6,69.65422222222222"
@@ -199,14 +199,14 @@
           "MaximumCommand": 100,
           "MaximumTemperature": 120.0,
           "MinimumTemperature": 20.0,
-          "Name": "Top Exhaust",
+          "Name": "CPU Case",
           "OneWayHysteresis": false,
           "Points": [
-            "29.573432938886967,9.920888888888896",
-            "40,25",
+            "30,25",
+            "40,35",
             "50,100"
           ],
-          "SelectedHysteresis": 1.0,
+          "SelectedHysteresis": 0.0,
           "SelectedResponseTime": 1,
           "SelectedTempSource": {
             "Identifier": "LiquidctlPlugin/\\\\?\\HID#VID_1E71&PID_300E&MI_01#a&185665fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}-liqtmp",
@@ -236,8 +236,58 @@
         "SelectedFanCurve": {
           "CommandMode": 0,
           "IsHidden": false,
-          "Name": "20 flat",
-          "Percent": 20.0
+          "Name": "CPU/GPU Case Mix",
+          "SelectedFanCurves": [
+            {
+              "CommandMode": 0,
+              "IgnoreHysteresisAtLimits": true,
+              "IsHidden": false,
+              "MaximumCommand": 100,
+              "MaximumTemperature": 120.0,
+              "MinimumTemperature": 20.0,
+              "Name": "CPU Case",
+              "OneWayHysteresis": false,
+              "Points": [
+                "30,25",
+                "40,35",
+                "50,100"
+              ],
+              "SelectedHysteresis": 0.0,
+              "SelectedResponseTime": 1,
+              "SelectedTempSource": {
+                "Identifier": "LiquidctlPlugin/\\\\?\\HID#VID_1E71&PID_300E&MI_01#a&185665fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}-liqtmp",
+                "IsHidden": false,
+                "Name": "Liquid Temp. - NZXT Kraken 2023",
+                "NickName": "Liquid Temp. - NZXT Kraken 2023"
+              }
+            },
+            {
+              "CommandMode": 0,
+              "IgnoreHysteresisAtLimits": true,
+              "IsHidden": false,
+              "MaximumCommand": 100,
+              "MaximumTemperature": 120.0,
+              "MinimumTemperature": 20.0,
+              "Name": "GPU Case",
+              "OneWayHysteresis": false,
+              "Points": [
+                "40,20",
+                "50,30",
+                "60,40",
+                "70,55",
+                "80,80"
+              ],
+              "SelectedHysteresis": 1.0,
+              "SelectedResponseTime": 1,
+              "SelectedTempSource": {
+                "Identifier": "ADLX/AMD Radeon RX 7900 XTX/768/temp/GPU",
+                "IsHidden": false,
+                "Name": "GPU",
+                "NickName": "GPU"
+              }
+            }
+          ],
+          "SelectedMixFunction": 2
         },
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -260,8 +310,58 @@
         "SelectedFanCurve": {
           "CommandMode": 0,
           "IsHidden": false,
-          "Name": "20 flat",
-          "Percent": 20.0
+          "Name": "CPU/GPU Case Mix",
+          "SelectedFanCurves": [
+            {
+              "CommandMode": 0,
+              "IgnoreHysteresisAtLimits": true,
+              "IsHidden": false,
+              "MaximumCommand": 100,
+              "MaximumTemperature": 120.0,
+              "MinimumTemperature": 20.0,
+              "Name": "CPU Case",
+              "OneWayHysteresis": false,
+              "Points": [
+                "30,25",
+                "40,35",
+                "50,100"
+              ],
+              "SelectedHysteresis": 0.0,
+              "SelectedResponseTime": 1,
+              "SelectedTempSource": {
+                "Identifier": "LiquidctlPlugin/\\\\?\\HID#VID_1E71&PID_300E&MI_01#a&185665fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}-liqtmp",
+                "IsHidden": false,
+                "Name": "Liquid Temp. - NZXT Kraken 2023",
+                "NickName": "Liquid Temp. - NZXT Kraken 2023"
+              }
+            },
+            {
+              "CommandMode": 0,
+              "IgnoreHysteresisAtLimits": true,
+              "IsHidden": false,
+              "MaximumCommand": 100,
+              "MaximumTemperature": 120.0,
+              "MinimumTemperature": 20.0,
+              "Name": "GPU Case",
+              "OneWayHysteresis": false,
+              "Points": [
+                "40,20",
+                "50,30",
+                "60,40",
+                "70,55",
+                "80,80"
+              ],
+              "SelectedHysteresis": 1.0,
+              "SelectedResponseTime": 1,
+              "SelectedTempSource": {
+                "Identifier": "ADLX/AMD Radeon RX 7900 XTX/768/temp/GPU",
+                "IsHidden": false,
+                "Name": "GPU",
+                "NickName": "GPU"
+              }
+            }
+          ],
+          "SelectedMixFunction": 2
         },
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -288,14 +388,14 @@
           "MaximumCommand": 100,
           "MaximumTemperature": 120.0,
           "MinimumTemperature": 20.0,
-          "Name": "Top Exhaust",
+          "Name": "CPU Case",
           "OneWayHysteresis": false,
           "Points": [
-            "29.573432938886967,9.920888888888896",
-            "40,25",
+            "30,25",
+            "40,35",
             "50,100"
           ],
-          "SelectedHysteresis": 1.0,
+          "SelectedHysteresis": 0.0,
           "SelectedResponseTime": 1,
           "SelectedTempSource": {
             "Identifier": "LiquidctlPlugin/\\\\?\\HID#VID_1E71&PID_300E&MI_01#a&185665fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}-liqtmp",
@@ -373,12 +473,6 @@
     "FanCurves": [
       {
         "CommandMode": 0,
-        "IsHidden": false,
-        "Name": "20 flat",
-        "Percent": 20.0
-      },
-      {
-        "CommandMode": 0,
         "IgnoreHysteresisAtLimits": true,
         "IsHidden": false,
         "MaximumCommand": 100,
@@ -387,8 +481,8 @@
         "Name": "GPU",
         "OneWayHysteresis": false,
         "Points": [
-          "30,9.920888888888896",
-          "50,9.920888888888896",
+          "30,15",
+          "50,15",
           "60.020088515019296,20.054222222222222",
           "70.1,30.187555555555562",
           "80.6,69.65422222222222"
@@ -400,29 +494,6 @@
           "IsHidden": false,
           "Name": "GPU",
           "NickName": "GPU"
-        }
-      },
-      {
-        "CommandMode": 0,
-        "IgnoreHysteresisAtLimits": true,
-        "IsHidden": false,
-        "MaximumCommand": 100,
-        "MaximumTemperature": 120.0,
-        "MinimumTemperature": 20.0,
-        "Name": "Top Exhaust",
-        "OneWayHysteresis": false,
-        "Points": [
-          "29.573432938886967,9.920888888888896",
-          "40,25",
-          "50,100"
-        ],
-        "SelectedHysteresis": 1.0,
-        "SelectedResponseTime": 1,
-        "SelectedTempSource": {
-          "Identifier": "LiquidctlPlugin/\\\\?\\HID#VID_1E71&PID_300E&MI_01#a&185665fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}-liqtmp",
-          "IsHidden": false,
-          "Name": "Liquid Temp. - NZXT Kraken 2023",
-          "NickName": "Liquid Temp. - NZXT Kraken 2023"
         }
       },
       {
@@ -446,6 +517,110 @@
           "Name": "Core (Tctl/Tdie)",
           "NickName": "Core (Tctl/Tdie)"
         }
+      },
+      {
+        "CommandMode": 0,
+        "IgnoreHysteresisAtLimits": true,
+        "IsHidden": false,
+        "MaximumCommand": 100,
+        "MaximumTemperature": 120.0,
+        "MinimumTemperature": 20.0,
+        "Name": "CPU Case",
+        "OneWayHysteresis": false,
+        "Points": [
+          "30,25",
+          "40,35",
+          "50,100"
+        ],
+        "SelectedHysteresis": 0.0,
+        "SelectedResponseTime": 1,
+        "SelectedTempSource": {
+          "Identifier": "LiquidctlPlugin/\\\\?\\HID#VID_1E71&PID_300E&MI_01#a&185665fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}-liqtmp",
+          "IsHidden": false,
+          "Name": "Liquid Temp. - NZXT Kraken 2023",
+          "NickName": "Liquid Temp. - NZXT Kraken 2023"
+        }
+      },
+      {
+        "CommandMode": 0,
+        "IgnoreHysteresisAtLimits": true,
+        "IsHidden": false,
+        "MaximumCommand": 100,
+        "MaximumTemperature": 120.0,
+        "MinimumTemperature": 20.0,
+        "Name": "GPU Case",
+        "OneWayHysteresis": false,
+        "Points": [
+          "40,20",
+          "50,30",
+          "60,40",
+          "70,55",
+          "80,80"
+        ],
+        "SelectedHysteresis": 1.0,
+        "SelectedResponseTime": 1,
+        "SelectedTempSource": {
+          "Identifier": "ADLX/AMD Radeon RX 7900 XTX/768/temp/GPU",
+          "IsHidden": false,
+          "Name": "GPU",
+          "NickName": "GPU"
+        }
+      },
+      {
+        "CommandMode": 0,
+        "IsHidden": false,
+        "Name": "CPU/GPU Case Mix",
+        "SelectedFanCurves": [
+          {
+            "CommandMode": 0,
+            "IgnoreHysteresisAtLimits": true,
+            "IsHidden": false,
+            "MaximumCommand": 100,
+            "MaximumTemperature": 120.0,
+            "MinimumTemperature": 20.0,
+            "Name": "CPU Case",
+            "OneWayHysteresis": false,
+            "Points": [
+              "30,25",
+              "40,35",
+              "50,100"
+            ],
+            "SelectedHysteresis": 0.0,
+            "SelectedResponseTime": 1,
+            "SelectedTempSource": {
+              "Identifier": "LiquidctlPlugin/\\\\?\\HID#VID_1E71&PID_300E&MI_01#a&185665fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}-liqtmp",
+              "IsHidden": false,
+              "Name": "Liquid Temp. - NZXT Kraken 2023",
+              "NickName": "Liquid Temp. - NZXT Kraken 2023"
+            }
+          },
+          {
+            "CommandMode": 0,
+            "IgnoreHysteresisAtLimits": true,
+            "IsHidden": false,
+            "MaximumCommand": 100,
+            "MaximumTemperature": 120.0,
+            "MinimumTemperature": 20.0,
+            "Name": "GPU Case",
+            "OneWayHysteresis": false,
+            "Points": [
+              "40,20",
+              "50,30",
+              "60,40",
+              "70,55",
+              "80,80"
+            ],
+            "SelectedHysteresis": 1.0,
+            "SelectedResponseTime": 1,
+            "SelectedTempSource": {
+              "Identifier": "ADLX/AMD Radeon RX 7900 XTX/768/temp/GPU",
+              "IsHidden": false,
+              "Name": "GPU",
+              "NickName": "GPU"
+            }
+          }
+        ],
+        "SelectedMixFunction": 2
       }
     ],
     "FanSensors": [
