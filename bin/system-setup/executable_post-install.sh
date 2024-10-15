@@ -92,7 +92,7 @@ set_env_var() {
     fi
 }
 echo "Setting system-wide environment variables"
-set_env_var "QT_QPA_PLATFORMTHEME" "qt6ct:qt5ct"
+set_env_var "QT_QPA_PLATFORMTHEME" "qt6ct"
 set_env_var "BROWSER" "firefox-developer-edition"
 set_env_var "EDITOR" "nvim"
 

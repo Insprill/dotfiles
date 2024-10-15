@@ -48,7 +48,6 @@ essentials=(
     "polkit-kde-agent" # Authentication
     "popsicle" # USB flasher
     "qt6ct" # QT6 theming
-    "qt5ct" # QT5 theming
     "qt6-declarative" # SDDM theme stuff
     "qt6-svg" # More SDDM theme stuff
     "ripgrep" # Grep on cocaine
