@@ -32,6 +32,7 @@ return
 #7::Run komorebic focus-workspace 6,, Hide
 #8::Run komorebic focus-workspace 7,, Hide
 #9::Run komorebic focus-workspace 8,, Hide
+#0::Run komorebic focus-workspace 9,, Hide
 
 ; Move active window to a workspace with Super + SHIFT + [0-9]
 #+1::Run komorebic move-to-workspace 0,, Hide
@@ -43,3 +44,4 @@ return
 #+7::Run komorebic move-to-workspace 6,, Hide
 #+8::Run komorebic move-to-workspace 7,, Hide
 #+9::Run komorebic move-to-workspace 8,, Hide
+#+0::Run komorebic move-to-workspace 9,, Hide
