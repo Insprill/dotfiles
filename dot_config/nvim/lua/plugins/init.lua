@@ -68,7 +68,6 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    -- config = require("configs.treesitter").config,
     opts = require("configs.treesitter").opts,
   },
 

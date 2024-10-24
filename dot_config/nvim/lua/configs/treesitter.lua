@@ -50,8 +50,5 @@ return {
       "xml",
       "yaml",
     },
-  },
-  config = function()
-    require("nvim-treesitter.install").compilers = { "clang", "gcc" }
-  end,
+  }
 }
