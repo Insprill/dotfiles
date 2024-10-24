@@ -22,11 +22,9 @@ $essentials = @{
     "Microsoft.PowerToys",
     "Mozilla.Firefox",
     "nomacs.nomacs",
-    "Python.Python.3.9", # Required for FanControl's liquidctl plugin
-    "Rem0o.FanControl",
     "RamenSoftware.Windhawk",
     "REALiX.HWiNFO",
-    "SomePythonThings.WingetUIStore",
+    "MartiCliment.UniGetUI",
     "twpayne.chezmoi",
     "7zip.7zip"
   )
@@ -40,6 +38,9 @@ $essentials = @{
 $development = @{
   Name = "Development"
   Winget = @(
+    "JetBrains.Toolbox",
+    "LLVM.LLVM", # Required for nvim-treesitter to compile
+    "Neovim.Neovim",
     "Neovide.Neovide",
     "Starship.Starship"
   )
@@ -69,9 +70,11 @@ $tiling = @{
 $insprill = @{
   Name = "Insprill"
   Winget = @(
-    "Mozilla.Thunderbird",
     "LocalSend.LocalSend",
+    "Mozilla.Thunderbird",
     "Nextcloud.NextcloudDesktop"
+    "Python.Python.3.9", # Required for FanControl's liquidctl plugin
+    "Rem0o.FanControl",
   )
   Choco = @(
     "iperf3"
@@ -138,10 +141,10 @@ Write-Host "Installing liquidctl"
 C:\Users\Insprill\AppData\Local\Programs\Python\Python39\python.exe -m pip install liquidctl
 
 Write-Host "Creating symlinks"
-$roamingPath = [System.Environment]::GetFolderPath('ApplicationData')
 $symLinks = @{
-    'C:\Program Files (x86)\FanControl\Configurations' = "$roamingPath\FanControl\Configurations"
-    'C:\Program Files (x86)\FanControl\Plugins' = "$roamingPath\FanControl\Plugins"
+    'C:\Program Files (x86)\FanControl\Configurations' = "$env:APPDATA\FanControl\Configurations"
+    'C:\Program Files (x86)\FanControl\Plugins' = "$env:APPDATA\FanControl\Plugins"
+    "$env:LOCALAPPDATA\nvim" = "$env:USERPROFILE\.config\nvim"
 }
 
 foreach ($path in $symLinks.Keys) {
