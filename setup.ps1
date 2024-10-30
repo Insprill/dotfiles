@@ -128,17 +128,19 @@ $groups = @($essentials, $development, $gaming, $tiling, $insprill)
 
 Write-Host "Available groups to install:"
 for ($counter=0; $counter -lt $groups.Length; $counter++) {
-  Write-Host "$counter) $($groups[$counter].Name)"
+    Write-Host "$counter) $($groups[$counter].Name)"
 }
 
 $selection = Read-Host "Enter the numbers of the groups you want to install (e.g. 1 2)"
 if ($selection) {
-  $selection = $selection.Split(" ") | ForEach-Object { $groups[$_] }
-  ProcessChoice($selection)
+    $selection = $selection.Split(" ") | ForEach-Object { $groups[$_] }
+    ProcessChoice($selection)
 }
 
 Write-Host "Installing liquidctl"
-C:\Users\Insprill\AppData\Local\Programs\Python\Python39\python.exe -m pip install liquidctl
+if (!$DryRun) {
+    C:\Users\Insprill\AppData\Local\Programs\Python\Python39\python.exe -m pip install liquidctl
+}
 
 Write-Host "Creating symlinks"
 $symLinks = @{
@@ -152,7 +154,9 @@ foreach ($path in $symLinks.Keys) {
         Write-Warning "Path $path already exists. Skipping creation of symlink."
     } else {
         try {
-            New-Item -Path $path -ItemType SymbolicLink -Value $symLinks[$path]
+            if (!$DryRun) {
+                New-Item -Path $path -ItemType SymbolicLink -Value $symLinks[$path]
+            }
             Write-Host "Created symlink: $path -> $($symLinks[$path])"
         } catch {
             Write-Error "Failed to create symlink for $path. Error: $_"
