@@ -12,6 +12,7 @@ return function()
     "docker_compose_language_service",
     "dockerls",
     "gopls",
+    "harper_ls",
     "hyprls",
     "jsonls",
     "lua_ls",
