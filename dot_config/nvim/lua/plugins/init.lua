@@ -34,6 +34,7 @@ return {
   {
     "andweeb/presence.nvim",
     lazy = false,
+    opts = require "configs.presence"
   },
 
   {
