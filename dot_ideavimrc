@@ -1,22 +1,42 @@
 let mapleader=" "
 
 """ Options
-set relativenumber
 set number
+set relativenumber
+
 set clipboard+=unnamed
+
 set ignorecase
 set smartcase
 
+set NERDTree
+
+
 
 """ Keys
+
 noremap <leader>fm :action ReformatCode<CR>
 noremap <leader>/ :action CommentByLineComment<CR>
-nnoremap <leader>e :action ActivateProjectToolWindow<CR>
-nnoremap <leader>x :action CloseEditor<CR>
-nnoremap <C-s> :action SaveAll<CR>
+
 nnoremap gr :action ShowUsages<CR>
+
+nnoremap <C-s> :action SaveAll<CR>
+nnoremap <C-l> :action ActivateEditorToolWindow<CR>
+nnoremap <C-w>d :action ShowErrorDescription<CR>
+
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+nnoremap <leader>cm :action ActivateVersionControlToolWindow<CR>:action Vcs.ShowTabbedFileHistory<CR>
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
+nnoremap <leader>ff :action SearchEverywhere<CR>
+nnoremap <leader>fw :action FindInPath<CR>
+nnoremap <leader>gt :action ActivateCommitToolWindow<CR>
+nnoremap <leader>h :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>ra :action RenameElement<CR>
+nnoremap <leader>x :action CloseEditor<CR>
+
 nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
+
 
 
 """ Plugins
