@@ -43,6 +43,7 @@ essentials=(
     "neovim" # Editor
     "neovide" # Editor but Rust
     "nerd-fonts-git" # Fonts
+    "network-manager-applet" # Tray icon for network connectivity
     "nmap" # Network shenanigans
     "nomacs" # Image viewer
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)

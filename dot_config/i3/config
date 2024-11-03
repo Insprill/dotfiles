@@ -293,5 +293,6 @@ exec --no-startup-id numlockx on
 exec --no-startup-id sleep 0.1 && ~/.screenlayout/main.sh
 exec --no-startup-id sleep 1 && conky -d
 exec --no-startup-id dex -a
+exec --no-startup-id nm-applet
 
 exec_always --no-startup-id waypaper --random
