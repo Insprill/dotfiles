@@ -1,12 +1,3 @@
 #!/bin/bash
-
-SETUP_SCRIPT_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-cd "$SETUP_SCRIPT_DIR"
-
-run_script() {
-    bash -c "./system-setup/$1.sh"
-}
-
-run_script pre-install
-run_script setup-packages
-run_script post-install
+SCRIPT_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
+"${SCRIPT_DIR}/setup/run.sh"

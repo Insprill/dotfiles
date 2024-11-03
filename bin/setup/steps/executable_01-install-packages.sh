@@ -1,14 +1,16 @@
 #!/bin/bash
 
 essentials=(
-    "yay" # Must be first
     "alacritty-git" # Primary terminal
+    "amd-ucode" # AMD CPU microcode
     "bat" # cat on steroids
     "beautyline" # Icon
     "bluez" # Bluetooth
     "bluez-utils"
+    "brightnessctl" # Controll screen brightness
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
+    "catppuccin-gtk-theme-mocha" # Catppuccin GTK theme (deprecated :pain:)
     "chezmoi" # Dotfile management
     "compsize" # View BTRFS compression ratios
     "devtools" # Required to edit package files with paru
@@ -22,12 +24,16 @@ essentials=(
     "firefox-developer-edition" # W browser
     "flameshot" # X screenshots
     "gcolor3" # Color picker
+    "git"
+    "git-lfs"
     "gnome-keyring" # Keyring
     "icoutils" # Creating desktop files for Wine applications
+    "intel-ucode" # Intel CPU microcode
     "iotop" # Disk monitor
     "jq" # Json processing
     "kitty" # Backup terminal
     "kvantum" # QT6 theme picker
+    "kvantum-theme-catppuccin-git" # Catppuccin QT theme
     "kwallet-pam" # Unlock wallet
     "kwalletmanager"
     "mkinitcpio" # Must be before the kernel
@@ -54,6 +60,7 @@ essentials=(
     "rofi-wayland" # Rofi with Wayland support
     "rofi-calc-git" # Rofi calculator
     "sddm" # Display manager
+    "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
     "capitaine-cursors" # Cursor
@@ -68,9 +75,6 @@ essentials=(
     "zip"
     "zoxide" # cd on crack
 )
-amdcpu=( # https://wiki.archlinux.org/title/Ryzen
-    "amd-ucode"
-)
 amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "mesa"
     "lib32-mesa"
@@ -84,22 +88,15 @@ amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "vulkan-radeon"
     "lib32-vulkan-radeon"
 )
-catppuccin=(
-    "catppuccin-gtk-theme-mocha"
-    "catppuccin-cursors-mocha"
-    "kvantum-theme-catppuccin-git"
-    "sddm-theme-catppuccin-git"
-)
 development=(
     "docker"
     "docker-buildx"
     "docker-compose"
     "dotnet-sdk" # C#
     "github-cli" # Easy way to login to GitHub with Git
-    "git"
-    "git-lfs"
     "go" # Inferior to Rust
     "jetbrains-toolbox" # IntelliJ/Rider/CLion/Feet
+    "lazygit" # Epic git TUI
     "luarocks" # Neovim config editing
     "namcap" # Validating PKGBUILDs
     "npm" # Installing Neovim plugins
@@ -122,6 +119,31 @@ gaming=(
     "protonup-qt" # GUI for managing Proton versions
     "xpadneo-dkms-git" # Wireles xbox controller support
 )
+intelgpu=(
+    "mesa"
+    "lib32-mesa"
+    "mesa-utils"
+    "libva-mesa-driver"
+    "lib32-libva-mesa-driver"
+    "mesa-vdpau"
+    "lib32-mesa-vdpau"
+    "vulkan-intel"
+    "lib32-vulkan-intel"
+    "intel-gpu-tools"
+)
+intelintegrated_10th_or_older=(
+    "mesa-amber"
+    "lib32-mesa-amber"
+    "mesa-utils"
+    "libva-mesa-driver"
+    "lib32-libva-mesa-driver"
+    "mesa-vdpau"
+    "lib32-mesa-vdpau"
+    "xf86-video-intel"
+    "vulkan-intel"
+    "lib32-vulkan-intel"
+    "intel-gpu-tools"
+)
 i3=(
     "arandr" # Monitor config
     "i3" # Window manager
@@ -136,9 +158,6 @@ i3=(
     "xclip" # Clipboard stuff
     "xorg-xev" # Keybind debugging
 )
-intelcpu=( # https://wiki.archlinux.org/title/Microcode#Loading_microcode
-    "intel-ucode"
-)
 nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "nvidia-dkms"
     "nvidia-settings"
@@ -149,6 +168,8 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "libva-nvidia-driver-git"
 )
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
+    "cmake" # Required to build plugins
+    "cpio" # Required to build plugins
     "hyprutils-git"
     "hyprlang-git"
     "hyprcursor-git"
@@ -160,6 +181,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "hyprpicker" # Color picker
     "qt5-wayland" # QT5 Wayland support
     "qt6-wayland" # QT6 Wayland support
+    "meson" # Required to build plugins
     "waybar-git"
     "wl-clipboard" # xclip but wayland
     "waypaper" # Desktop background
@@ -179,23 +201,18 @@ insprill=( # Stuff I use that I doubt anyone else cares about
 
 groups_list=(
     essentials
-    amdcpu
     amdgpu
-    catppuccin
     development
     gaming
+    intelgpu
+    intelintegrated_10th_or_older
     i3
-    intelcpu
     nvidia
     hyprland
     insprill
 )
 
-dry_run=false
-if [[ "$1" == "--dry-run" ]]; then
-    dry_run=true
-    echo "Dry run mode - no installations will be performed."
-fi
+dry_run=$1
 
 check_install_method() {
     if pacman -Si "$1" &> /dev/null; then
@@ -208,7 +225,7 @@ check_install_method() {
 install_packages() {
     for pkg in "$@"; do
         install_method=$(check_install_method "$pkg")
-        if $dry_run; then
+        if "$dry_run"; then
             echo "[DRY RUN] Would install $pkg using $install_method."
         else
             if [ "$install_method" = "pacman" ]; then
@@ -238,20 +255,19 @@ list_group_packages() {
 }
 
 process_choice() {
-    local confirm
     for choice in "$@"; do
         list_group_packages "$choice"
     done
 
-    read -p "Proceed with installation? (y/N): " confirm
-    if [[ "$confirm" =~ ^[Yy]$ ]]; then
+    read -p "Proceed with installation? [y/N]: " -n 1 -r; echo
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
         echo "Updating system..."
-        if [ ! $dry_run ]; then
-            sudo pacman -Syu
+        if ! "$dry_run"; then
+            sudo pacman -Syu --needed yay # Updates system & ensures yay is installed
             yay -Syu
         fi
         for choice in "$@"; do
-            local group_idx=$(( $choice - 1 ))
+            local group_idx=$(( choice - 1 ))
             local group_name=${groups_list[$group_idx]}
             local -n group_ref=$group_name
             echo "Installing $group_name..."
@@ -263,9 +279,8 @@ process_choice() {
 }
 
 display_choices
-read -p "Enter the numbers of the groups you want to install (e.g., 1 2): " input
-selected_choices=($input)
+read -p "Enter the numbers of the groups you want to install, seperated by spaces: " -r -a input; echo
 
-process_choice "${selected_choices[@]}"
+process_choice "${input[@]}"
 
 echo "Installation complete."

@@ -1,0 +1,63 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )" || exit 1 # This shouldn't fail™
+STEPS_DIR="$SCRIPT_DIR/steps"
+if ! cd "$STEPS_DIR"; then
+    echo "Failed to find steps directory at '${STEPS_DIR}'!"
+    exit 1
+fi
+
+steps=(
+    01-install-packages
+    02-remove-packages
+    03-create-etc-links
+    04-gpu-config-amd
+    05-gpu-config-nvidia
+    06-theme-grub
+    08-rebuild-bat-cache
+    09-enable-sddm
+    10-set-shell
+    11-install-hyprland-plugins
+    12-install-rust-toolchains
+    13-install-git-lfs
+    14-github-login
+    15-set-vscode-passwd-store
+    20-enable-clipping
+    90-adjust-sys-clock
+    97-update-grub
+    98-rebuild-initramfs
+    99-reboot
+)
+
+step_name() {
+    echo "${1#[0-9]*-}"
+}
+
+dry_run=false
+if [[ "$1" == "--dry-run" ]]; then
+    dry_run=true
+    echo "Dry run mode - no system modifications will be made!"
+fi
+
+echo "Setup Steps:"
+for i in "${!steps[@]}"; do
+    echo "$((i+1)). $(step_name "${steps[i]}")"
+done
+
+read -p "Enter the numbers of the steps you'd like to skip, seperated by spaces: " -r -a steps_to_skip; echo
+
+total_steps=${#steps[@]}
+curr_step=1
+
+for step in "${steps[@]}"; do
+    if [[ ${steps_to_skip[*]} =~ $curr_step ]]; then
+        echo "[$curr_step/$total_steps] Skipping $(step_name "$step")..." >&2
+    else
+        echo "[$curr_step/$total_steps] Executing $(step_name "$step")..." >&2
+        if ! bash "$step.sh" $dry_run; then
+            echo "[$curr_step/$total_steps] ERROR: $step failed with exit code $?" >&2
+            exit 1
+        fi
+    fi
+    ((curr_step++))
+done

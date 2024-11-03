@@ -1,5 +1,5 @@
 # dotfiles
-The dotfiles I use on Arch... btw.
+The dotfiles I use on Arch... btw (and Windows).
 
 All files are managed with [chezmoi](https://www.chezmoi.io/).  
 You can read their documentation [here](https://www.chezmoi.io/install/).
@@ -7,46 +7,71 @@ You can read their documentation [here](https://www.chezmoi.io/install/).
 These dotfiles are heavily customized to my liking, but if you'd like to try them
 for whatever reason, and so I don't forget, here's how to get the system setup.
 
-## Setup
 
-These dotfiles are made for [EndeavourOS](https://endeavouros.com/).
-Things may not work correctly on other distros.
 
-When installing, don't select a desktop.
-When asked what packages should be installed, ensure the X packages are checked,
-but Firefox and EndeavourOS Applications are not.
-Use common sense with the other packages to select/unselect.
 
-Once the system is setup, install Chezmoi to get the dotfiles
+## Linux
+
+### Distro Setup
+
+#### CachyOS
+
+1. [Download CachyOS Desktop Edition](https://cachyos.org/download/).
+1. Flash the ISO to a USB drive (or use [Ventoy](https://www.ventoy.net/)).
+1. Boot into the live ISO.
+1. If you're using a laptop, ensure it's plugged in.
+1. Connect to the internet (required).
+1. In the `CachyOS Hello` window, click `Launch installer`.
+1. Select `Grub` as your bootloader.
+1. Wait for the installer window to open. This may take a moment.
+1. Proceed through the installer to the `Desktop` step as normal.
+1. Once on the `Desktop` step, select `No Desktop`.
+1. In the `Additional packages` page, ensure the only selections are `Base-devel + Common packages`, `CPU specific Microcode update packages`, and optionally `Printing-Support`.
+1. Finish the installation as normal.
+
+
+### System Setup
+
+1. After OS installation, reboot the machine.
+2. Login to the account you made during installation.
+3. Run the following command to install chezmoi.
 ```shell
 sudo pacman -Syu chezmoi
 ```
-
-To install the dotfiles, run
+4. Run the following command download & install the dotfiles. If you forked this repo, replace `Insprill` with your username.
 ```shell
-chezmoi init Insprill
-chezmoi apply
+chezmoi init Insprill && chezmoi apply
 ```
-
-If you have a fork of this repository, replace `Insprill` with your GitHub username,
-or you can provide a full URL to a repository.
-Chezmoi's documentation has more information.
-
-To get the rest of the system setup, run the `setup-system` script in the `~/bin` directory.
+5. Run the following command to begin system setup. Follow the prompts it gives you as it goes.
+Once it finishes, it will prompt you to reboot, and your system is completely setup.
 ```shell
 ~/bin/setup-system
 ```
 
-Follow the prompts, and when finished, reboot with `sudo reboot`.
 
-## Post Setup
+### i3 Post-Setup
 
-### i3 Rounded Corner Borders
+#### Rounded Corner Borders
 
-To get proper borders with rounded corners in i3, run the `patch-i3` script in the `bin` directory while in i3.
+To get proper borders with rounded corners in i3, run the `patch-i3` script in the `bin` directory, while in i3.
 Note that this will log you out, closing any applications you had open!
 
-### i3 Monitor Layout
+#### Monitor Layout
 
 To save a monitor layout on i3, open `arandr`, adjust the monitors how you'd like, then save the file to `~/.screenlayout/main.sh`.
 
+
+
+
+## Windows (AtlasOS)
+
+1. Follow the [AtlasOS Installation Guide](https://docs.atlasos.net/getting-started/installation/) until your system is setup.
+2. Run the following command to install chezmoi.
+```shell
+winget install twpayne.chezmoi
+```
+3. Run the following command to download & install the dotfiles. If you forked this repo, replace `Insprill` with your username.
+```shell
+chezmoi init Insprill && chezmoi apply
+```
+4. Navigate to your home directory, and run the `setup.ps1` script with PowerShell as an Administrator.
