@@ -16,12 +16,5 @@
     "stack": "#cba6f7",
     "monocle": "#cba6f7"
   },
-  "global_work_area_offset": { "bottom": 0, "left": 0, "right": 0, "top": 0 },
-  "float_rules": [
-    {
-      "kind": "Exe",
-      "id": "Zebar.exe",
-      "matching_strategy": "Equals"
-    }
-  ]
+  "global_work_area_offset": { "bottom": 0, "left": 0, "right": 0, "top": 0 }
 }
