@@ -1,118 +1,164 @@
 {
-  "layer": "top",
-  "position": "top",
-  "mod": "dock",
-  "exclusive": true,
-  "passthrough": false,
-  "gtk-layer-shell": true,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["custom/media"],
-  "modules-right": ["tray", "network", "cpu", "memory", "pulseaudio", "clock"],
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
 
-  "clock": {
-    "format": "\uf017  {:%m-%d-%y %H:%M:%S}",
-    "interval": 1,
-    "tooltip": true,
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "on-click-right": "mode",
-      "format": {
-        "months": "<span color='#f9e2af'><b>{}</b></span>",
-        "days": "<span color='#b4befe'><b>{}</b></span>",
-        "weeks": "<span color='#94e2d5'><b>W{}</b></span>",
-        "weekdays": "<span color='#fab387'><b>{}</b></span>",
-        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
-      }
+    "layer": "top",
+    "position": "top",
+
+    "spacing": 5,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        // "backlight",
+        "network",
+        "mpris"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "temperature",
+        "cpu",
+        "memory",
+        "battery",
+        "wireplumber",
+        "custom/power"
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["󰛩 ", "󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+        "on-scroll-down": "brightnessctl s 5%-",
+        "on-scroll-up": "brightnessctl s +5%",
+        "cursor": false,
+        "tooltip": false
     },
-    "actions": {
-      "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
-  },
 
-  "cpu": {
-    "interval": 2,
-    "format": "\udb83\udf86  {usage}%",
-    "states": {
-      "warning": 50,
-      "critical": 80
+    "battery": {
+        "interval": 1,
+        "states": {
+            "good": 95,
+            "warning": 20,
+            "critical": 5
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "tooltip-format": "{timeTo}\nPower Draw: {power}W\nCycles: {cycles}\nHealth: {health}%"
     },
-    "on-click": "alacritty -e btop"
-  },
 
-  "custom/media": {
-    "exec": "/usr/bin/python3 ~/.config/waybar/custom_modules/mediaplayer.py",
-    "format": "{}",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
-  },
-
-  "memory": {
-    "interval": 2,
-    "format": "\ue266  {}%",
-    "tooltip": true,
-    "tooltip-format": "Memory - {used:0.1f}GB used",
-    "states": {
-      "warning": 50,
-      "critical": 80
+    "clock": {
+        "interval": 1,
+        "format": "  {:%H:%M:%S    %m/%d/%y}",
+        "tooltip-format": "<big>{calendar}</big>",
+        "today-format": "<b>{}</b>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "",
+            "on-scroll": 1,
+            "format": {
+                "months":   "<span color='#cba6f7'><b>{}</b></span>", // Mauve
+                "days":     "<span color='#cdd6f4'><b>{}</b></span>", // Text
+                "weeks":    "<span color='#89dceb'><b>W{}</b></span>", // Blue
+                "weekdays": "<span color='#fab387'><b>{}</b></span>", // Peach
+                "today":    "<span color='#f38ba8'><b><big>{}</big></b></span>" // Red
+            }
+        }
     },
-    "on-click": "alacritty -e btop"
-  },
 
-  "network": {
-    "interval": 2,
-    "format": "\udb81\udc8d  {ipaddr} | \uf019  {bandwidthDownBits}  \uf093 {bandwidthUpBits}",
-    "on-click": "alacritty -e btop"
-  },
+    "cpu": {
+        "interval": 1,
+        "format": "{icon} {usage}%",
+        "format-icons": ["󰾆 ", "󰾅 ", "󰓅 "]
+    },
 
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": " ",
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pavucontrol",
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-    "scroll-step": 5,
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
+    "custom/power": {
+        "format": " ",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{name}",
+        "sort-by-number": true,
+        "active-only": false,
+        "cursor": true
+    },
+
+    "temperature": {
+        "interval": 2,
+        "critical-threshold": 85,
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "alacritty -e btop",
+        "tooltip": false
+    },
+
+    "memory": {
+        "interval": 1,
+        "format": "  {percentage}%",
+        "tooltip-format": "⎯⎯ Memory ⎯⎯\nUsed: {used} GiB\nAvail: {avail} GiB\nTotal: {total} GiB\n⎯⎯ Swap ⎯⎯\nUsed: {swapUsed} GiB\nAvail: {swapAvail} GiB\nTotal: {swapTotal} GiB",
+        "on-click": "alacritty -e btop"
+    },
+
+    "mpris": {
+        "interval": 5,
+        "format": "{player_icon} {artist} - {title}",
+        "format-paused": "{status_icon} <i>{artist} - {title}</i>",
+        "player-icons": {
+          "default": ""
+        },
+        "status-icons": {
+          "paused": ""
+        }
+    },
+
+    "network": {
+      "interval": 1,
+      "format": "  {bandwidthDownBits}   {bandwidthUpBits}",
+      "format-disconnected": "",
+      "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}",
+      "tooltip-format-wifi": "SSID: {essid}\nFreq: {frequency}GHz\nStrength: {signaldBm}dBm\nInterface: {ifname}\nIP: {ipaddr}",
+      "on-click": "alacritty -e btop",
+      "tooltip": true
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 5,
+        "cursor": true
+    },
+
+    "wireplumber": {
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "format": "<span foreground='#fab387'>{icon}</span> {volume}%",
+        "format-muted": "<span foreground='#fab387'> </span> {volume}%",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        }
     }
-  },
-
-  "tray": {
-    "icon-size": 14,
-    "spacing": 10
-  },
-
-  "wlr/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "on-click": "activate",
-    "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
-    }
-  }
 }
