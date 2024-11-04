@@ -137,6 +137,12 @@ if ($selection) {
     ProcessChoice($selection)
 }
 
+$komorebicPath = "C:\Program Files\komorebi\bin\komorebic.exe"
+if (Test-Path $komorebicPath) {
+  Write-Host "Updating komorebic applications"
+  Start-Process -FilePath "$komorebicPath" -ArgumentList "fetch-asc"
+}
+
 Write-Host "Installing liquidctl"
 if (!$DryRun) {
     C:\Users\Insprill\AppData\Local\Programs\Python\Python39\python.exe -m pip install liquidctl
