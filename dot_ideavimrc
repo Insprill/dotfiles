@@ -21,7 +21,6 @@ noremap <leader>/ :action CommentByLineComment<CR>
 nnoremap gr :action ShowUsages<CR>
 
 nnoremap <C-s> :action SaveAll<CR>
-nnoremap <C-l> :action ActivateEditorToolWindow<CR>
 nnoremap <C-w>d :action ShowErrorDescription<CR>
 
 nnoremap <leader>ca :action ShowIntentionActions<CR>
