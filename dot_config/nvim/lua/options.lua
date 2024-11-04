@@ -10,15 +10,6 @@ o.relativenumber = true
 -- Windows-specific options
 if jit.os == "Windows" then
   o.shell = "pwsh"
-  -- This is super hacky, but necessary for nvim-treesitter to work
-  -- properly on Windows. Using CC or GCC will cause Neovim to crash
-  -- as soon as a treesitter is loaded. Using zig causes nothing to
-  -- compile at all. Setting "require 'nvim-treesitter.install'.compilers"
-  -- to "zig" in the plugins' init function works, but not for the first
-  -- install, since the compilation process starts before init is called.
-  -- This ends up being the only way to get everything fully functional
-  -- the first time nvim-treesitter is installed.
-  vim.fn.setenv("CC", "clang")
 end
 
 -- Auto-reload
