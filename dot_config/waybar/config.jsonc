@@ -6,8 +6,6 @@
     "layer": "top",
     "position": "top",
 
-    "spacing": 5,
-
     "modules-left": [
         "hyprland/workspaces",
         "custom/updates",
