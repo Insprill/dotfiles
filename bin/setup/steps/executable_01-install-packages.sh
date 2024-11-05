@@ -3,6 +3,7 @@
 essentials=(
     "alacritty-git" # Primary terminal
     "amd-ucode" # AMD CPU microcode
+    "ark" # Archive management
     "bat" # cat on steroids
     "bluez" # Bluetooth
     "bluez-utils"
@@ -14,7 +15,6 @@ essentials=(
     "compsize" # View BTRFS compression ratios
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
-    "dolphin" # File manager
     "dunst" # Notifications
     "dust" # du on crack
     "eza" # ls on crack
@@ -26,6 +26,7 @@ essentials=(
     "git"
     "git-lfs"
     "gnome-keyring" # Keyring
+    "gvfs" # PCManFM stuff
     "icoutils" # Creating desktop files for Wine applications
     "intel-ucode" # Intel CPU microcode
     "iotop" # Disk monitor
@@ -51,6 +52,7 @@ essentials=(
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
     "pavucontrol" # Audio settings
+    "pcmanfm-qt" # File manager
     "polkit-kde-agent" # Authentication
     "popsicle" # USB flasher
     "qt6ct" # QT6 theming
