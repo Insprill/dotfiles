@@ -20,6 +20,12 @@ sudo ln -s "$SRC/X11/xorg.conf.d/50-mouse.conf" /etc/X11/xorg.conf.d/50-mouse.co
 sudo mkdir -p /etc/sysctl.d/
 sudo ln -s "$SRC/sysctl.d/fs.conf" /etc/sysctl.d/fs.conf
 
+# Sudo
+# These can't be linked as sudo requires
+# them to be owned by root.
+sudo mkdir -p /etc/sudoers.d/
+sudo cp "$SRC/sudoers.d/20-insults" /etc/sudoers.d/20-insults
+
 # SDDM
 sudo mkdir -p /etc/sddm.conf.d/
 sudo ln -s "$SRC/sddm.conf.d/custom-settings.conf" /etc/sddm.conf.d/custom-settings.conf
