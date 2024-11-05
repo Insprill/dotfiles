@@ -4,47 +4,23 @@ LICENSE
 
 # Linux-only
 {{ if ne .chezmoi.os "linux" }}
-.config/Kvantum/
-.config/btop/
-.config/code-flags.conf
-.config/conky/
-.config/conky-manager.json
-.config/dunst/
-.config/electron29-flags.conf
-.config/fish/
-.config/gtk-3.0/
-.config/hypr/
-.config/i3/
-.config/neofetch/
-.config/i3status-rust/
-.config/pacseek/
-.config/paru/
-.config/picom.conf
-.config/powershell/
-.config/qt5ct/
-.config/qt6ct/
-.config/rofi/
-.config/systemd/
-.config/waybar/
-.config/wpaperd/
-.config/xsettingsd/
-
-.local/share/applications/
-
+.config/
+.local/
 bin/
-.Xresources
+
 .bashrc
 .dmrc
 .gtkrc-2.0
 .xinitrc
-
+.Xresources
 {{ end }}
 
 # Windows-only
 {{ if ne .chezmoi.os "windows" }}
+!.config/nvim
+!.config/starship.toml
 AppData/
 Documents/PowerShell/
-applications.yaml
 desktop.ini
 init.reg
 komorebi.json
