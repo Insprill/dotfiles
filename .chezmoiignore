@@ -17,12 +17,16 @@ bin/
 
 # Windows-only
 {{ if ne .chezmoi.os "windows" }}
-!.config/nvim
-!.config/starship.toml
 AppData/
 Documents/PowerShell/
 desktop.ini
 init.reg
 komorebi.json
 setup.ps1
+# Windows-only Linux includes
+{{ else }}
+!.config/
+!.config/alacritty/**
+!.config/nvim/**
+!.config/starship.toml
 {{ end }}
