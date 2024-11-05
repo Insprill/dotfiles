@@ -16,7 +16,8 @@
         "mpris"
     ],
     "modules-center": [
-        "clock"
+        "clock",
+        "power-profiles-daemon"
     ],
     "modules-right": [
         "tray",
@@ -150,6 +151,17 @@
       "tooltip-format-wifi": "SSID: {essid}\nFreq: {frequency}GHz\nStrength: {signaldBm}dBm\nInterface: {ifname}\nIP: {ipaddr}",
       "on-click": "alacritty -e btop",
       "tooltip": true
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power Profile: {profile}\nDriver: {driver}",
+      "format-icons": {
+        "default": " ",
+        "performance": " ",
+        "balanced": " ",
+        "power-saver": " "
+      }
     },
 
     "tray": {
