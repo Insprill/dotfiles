@@ -55,6 +55,7 @@ essentials=(
     "pcmanfm-qt" # File manager
     "polkit-kde-agent" # Authentication
     "popsicle" # USB flasher
+    "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
     "qt6-declarative" # SDDM theme stuff
     "qt6-svg" # More SDDM theme stuff
