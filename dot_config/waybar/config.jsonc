@@ -82,8 +82,9 @@
 
     "cpu": {
         "interval": 1,
-        "format": "{icon} {usage}%",
-        "format-icons": ["󰾆 ", "󰾅 ", "󰓅 "]
+        "format": "{icon} {usage}% | {max_frequency:0.1f}GHz",
+        "format-icons": ["󰾆 ", "󰾅 ", "󰓅 "],
+        "on-click": "alacritty -e btop"
     },
 
     "custom/power": {
