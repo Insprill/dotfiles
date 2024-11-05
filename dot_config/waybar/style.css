@@ -93,16 +93,8 @@ tooltip.background {
   color: #c8d2e0;
 }
 
-#cpu {
-  color: #fb958b;
-}
-
 #custom-power {
   background: transparent;
-}
-
-#memory {
-  color: #ebcb8b;
 }
 
 #mpris {
@@ -110,16 +102,8 @@ tooltip.background {
   color: #1e1e2e; /* Base */
 }
 
-label:focus {
-  background-color: #000000;
-}
-
-#network {
-  color: #b48ead;
-}
-
 #network.disconnected {
-  color: #f53c3c;
+  color: #f38ba8; /* Red */
 }
 
 #temperature.critical {
