@@ -8,6 +8,10 @@ sudo mkdir -p /etc/pacman.d/hooks/
 sudo ln -s "$SRC/pacman.d/hooks/vencord-pre.hook" /etc/pacman.d/hooks/vencord-pre.hook
 sudo ln -s "$SRC/pacman.d/hooks/vencord-post.hook" /etc/pacman.d/hooks/vencord-post.hook
 
+# Polkit rules
+sudo mkdir -p /etc/polkit-1/rules.d/
+sudo ln -s "$SRC/polkit-1/rules.d/10-power-management.rules" /etc/polkit-1/rules.d/10-power-management.rules
+
 # X11 settings
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo ln -s "$SRC/X11/xorg.conf.d/50-mouse.conf" /etc/X11/xorg.conf.d/50-mouse.conf

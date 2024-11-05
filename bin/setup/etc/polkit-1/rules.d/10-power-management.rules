@@ -1,0 +1,19 @@
+polkit.addRule(function(action, subject) {
+    var permission = {
+        // Power management actions
+        "org.freedesktop.login1.power-off": "yes",
+        "org.freedesktop.login1.power-off-multiple-sessions": "yes",
+        "org.freedesktop.login1.reboot": "yes",
+        "org.freedesktop.login1.reboot-multiple-sessions": "yes",
+        "org.freedesktop.login1.suspend": "yes",
+        "org.freedesktop.login1.hibernate": "yes",
+
+        // Power profile daemon
+        "net.hadess.PowerProfiles.switch-profile": "yes"
+    };
+
+    if (subject.isInGroup("wheel") &&
+        action.id in permission) {
+        return polkit.Result[permission[action.id]];
+    }
+});
