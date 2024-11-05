@@ -50,14 +50,15 @@
         "interval": 1,
         "states": {
             "good": 95,
-            "warning": 20,
+            "low": 25,
+            "warning": 10,
             "critical": 5
         },
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-icons": [" ", " ", " ", " ", " "],
-        "tooltip-format": "{timeTo}\nPower Draw: {power}W\nCycles: {cycles}\nHealth: {health}%"
+        "tooltip-format": "{timeTo}\nPower Draw: {power:0.2f}W\nCycles: {cycles}\nHealth: {health}%"
     },
 
     "clock": {
