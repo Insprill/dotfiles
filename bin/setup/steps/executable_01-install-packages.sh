@@ -4,7 +4,6 @@ essentials=(
     "alacritty-git" # Primary terminal
     "amd-ucode" # AMD CPU microcode
     "bat" # cat on steroids
-    "beautyline" # Icon
     "bluez" # Bluetooth
     "bluez-utils"
     "brightnessctl" # Controll screen brightness

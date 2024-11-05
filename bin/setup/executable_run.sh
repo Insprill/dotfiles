@@ -14,6 +14,7 @@ steps=(
     04-gpu-config-amd
     05-gpu-config-nvidia
     06-theme-grub
+    07-install-icon-theme
     08-rebuild-bat-cache
     09-enable-sddm
     10-set-shell
