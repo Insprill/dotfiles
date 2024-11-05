@@ -1,3 +1,4 @@
 #!/bin/bash
-
-dunstify -h string:x-dunst-stack-tag:audio "Volume: " -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -oP '\d+\.\d+' | awk '{print int($1*100)}')"
+volume_status=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+suffix=$(if echo "$volume_status" | grep -q "MUTED"; then echo "MUTED"; else echo ""; fi)
+dunstify -h string:x-dunst-stack-tag:audio "Volume: $suffix" -h int:value:"$(echo "$volume_status" | grep -oP '\d+\.\d+' | awk '{print int($1*100)}')"
