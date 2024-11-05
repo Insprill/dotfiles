@@ -185,6 +185,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "qt6-wayland" # QT6 Wayland support
     "meson" # Required to build plugins
     "waybar-git"
+    "waybar-module-pacman-updates-git"
     "wl-clipboard" # xclip but wayland
     "waypaper" # Desktop background
     "wlogout" # Power menu

@@ -10,6 +10,7 @@
 
     "modules-left": [
         "hyprland/workspaces",
+        "custom/updates",
         // "backlight",
         "network",
         "mpris"
@@ -88,6 +89,19 @@
         "format": " ",
         "on-click": "wlogout",
         "tooltip": false
+    },
+
+    "custom/updates": {
+        "format": "{}{icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": " 󰚰",
+            "updated": ""
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates --no-zero-output --interval-seconds 10 --network-interval-seconds 3600 --tooltip-align-columns",
+        "on-click": "alacritty -e paru",
+        "cursor": true
     },
 
     "hyprland/workspaces": {
