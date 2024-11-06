@@ -106,10 +106,7 @@
     },
 
     "hyprland/workspaces": {
-        "all-outputs": true,
         "format": "{name}",
-        "sort-by-number": true,
-        "active-only": false,
         "cursor": true
     },
 
