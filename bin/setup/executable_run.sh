@@ -50,8 +50,9 @@ read -p "Enter the numbers of the steps you'd like to skip, seperated by spaces:
 total_steps=${#steps[@]}
 curr_step=1
 
+IFS="|"
 for step in "${steps[@]}"; do
-    if [[ ${steps_to_skip[*]} =~ $curr_step ]]; then
+    if [[ "${IFS}${steps_to_skip[*]}${IFS}" =~ "${IFS}${curr_step}${IFS}" ]]; then
         echo "[$curr_step/$total_steps] Skipping $(step_name "$step")..." >&2
     else
         echo "[$curr_step/$total_steps] Executing $(step_name "$step")..." >&2
@@ -62,3 +63,4 @@ for step in "${steps[@]}"; do
     fi
     ((curr_step++))
 done
+unset IFS
