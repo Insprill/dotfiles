@@ -10,8 +10,8 @@
         "hyprland/workspaces",
         "custom/updates",
         // "backlight",
-        "network",
-        "mpris"
+        "network"
+        // "mpris"
     ],
     "modules-center": [
         "clock",
