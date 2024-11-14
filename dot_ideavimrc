@@ -15,7 +15,6 @@ set NERDTree
 
 """ Keys
 
-noremap <leader>fm :action ReformatCode<CR>
 noremap <leader>/ :action CommentByLineComment<CR>
 
 nnoremap gr :action ShowUsages<CR>
@@ -35,6 +34,8 @@ nnoremap <leader>x :action CloseEditor<CR>
 
 nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
+
+vnoremap<leader>fm :action ReformatCode<CR>
 
 
 
