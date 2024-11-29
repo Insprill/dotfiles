@@ -35,7 +35,7 @@ nnoremap <leader>x :action CloseEditor<CR>
 nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
 
-vnoremap<leader>fm :action ReformatCode<CR>
+map<leader>fm :action ReformatCode<CR>
 
 
 
