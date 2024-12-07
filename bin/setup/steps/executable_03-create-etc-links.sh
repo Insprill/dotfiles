@@ -3,6 +3,13 @@
 echo "Linking /etc files"
 SRC="$HOME/bin/setup/etc"
 
+# Hyprland
+sudo mkdir -p /etc/hyprland
+sudo ln -s "$SRC/hyprland/common.conf" /etc/hyprland/common.conf
+sudo ln -s "$SRC/hyprland/monitors.conf" /etc/hyprland/monitors.conf
+sudo ln -s "$SRC/hyprland/nvidia.conf" /etc/hyprland/nvidia.conf
+sudo ln -s "$SRC/hyprland/theme.conf" /etc/hyprland/theme.conf
+
 # Pacman hooks
 sudo mkdir -p /etc/pacman.d/hooks/
 sudo ln -s "$SRC/pacman.d/hooks/vencord-pre.hook" /etc/pacman.d/hooks/vencord-pre.hook
