@@ -10,6 +10,7 @@ essentials=(
     "brightnessctl" # Controll screen brightness
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
+    "capitaine-cursors" # Cursor
     "catppuccin-gtk-theme-mocha" # Catppuccin GTK theme (deprecated :pain:)
     "chezmoi" # Dotfile management
     "compsize" # View BTRFS compression ratios
@@ -42,7 +43,6 @@ essentials=(
     "libva-utils"
     "neovim" # Editor
     "neovide" # Editor but Rust
-    "nerd-fonts-git" # Fonts
     "network-manager-applet" # Tray icon for network connectivity
     "nmap" # Network shenanigans
     "nomacs" # Image viewer
@@ -66,9 +66,12 @@ essentials=(
     "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
-    "capitaine-cursors" # Cursor
+    "ttf-meslo-nerd" # Fonts
+    "ttf-jetbrains-mono-nerd"
+    "ttf-nerd-fonts-symbols"
+    "ttf-nerd-fonts-symbols-mono"
     "ueberzugpp" # Show images in terminals
-    "ungoogled-chromium" # L browser
+    "ungoogled-chromium-bin" # L browser
     "vulkan-tools"
     "vdpauinfo"
     "wine-ge-custom" # Better Wine
@@ -134,7 +137,7 @@ intelgpu=(
     "lib32-vulkan-intel"
     "intel-gpu-tools"
 )
-intelintegrated_10th_or_older=(
+inteligpu_10th_gen_or_older=(
     "mesa-amber"
     "lib32-mesa-amber"
     "mesa-utils"
@@ -182,6 +185,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "hyprlock-git"
     "gamescope" # Valve magic
     "grimblast-git" # Screenshots
+    "hyprpaper" # Desktop background
     "hyprpicker" # Color picker
     "qt5-wayland" # QT5 Wayland support
     "qt6-wayland" # QT6 Wayland support
@@ -211,14 +215,17 @@ groups_list=(
     development
     gaming
     intelgpu
-    intelintegrated_10th_or_older
+    inteligpu_10th_gen_or_older
     i3
     nvidia
     hyprland
     insprill
 )
 
-dry_run=$1
+dry_run="${1:-false}"
+if "$dry_run"; then
+    echo "Running in dry run mode - nothing will actually be installed!"
+fi
 
 check_install_method() {
     if pacman -Si "$1" &> /dev/null; then
