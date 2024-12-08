@@ -222,10 +222,15 @@ install_packages() {
         if "$dry_run"; then
             echo "[DRY RUN] Would install $pkg using $install_method."
         else
-            if [ "$install_method" = "pacman" ]; then
-                sudo pacinstall --yolo "$pkg"
+            echo "Installing $pkg..."
+            if pacman -Qi "$pkg" >/dev/null 2>&1; then
+                echo "Already installed! Skipping."
             else
-                yay --devel --sudoloop --useask --cleanafter --noconfirm -S "$pkg"
+                if [ "$install_method" = "pacman" ]; then
+                    sudo pacinstall --yolo "$pkg"
+                else
+                    yay --devel --sudoloop --useask --cleanafter --noconfirm -S "$pkg"
+                fi
             fi
         fi
     done
