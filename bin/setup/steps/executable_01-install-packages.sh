@@ -114,7 +114,7 @@ development=(
 gaming=(
     "discord" # 🤓
     "gamemode" # Optimizations for games
-    "gpu-screen-recorder-gtk-git" # Basically shadowplay
+    "gpu-screen-recorder" # make a guess
     "mangohud" # Performance overlay
     "steam" # Good guy Valve
     "steam-native-runtime"
@@ -158,6 +158,7 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "cmake" # Required to build plugins
     "cpio" # Required to build plugins
+    "hyprutils-git" # Required since hyprland-qtutils-git doesn't depend on the git version :|
     "hyprland-git" # Epic compositor
     "hyprlock-git" # Lockscreen for said epic compositor
     "hyprpolkitagent-git" # Authentication
