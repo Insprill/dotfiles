@@ -114,7 +114,7 @@ development=(
 gaming=(
     "discord" # 🤓
     "gamemode" # Optimizations for games
-    "gpu-screen-recorder-gtk-git" # Basically shadowplay
+    "gpu-screen-recorder" # make a guess
     "mangohud" # Performance overlay
     "steam" # Good guy Valve
     "steam-native-runtime"
