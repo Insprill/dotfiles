@@ -262,7 +262,7 @@ process_choice() {
     if [[ "$REPLY" =~ ^[Yy]$ ]]; then
         echo "Updating system..."
         if ! "$dry_run"; then
-            sudo pacman -Syu --needed yay # Updates system & ensures yay is installed
+            sudo pacman -Syu --needed yay --noconfirm # Updates system & ensures yay is installed
             yay -Syu
         fi
         for choice in "$@"; do
