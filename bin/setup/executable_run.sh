@@ -21,6 +21,7 @@ steps=(
     11-install-hyprland-plugins
     12-install-rust-toolchains
     13-install-git-lfs
+    14-disable-ufw
     15-set-vscode-passwd-store
     20-enable-clipping
     90-adjust-sys-clock
