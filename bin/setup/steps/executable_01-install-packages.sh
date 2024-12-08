@@ -229,7 +229,7 @@ install_packages() {
                 if [ "$install_method" = "pacman" ]; then
                     sudo pacinstall --yolo "$pkg"
                 else
-                    yay --devel --sudoloop --useask --cleanafter --noconfirm -S "$pkg"
+                    yay --devel --sudoloop --useask --cleanafter --removemake --noconfirm -S "$pkg"
                 fi
             fi
         fi
