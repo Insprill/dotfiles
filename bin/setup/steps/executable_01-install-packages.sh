@@ -148,23 +148,8 @@ inteligpu_10th_gen_or_older=(
     "lib32-vulkan-intel"
     "intel-gpu-tools"
 )
-i3=(
-    "arandr" # Monitor config
-    "i3" # Window manager
-    "i3lock-fancy-rapid-git" # Pretty lock screen
-    "i3status-rust-git" # RUUUUST
-    "feh" # Desktop background
-    "numlockx" # Enable numlock
-    "picom-git" # X compositor
-    "conky" # X system stats
-    "meson" # Required to build i3
-    "ninja" # Required to build i3
-    "xclip" # Clipboard stuff
-    "xorg-xev" # Keybind debugging
-)
 nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "nvidia-dkms"
-    "nvidia-settings"
     "nvidia-utils"
     "lib32-nvidia-utils"
     "opencl-nvidia"
@@ -213,7 +198,6 @@ groups_list=(
     gaming
     intelgpu
     inteligpu_10th_gen_or_older
-    i3
     nvidia
     hyprland
     insprill

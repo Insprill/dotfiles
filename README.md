@@ -49,18 +49,6 @@ Once it finishes, it will prompt you to reboot, and your system is completely se
 ```
 
 
-### i3 Post-Setup
-
-#### Rounded Corner Borders
-
-To get proper borders with rounded corners in i3, run the `patch-i3` script in the `bin` directory, while in i3.
-Note that this will log you out, closing any applications you had open!
-
-#### Monitor Layout
-
-To save a monitor layout on i3, open `arandr`, adjust the monitors how you'd like, then save the file to `~/.screenlayout/main.sh`.
-
-
 
 
 ## Windows (AtlasOS)
