@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! command -v gh >/dev/null 2>&1; then
+if ! command -v code >/dev/null 2>&1; then
     echo "VSCode is not installed, skipping step"
     exit 0
 fi
@@ -11,6 +11,11 @@ JSON_FILE="$HOME/.vscode/argv.json"
 key="password-store"
 value="gnome"
 temp_file="$(mktemp)"
+
+if [ ! -f "$JSON_FILE" ]; then
+    mkdir -p "$(dirname "$JSON_FILE")"
+    touch "$JSON_FILE"
+fi
 
 # Remove comments and save to a temporary file
 sed '/^\s*\/\//d' "$JSON_FILE" > "$temp_file"
