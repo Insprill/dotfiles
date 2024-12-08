@@ -40,6 +40,7 @@ essentials=(
     "mkinitcpio" # Must be before the kernel
     "libva-utils"
     "localsend" # Epic file sharing between devices
+    "mpv" # Video player
     "neovim" # Editor
     "neovide" # Editor but Rust
     "network-manager-applet" # Tray icon for network connectivity
