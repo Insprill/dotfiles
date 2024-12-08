@@ -23,7 +23,6 @@ essentials=(
     "fish" # Shell
     "firefox-developer-edition" # W browser
     "flameshot" # X screenshots
-    "gcolor3" # Color picker
     "git"
     "git-lfs"
     "gnome-keyring" # Keyring
@@ -38,8 +37,6 @@ essentials=(
     "kwallet-pam" # Unlock wallet
     "kwalletmanager"
     "mkinitcpio" # Must be before the kernel
-    "linux-zen" # W kernel
-    "linux-zen-headers" # W kernel headers
     "libva-utils"
     "neovim" # Editor
     "neovide" # Editor but Rust
@@ -176,24 +173,21 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "cmake" # Required to build plugins
     "cpio" # Required to build plugins
-    "hyprutils-git"
-    "hyprlang-git"
-    "hyprcursor-git"
-    "hyprwayland-scanner-git"
-    "aquamarine-git"
-    "hyprland-git" # Based (above are required otherwise hyprland-git sometimes won't build)
-    "hyprlock-git"
+    "hyprland-git" # Epic compositor
+    "hyprlock-git" # Lockscreen for said epic compositor
     "gamescope" # Valve magic
     "grimblast-git" # Screenshots
-    "hyprpaper" # Desktop background
-    "hyprpicker" # Color picker
+    "hyprpaper-git" # Desktop background
+    "hyprpicker-git" # Color picker
+    "hyprsysteminfo-git" # Show system/Hyprland info
+    "pkg-config" # Required to build plugins
     "qt5-wayland" # QT5 Wayland support
     "qt6-wayland" # QT6 Wayland support
     "meson" # Required to build plugins
-    "waybar-git"
-    "waybar-module-pacman-updates-git"
+    "waybar-git" # Bar
+    "waybar-module-pacman-updates-git" # Show pacman updates in waybar
     "wl-clipboard" # xclip but wayland
-    "waypaper" # Desktop background
+    "waypaper" # Desktop background picker/randomizer
     "wlogout" # Power menu
     "xdg-desktop-portal-hyprland-git"
     "xdg-desktop-portal-gtk"
