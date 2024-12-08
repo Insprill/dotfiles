@@ -18,7 +18,7 @@ steps=(
     08-rebuild-bat-cache
     09-enable-sddm
     10-set-shell
-    11-install-hyprland-plugins
+    # 11-install-hyprland-plugins
     12-install-rust-toolchains
     13-install-git-lfs
     14-disable-ufw
