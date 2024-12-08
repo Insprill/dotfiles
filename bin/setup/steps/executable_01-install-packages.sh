@@ -1,7 +1,7 @@
 #!/bin/bash
 
 essentials=(
-    "alacritty-git" # Primary terminal
+    "alacritty" # Primary terminal
     "amd-ucode" # AMD CPU microcode
     "ark" # Archive management
     "bat" # cat on steroids
@@ -36,13 +36,16 @@ essentials=(
     "kvantum-theme-catppuccin-git" # Catppuccin QT theme
     "kwallet-pam" # Unlock wallet
     "kwalletmanager"
+    "luarocks" # Neovim config editing
     "mkinitcpio" # Must be before the kernel
     "libva-utils"
+    "localsend" # Epic file sharing between devices
     "neovim" # Editor
     "neovide" # Editor but Rust
     "network-manager-applet" # Tray icon for network connectivity
     "nmap" # Network shenanigans
     "nomacs" # Image viewer
+    "npm" # Installing Neovim plugins
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
     "p7zip" # 7z
@@ -73,6 +76,7 @@ essentials=(
     "vdpauinfo"
     "wine-ge-custom" # Better Wine
     "wine-mono" # Mono support for Wine
+    "yarn" # Installing Neovim plugins
     "yazi" # W terminal file browser
     "yt-dlp" # we do a little trolling
     "zip"
@@ -100,16 +104,13 @@ development=(
     "go" # Inferior to Rust
     "jetbrains-toolbox" # IntelliJ/Rider/CLion/Feet
     "lazygit" # Epic git TUI
-    "luarocks" # Neovim config editing
     "namcap" # Validating PKGBUILDs
-    "npm" # Installing Neovim plugins
     "pnpm" # Better than npm
     "posting" # Terminal API client
     "powershell-bin" # W
     "rustup" # RUUUUST
     "tokei" # Epic line counts
     "visual-studio-code-bin" # Notepad+++
-    "yarn" # Worse than pnpm
 )
 gaming=(
     "discord" # 🤓
@@ -180,11 +181,13 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "hyprpaper-git" # Desktop background
     "hyprpicker-git" # Color picker
     "hyprsysteminfo-git" # Show system/Hyprland info
+    "layer-shell-qt" # SDDM stuff
+    "layer-shell-qt5" # SDDM stuff
     "pkg-config" # Required to build plugins
     "qt5-wayland" # QT5 Wayland support
     "qt6-wayland" # QT6 Wayland support
     "meson" # Required to build plugins
-    "waybar-git" # Bar
+    "waybar" # Bar
     "waybar-module-pacman-updates-git" # Show pacman updates in waybar
     "wl-clipboard" # xclip but wayland
     "waypaper" # Desktop background picker/randomizer
