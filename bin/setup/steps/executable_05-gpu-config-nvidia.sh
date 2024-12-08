@@ -6,9 +6,21 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 0
 fi
 
-echo "Adding Kernel modules"
 NVIDIA_KERNEL_MODULES="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
-if ! grep -q "$NVIDIA_KERNEL_MODULES" /etc/mkinitcpio.conf || sudo sed -i "/^MODULES=/s/)/ $NVIDIA_KERNEL_MODULES)/" /etc/mkinitcpio.conf; then
-    echo "Error: Failed to update /etc/mkinitcpio.conf"
-    exit 1
+if grep -q "$NVIDIA_KERNEL_MODULES" /etc/mkinitcpio.conf; then
+    echo "Nvidia kernel modules already added; skipping."
+else
+    echo "Adding Kernel modules"
+    if ! sudo sed -i "/^MODULES=/s/)/ $NVIDIA_KERNEL_MODULES)/" /etc/mkinitcpio.conf; then
+        echo "Error: Failed to update /etc/mkinitcpio.conf"
+        exit 1
+    fi
 fi
+
+echo "Enabling Nvidia-specific Hyprland options"
+if ! sudo sed -i "s|^# source=/etc/hyprland/nvidia.conf|source=/etc/hyprland/nvidia.conf|" /etc/hyprland/common.conf; then
+    echo "Warning: Failed to enable Nvidia Hyprland options. Are they already enabled?"
+fi
+
+exit 0
+

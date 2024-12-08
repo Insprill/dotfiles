@@ -10,6 +10,10 @@ sudo ln -s "$SRC/hyprland/monitors.conf" /etc/hyprland/monitors.conf
 sudo ln -s "$SRC/hyprland/nvidia.conf" /etc/hyprland/nvidia.conf
 sudo ln -s "$SRC/hyprland/theme.conf" /etc/hyprland/theme.conf
 
+# Modprobe
+sudo mkdir -p /etc/modprobe.d/
+sudo ln -s "$SRC/modprobe.d/nvidia.conf" /etc/modprobe.d/nvidia.conf
+
 # Pacman hooks
 sudo mkdir -p /etc/pacman.d/hooks/
 sudo ln -s "$SRC/pacman.d/hooks/vencord-pre.hook" /etc/pacman.d/hooks/vencord-pre.hook
