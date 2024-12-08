@@ -16,21 +16,25 @@ essentials=(
     "compsize" # View BTRFS compression ratios
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
+    "dolphin" # File manager
+    "dolphin-plugins" # things 'n stuff
     "dunst" # Notifications
     "dust" # du on crack
     "eza" # ls on crack
     "fastfetch" # New neofetch
+    "ffmpegthumbnailer" # Thumbnails in Dolphin
     "fish" # Shell
     "firefox-developer-edition" # W browser
     "flameshot" # X screenshots
     "git"
     "git-lfs"
     "gnome-keyring" # Keyring
-    "gvfs" # PCManFM stuff
     "icoutils" # Creating desktop files for Wine applications
     "intel-ucode" # Intel CPU microcode
     "iotop" # Disk monitor
     "jq" # Json processing
+    "kdegraphics-thumbnailers" # Thumbnails for various files in Dolphin
+    "kio-admin" # Open folder as admin in Dolphin
     "kitty" # Backup terminal
     "kvantum" # QT6 theme picker
     "kvantum-theme-catppuccin-git" # Catppuccin QT theme
@@ -50,13 +54,14 @@ essentials=(
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
     "p7zip" # 7z
+    "packagekit-qt6" # Dolphin plugins
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
     "pavucontrol" # Audio settings
-    "pcmanfm-qt" # File manager
     "popsicle" # USB flasher
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
+    "qt6-imageformats" # More thumbnails for Dolphin
     "qt6-declarative" # SDDM theme stuff
     "qt6-svg" # More SDDM theme stuff
     "ripgrep" # Grep on cocaine
