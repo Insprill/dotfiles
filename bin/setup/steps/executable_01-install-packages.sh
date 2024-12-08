@@ -53,7 +53,6 @@ essentials=(
     "paru" # AUR helper
     "pavucontrol" # Audio settings
     "pcmanfm-qt" # File manager
-    "polkit-kde-agent" # Authentication
     "popsicle" # USB flasher
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
@@ -161,6 +160,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "cpio" # Required to build plugins
     "hyprland-git" # Epic compositor
     "hyprlock-git" # Lockscreen for said epic compositor
+    "hyprpolkitagent-git" # Authentication
     "gamescope" # Valve magic
     "grimblast-git" # Screenshots
     "hyprpaper-git" # Desktop background
