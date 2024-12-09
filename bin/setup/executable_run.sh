@@ -23,6 +23,7 @@ steps=(
     13-install-git-lfs
     14-disable-ufw
     15-set-vscode-passwd-store
+    16-delete-unnecessary-folders
     20-enable-clipping
     90-adjust-sys-clock
     97-update-grub
