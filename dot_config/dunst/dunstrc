@@ -24,16 +24,16 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    # width = 300
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    # height = 300
 
     # Position the notification in the top right corner
     origin = top-right
 
     # Offset from the origin
-    offset = 10x50
+    offset = (10,25)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -59,7 +59,6 @@
 
     # Set the maximum width for the progress bar
     progress_bar_max_width = 300
-
 
     # Show how many messages are currently hidden (because of
     # notification_limit).
@@ -96,7 +95,7 @@
     # If value is greater than 0, separator_height will be ignored and a border
     # of size frame_width will be drawn around each notification instead.
     # Click events on gaps do not currently propagate to applications below.
-    gap_size = 15
+    gap_size = 10
 
     # Define a color for the separator.
     # possible values are:
@@ -196,7 +195,7 @@
     enable_recursive_icon_lookup = true
 
     # Set icon theme (only used for recursive icon lookup)
-    icon_theme = BeautyLine
+    icon_theme = Tela-catppuccin
     # You can also set multiple icon themes, with the leftmost one being used first.
     # icon_theme = "Adwaita, breeze"
 
@@ -212,7 +211,7 @@
     max_icon_size = 64
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /usr/share/icons/BeautyLine/
+    # icon_path = /usr/share/icons/BeautyLine/
 
     ### History ###
 
