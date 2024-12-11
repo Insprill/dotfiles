@@ -125,6 +125,7 @@ gaming=(
     "steam" # Good guy Valve
     "steam-native-runtime"
     "proton-ge-custom-bin" # Better Proton
+    "protontricks"
     "protonup-qt" # GUI for managing Proton versions
     "xpadneo-dkms-git" # Wireles xbox controller support
 )
@@ -188,6 +189,16 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "xorg-xeyes" # Useful for debugging XWayland issues
     "xorg-xhost" # Fixes GParted not opening
 )
+vr=(
+    "avahi" # WiVRn auto-discovery
+    "cli11" # OpenComposite dependency
+    "glib2-devel" # OpenComposite dependency
+    "nlohmann-json" # OpenComposite dependency
+    "monado-git" # OpenXR Runtime
+    "monado-vulkan-layers-git" # Required for Nvidia (otherwise segfault on launch)
+    "envision-xr-git" # Utility for setting up monado/opencomposite/wivrn
+    "wlx-overlay-s-git" # Desktop view in VR
+)
 insprill=( # Stuff I use that I doubt anyone else cares about
     "feishin-bin"
     "spek"
@@ -206,6 +217,7 @@ groups_list=(
     inteligpu_10th_gen_or_older
     nvidia
     hyprland
+    vr
     insprill
 )
 
