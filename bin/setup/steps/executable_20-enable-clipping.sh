@@ -8,9 +8,13 @@ fi
 # Enable clipping
 read -p "Do you want to enable clipping? [y/N] " -n 1 -r; echo
 
+HYPRLAND_CONFIG="$HOME/.config/hypr/hyprland.conf"
+
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    systemctl --user enable gpu-screen-recorder-replay.service
-    systemctl --user start gpu-screen-recorder-replay.service
+    echo "Enabling clipping"
+    if ! sed -i "s|^# exec-once = ~/bin/start_gpu_recorder_replay.sh|exec-once = ~/bin/start_gpu_recorder_replay.sh|" "$HYPRLAND_CONFIG"; then
+        echo "Warning: Failed to enable clipping. You can do so manually in '$HYPRLAND_CONFIG'."
+    fi
 else
-    echo "If you want to enable it later, start the 'gpu-screen-recorder-replay' user service."
+    echo "If you want to enable it later, uncomment the startup line in '$HYPRLAND_CONFIG'."
 fi
