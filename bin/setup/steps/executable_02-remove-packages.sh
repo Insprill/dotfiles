@@ -1,9 +1,10 @@
 #!/bin/bash
 
 packages=(
-    dracut
+    dracut # Comes with EndeavourosOS, we use mkinitcpio
     eos-dracut
-    xterm
+    xterm # Comes with EndeavourosOS
+    pavucontrol # We use pavucontrol-qt
 )
 
 for pkg in "${packages[@]}"; do

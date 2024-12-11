@@ -57,7 +57,7 @@ essentials=(
     "packagekit-qt6" # Dolphin plugins
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
-    "pavucontrol" # Audio settings
+    "pavucontrol-qt" # Audio settings
     "popsicle" # USB flasher
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
