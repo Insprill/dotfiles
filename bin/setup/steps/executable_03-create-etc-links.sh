@@ -16,6 +16,7 @@ sudo ln -s "$SRC/modprobe.d/nvidia.conf" /etc/modprobe.d/nvidia.conf
 
 # Pacman hooks
 sudo mkdir -p /etc/pacman.d/hooks/
+sudo ln -s "$SRC/pacman.d/hooks/hyprland-post.hook" /etc/pacman.d/hooks/hyprland-post.hook
 sudo ln -s "$SRC/pacman.d/hooks/vencord-pre.hook" /etc/pacman.d/hooks/vencord-pre.hook
 sudo ln -s "$SRC/pacman.d/hooks/vencord-post.hook" /etc/pacman.d/hooks/vencord-post.hook
 
