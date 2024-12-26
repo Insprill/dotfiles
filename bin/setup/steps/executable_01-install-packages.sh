@@ -7,6 +7,7 @@ essentials=(
     "bat" # cat on steroids
     "bluez" # Bluetooth
     "bluez-utils"
+    "blueman" # Bluetooth GUI
     "brightnessctl" # Controll screen brightness
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
