@@ -166,14 +166,14 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "cmake" # Required to build plugins
     "cpio" # Required to build plugins
-    "hyprland-git" # Epic compositor
-    "hyprlock-git" # Lockscreen for said epic compositor
-    "hyprpolkitagent-git" # Authentication
+    "hyprland" # Epic compositor
+    "hyprlock" # Lockscreen for said epic compositor
+    "hyprpolkitagent" # Authentication
     "gamescope" # Valve magic
     "grimblast-git" # Screenshots
-    "hyprpaper-git" # Desktop background
-    "hyprpicker-git" # Color picker
-    "hyprsysteminfo-git" # Show system/Hyprland info
+    "hyprpaper" # Desktop background
+    "hyprpicker" # Color picker
+    "hyprsysteminfo" # Show system/Hyprland info
     "layer-shell-qt" # SDDM stuff
     "layer-shell-qt5" # SDDM stuff
     "pkg-config" # Required to build plugins
@@ -185,7 +185,7 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "wl-clipboard" # xclip but wayland
     "waypaper" # Desktop background picker/randomizer
     "wlogout" # Power menu
-    "xdg-desktop-portal-hyprland-git"
+    "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal-gtk"
     "xorg-xeyes" # Useful for debugging XWayland issues
     "xorg-xhost" # Fixes GParted not opening
