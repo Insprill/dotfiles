@@ -1,11 +1,12 @@
-[Colors:View]
-BackgroundNormal=#1e1e2e
-
 [General]
 TerminalApplication=alacritty
 
+[Icons]
+Theme=Tela-catppuccin
+
 [KDE]
 ShowDeleteCommand=false
+widgetStyle=qt6ct-style
 
 [KFileDialog Settings]
 Allow Expansion=false
