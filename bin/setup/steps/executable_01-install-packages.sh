@@ -159,7 +159,6 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "hyprpolkitagent" # Authentication
     "gamescope" # Valve magic
     "grimblast-git" # Screenshots
-    "hyprpaper" # Desktop background
     "hyprpicker" # Color picker
     "hyprsysteminfo" # Show system/Hyprland info
     "layer-shell-qt" # SDDM stuff
@@ -171,8 +170,8 @@ hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "waybar" # Bar
     "waybar-module-pacman-updates-git" # Show pacman updates in waybar
     "wl-clipboard" # xclip but wayland
-    "waypaper" # Desktop background picker/randomizer
     "wlogout" # Power menu
+    "wpaperd" # Desktop background picker/randomizer
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal-gtk"
     "xorg-xeyes" # Useful for debugging XWayland issues

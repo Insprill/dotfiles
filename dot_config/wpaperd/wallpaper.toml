@@ -2,3 +2,4 @@
 path = "~/Pictures/wallpapers/"
 apply-shadow = false
 sorting = "random"
+group = 1
