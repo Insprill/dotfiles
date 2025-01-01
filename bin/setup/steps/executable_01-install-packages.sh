@@ -67,7 +67,7 @@ essentials=(
     "qt6-svg" # More SDDM theme stuff
     "ripgrep" # Grep on cocaine
     "rofi-wayland" # Rofi with Wayland support
-    "rofi-calc-git" # Rofi calculator
+    "rofi-calc" # Rofi calculator
     "sddm" # Display manager
     "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
@@ -128,7 +128,8 @@ gaming=(
     "proton-ge-custom-bin" # Better Proton
     "protontricks"
     "protonup-qt" # GUI for managing Proton versions
-    "xpadneo-dkms-git" # Wireles xbox controller support
+    "xone-dkms" # Wired/dongle xbox controller support
+    "xpadneo-dkms" # Wireles xbox controller support
 )
 intelgpu=(
     "mesa"
@@ -148,7 +149,7 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "lib32-nvidia-utils"
     "opencl-nvidia"
     "lib32-opencl-nvidia"
-    "libva-nvidia-driver-git"
+    "libva-nvidia-driver"
 )
 hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
     "cmake" # Required to build plugins
