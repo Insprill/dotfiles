@@ -142,19 +142,6 @@ intelgpu=(
     "lib32-vulkan-intel"
     "intel-gpu-tools"
 )
-inteligpu_10th_gen_or_older=(
-    "mesa-amber"
-    "lib32-mesa-amber"
-    "mesa-utils"
-    "libva-mesa-driver"
-    "lib32-libva-mesa-driver"
-    "mesa-vdpau"
-    "lib32-mesa-vdpau"
-    "xf86-video-intel"
-    "vulkan-intel"
-    "lib32-vulkan-intel"
-    "intel-gpu-tools"
-)
 nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "nvidia-dkms"
     "nvidia-utils"
@@ -215,7 +202,6 @@ groups_list=(
     development
     gaming
     intelgpu
-    inteligpu_10th_gen_or_older
     nvidia
     hyprland
     vr
