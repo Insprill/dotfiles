@@ -233,7 +233,7 @@ install_packages() {
                 echo "Already installed! Skipping."
             else
                 if [ "$install_method" = "pacman" ]; then
-                    sudo pacinstall --yolo "$pkg"
+                    yes | sudo pacman -S "$pkg"
                 else
                     yay --devel --sudoloop --useask --cleanafter --removemake --noconfirm -S "$pkg"
                 fi
