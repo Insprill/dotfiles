@@ -67,7 +67,7 @@ essentials=(
     "qt6-svg" # More SDDM theme stuff
     "ripgrep" # Grep on cocaine
     "rofi-wayland" # Rofi with Wayland support
-    "rofi-calc" # Rofi calculator
+    "rofi-calc-git" # Rofi calculator. Must be git, stable doesn't work!
     "sddm" # Display manager
     "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
