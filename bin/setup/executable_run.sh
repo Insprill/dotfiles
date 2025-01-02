@@ -24,6 +24,7 @@ steps=(
     14-disable-ufw
     15-set-vscode-passwd-store
     16-delete-unnecessary-folders
+    17-apply-gtk-theme
     20-enable-clipping
     90-adjust-sys-clock
     97-update-grub
