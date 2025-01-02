@@ -8,5 +8,7 @@ Target = hyprland-git
 [Action]
 Description = Update Hyprland plugins
 When = PostTransaction
-NeedsTargets
-Exec = /usr/bin/hyprpm update
+# hyprpm needs $XDG_RUNTIME_DIR set to build plugins.
+# The warning about $HOME or $HYPRLAND_INSTANCE_SIGNATURE not being set is fine.
+# The output needs to get filtered by sed to get rid of the rediculous amounts of whitespace that get printed.
+Exec = /bin/bash -c 'sudo -u $SUDO_USER XDG_RUNTIME_DIR=/run/user/$(id -u $SUDO_USER) /usr/bin/hyprpm update | sed -E "s/[[:space:]]+/ /g; s/\n+/\'\n\'/g"'
