@@ -3,6 +3,7 @@
 essentials=(
     "alacritty" # Primary terminal
     "amd-ucode" # AMD CPU microcode
+    "archlinux-xdg-menu" # Fix Dolphin file associations
     "ark" # Archive management
     "bat" # cat on steroids
     "bluez" # Bluetooth
