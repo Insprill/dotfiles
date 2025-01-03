@@ -2,49 +2,65 @@
 
 echo "Linking /etc files"
 SRC="$HOME/bin/setup/etc"
+DEST_BASE="/etc"
 
-# Hyprland
-sudo mkdir -p /etc/hyprland
-sudo ln -s "$SRC/hyprland/common.conf" /etc/hyprland/common.conf
-sudo ln -s "$SRC/hyprland/monitors.conf" /etc/hyprland/monitors.conf
-sudo ln -s "$SRC/hyprland/nvidia.conf" /etc/hyprland/nvidia.conf
-sudo ln -s "$SRC/hyprland/theme.conf" /etc/hyprland/theme.conf
+create_dir() {
+    local dir="$DEST_BASE/$(dirname "$1")"
+    if [ ! -d "$dir" ]; then
+        echo "Creating directory: $dir"
+        sudo mkdir -p "$dir"
+    fi
+}
+
+create_symlink() {
+    local src="$SRC/$1"
+    local dest="$DEST_BASE/$1"
+    create_dir "$1"
+    echo "Creating link '$dest'"
+    sudo rm "$dest"
+    sudo ln -s "$src" "$dest"
+}
+
+copy_file() {
+    local src="$SRC/$1"
+    local dest="$DEST_BASE/$1"
+    create_dir "$1"
+    echo "Copying file '$dest'"
+    sudo rm "$dest"
+    sudo cp "$src" "$dest"
+}
+
+# Hyprland (linking breaks sddm)
+copy_file "hyprland/common.conf"
+copy_file "hyprland/monitors.conf"
+copy_file "hyprland/nvidia.conf"
+copy_file "hyprland/theme.conf"
 
 # Modprobe
-sudo mkdir -p /etc/modprobe.d/
-sudo ln -s "$SRC/modprobe.d/nvidia.conf" /etc/modprobe.d/nvidia.conf
+create_symlink "modprobe.d/nvidia.conf"
 
 # Pacman hooks
-sudo mkdir -p /etc/pacman.d/hooks/
-sudo ln -s "$SRC/pacman.d/hooks/hyprland-post.hook" /etc/pacman.d/hooks/hyprland-post.hook
-sudo ln -s "$SRC/pacman.d/hooks/vencord-pre.hook" /etc/pacman.d/hooks/vencord-pre.hook
-sudo ln -s "$SRC/pacman.d/hooks/vencord-post.hook" /etc/pacman.d/hooks/vencord-post.hook
+create_symlink "pacman.d/hooks/hyprland-post.hook"
+create_symlink "pacman.d/hooks/vencord-pre.hook"
+create_symlink "pacman.d/hooks/vencord-post.hook"
 
 # Polkit rules
-sudo mkdir -p /etc/polkit-1/rules.d/
-sudo ln -s "$SRC/polkit-1/rules.d/10-power-management.rules" /etc/polkit-1/rules.d/10-power-management.rules
+create_symlink "polkit-1/rules.d/10-power-management.rules"
 
-# X11 settings
-sudo mkdir -p /etc/X11/xorg.conf.d/
-sudo ln -s "$SRC/X11/xorg.conf.d/50-mouse.conf" /etc/X11/xorg.conf.d/50-mouse.conf
+# Systemctl
+create_symlink "sysctl.d/fs.conf"
 
-# systemctl
-sudo mkdir -p /etc/sysctl.d/
-sudo ln -s "$SRC/sysctl.d/fs.conf" /etc/sysctl.d/fs.conf
-
-# Sudo
-# These can't be linked as sudo requires
-# them to be owned by root.
-sudo mkdir -p /etc/sudoers.d/
-sudo cp "$SRC/sudoers.d/20-insults" /etc/sudoers.d/20-insults
+# Sudo (cannot be linked, must be copied)
+copy_file "sudoers.d/20-insults"
 
 # SDDM
-sudo mkdir -p /etc/sddm.conf.d/
-sudo ln -s "$SRC/sddm.conf.d/custom-settings.conf" /etc/sddm.conf.d/custom-settings.conf
+create_symlink "sddm.conf.d/custom-settings.conf"
 
 # Uni-sync
-sudo mkdir -p /etc/systemd/system/
-sudo ln -s "$SRC/systemd/system/uni-sync.service" /etc/systemd/system/uni-sync.service
-sudo ln -s "$SRC/systemd/system/uni-sync.timer" /etc/systemd/system/uni-sync.timer
+create_symlink "systemd/system/uni-sync.service"
+create_symlink "systemd/system/uni-sync.timer"
+
+# X11 settings
+create_symlink "X11/xorg.conf.d/50-mouse.conf"
 
 exit 0
