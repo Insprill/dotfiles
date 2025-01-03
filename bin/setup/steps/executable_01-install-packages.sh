@@ -15,7 +15,9 @@ essentials=(
     "capitaine-cursors" # Cursor
     "catppuccin-gtk-theme-mocha" # Catppuccin GTK theme (deprecated :pain:)
     "chezmoi" # Dotfile management
+    "cmake" # Required to build Hyprland plugins
     "compsize" # View BTRFS compression ratios
+    "cpio" # Required to build Hyprland plugins
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
     "dolphin" # File manager
@@ -30,7 +32,14 @@ essentials=(
     "flameshot" # X screenshots
     "git"
     "git-lfs"
+    "gamescope" # Valve magic
     "gnome-keyring" # Keyring
+    "hyprland" # Epic compositor
+    "hyprlock" # Lockscreen for said epic compositor
+    "hyprpolkitagent" # Authentication
+    "hyprpicker" # Color picker
+    "hyprsysteminfo" # Show system/Hyprland info
+    "grimblast-git" # Screenshots
     "icoutils" # Creating desktop files for Wine applications
     "intel-ucode" # Intel CPU microcode
     "iotop" # Disk monitor
@@ -42,10 +51,12 @@ essentials=(
     "kvantum-theme-catppuccin-git" # Catppuccin QT theme
     "kwallet-pam" # Unlock wallet
     "kwalletmanager"
+    "layer-shell-qt" # SDDM stuff
     "luarocks" # Neovim config editing
-    "mkinitcpio" # Must be before the kernel
     "libva-utils"
     "localsend" # Epic file sharing between devices
+    "meson" # Required to build Hyprland plugins
+    "mkinitcpio" # Must be before the kernel
     "mpv" # Video player
     "neovim" # Editor
     "neovide" # Editor but Rust
@@ -60,12 +71,15 @@ essentials=(
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
     "pavucontrol-qt" # Audio settings
+    "pkg-config" # Required to build Hyprland plugins
     "popsicle" # USB flasher
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
     "qt6-imageformats" # More thumbnails for Dolphin
     "qt6-declarative" # SDDM theme stuff
     "qt6-svg" # More SDDM theme stuff
+    "qt6-wayland" # QT6 Wayland support
+    "qt5-wayland" # QT5 Wayland support
     "ripgrep" # Grep on cocaine
     "rofi-wayland" # Rofi with Wayland support
     "rofi-calc-git" # Rofi calculator. Must be git, stable doesn't work!
@@ -81,8 +95,17 @@ essentials=(
     "ungoogled-chromium-bin" # L browser
     "vulkan-tools"
     "vdpauinfo"
+    "waybar" # Bar
+    "waybar-module-pacman-updates-git" # Show pacman updates in waybar
     "wine-ge-custom" # Better Wine
     "wine-mono" # Mono support for Wine
+    "wl-clipboard" # xclip but wayland
+    "wlogout" # Power menu
+    "wpaperd" # Desktop background picker/randomizer
+    "xorg-xeyes" # Useful for debugging XWayland issues
+    "xorg-xhost" # Fixes GParted not opening
+    "xdg-desktop-portal-hyprland"
+    "xdg-desktop-portal-gtk"
     "yarn" # Installing Neovim plugins
     "yazi" # W terminal file browser
     "yt-dlp" # we do a little trolling
@@ -152,32 +175,6 @@ nvidia=( # https://wiki.archlinux.org/title/NVIDIA
     "lib32-opencl-nvidia"
     "libva-nvidia-driver"
 )
-hyprland=( # https://wiki.hyprland.org/Useful-Utilities/
-    "cmake" # Required to build plugins
-    "cpio" # Required to build plugins
-    "hyprland" # Epic compositor
-    "hyprlock" # Lockscreen for said epic compositor
-    "hyprpolkitagent" # Authentication
-    "gamescope" # Valve magic
-    "grimblast-git" # Screenshots
-    "hyprpicker" # Color picker
-    "hyprsysteminfo" # Show system/Hyprland info
-    "layer-shell-qt" # SDDM stuff
-    "layer-shell-qt5" # SDDM stuff
-    "pkg-config" # Required to build plugins
-    "qt5-wayland" # QT5 Wayland support
-    "qt6-wayland" # QT6 Wayland support
-    "meson" # Required to build plugins
-    "waybar" # Bar
-    "waybar-module-pacman-updates-git" # Show pacman updates in waybar
-    "wl-clipboard" # xclip but wayland
-    "wlogout" # Power menu
-    "wpaperd" # Desktop background picker/randomizer
-    "xdg-desktop-portal-hyprland"
-    "xdg-desktop-portal-gtk"
-    "xorg-xeyes" # Useful for debugging XWayland issues
-    "xorg-xhost" # Fixes GParted not opening
-)
 vr=(
     "avahi" # WiVRn auto-discovery
     "cli11" # OpenComposite dependency
@@ -204,7 +201,6 @@ groups_list=(
     gaming
     intelgpu
     nvidia
-    hyprland
     vr
     insprill
 )
