@@ -29,7 +29,6 @@ essentials=(
     "ffmpegthumbnailer" # Thumbnails in Dolphin
     "fish" # Shell
     "firefox-developer-edition" # W browser
-    "flameshot" # X screenshots
     "git"
     "git-lfs"
     "gamescope" # Valve magic
@@ -66,7 +65,7 @@ essentials=(
     "npm" # Installing Neovim plugins
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
-    "p7zip" # 7z
+    "paccache-hook" # Remove cached versions of old/uninstalled packages
     "packagekit-qt6" # Dolphin plugins
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
@@ -111,6 +110,7 @@ essentials=(
     "yt-dlp" # we do a little trolling
     "zip"
     "zoxide" # cd on crack
+    "7zip" # 7z
 )
 amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "mesa"
@@ -187,10 +187,9 @@ vr=(
 )
 insprill=( # Stuff I use that I doubt anyone else cares about
     "feishin-bin"
-    "spek"
     "thunderbird"
     "unityhub"
-    "gconf" # Required for Unity to work
+    #"gconf" # Required for Unity to work (currently doesn't build?)
     "vesktop-bin"
 )
 
