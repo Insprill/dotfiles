@@ -7,7 +7,7 @@ return function()
   -- :help lspconfig-all | https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
   local servers = {
     "bashls",
-    "clangd",
+    "cmake",
     "cssls",
     "docker_compose_language_service",
     "dockerls",
@@ -18,7 +18,6 @@ return function()
     "lua_ls",
     "powershell_es",
     "pylyzer",
-    -- "rust_analyzer", -- Setup later
     "svelte",
     "tailwindcss",
     "ts_ls",
@@ -33,6 +32,20 @@ return function()
       capabilities = nvlsp.capabilities,
     }
   end
+
+  -- clangd
+  lspconfig.clangd.setup {
+    capabilities = {
+      textDocument = {
+        completion = {
+          editsNearCursor = true,
+        },
+      },
+      offsetEncoding =  'utf-16',
+    },
+    on_init = nvlsp.on_init,
+    on_attach = nvlsp.on_attach,
+  }
 
   -- Rust | Enable all features by default
   lspconfig.rust_analyzer.setup {
