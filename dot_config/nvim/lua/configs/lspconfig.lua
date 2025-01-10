@@ -12,7 +12,6 @@ return function()
     "docker_compose_language_service",
     "dockerls",
     "gopls",
-    "harper_ls",
     "hyprls",
     "jsonls",
     "lua_ls",
@@ -43,6 +42,13 @@ return function()
       },
       offsetEncoding =  'utf-16',
     },
+    on_init = nvlsp.on_init,
+    on_attach = nvlsp.on_attach,
+  }
+
+  lspconfig.harper_ls.setup {
+    filetypes = { "markdown", "text", "gitcommit" },
+    capabilities = nvlsp.capabilities,
     on_init = nvlsp.on_init,
     on_attach = nvlsp.on_attach,
   }
