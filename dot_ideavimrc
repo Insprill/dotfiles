@@ -40,5 +40,4 @@ map<leader>fm :action ReformatCode<CR>
 
 
 """ Plugins
-set sneak
 set quickscope
