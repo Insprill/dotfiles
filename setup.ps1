@@ -74,7 +74,7 @@ $insprill = @{
     "Mozilla.Thunderbird",
     "Nextcloud.NextcloudDesktop"
     "Python.Python.3.9", # Required for FanControl's liquidctl plugin
-    "Rem0o.FanControl",
+    "Rem0o.FanControl"
   )
   Choco = @(
     "iperf3"
@@ -120,7 +120,7 @@ function ProcessChoice($groups) {
   $groups | ForEach-Object { 
     if ($_.Winget) { InstallAllWinget($_) }
     if ($_.Choco) { InstallAllChoco($_) }
-    if ($_.Custom && -not $DryRun) { $_.Custom.Invoke() }
+    if ($_.Custom -and -not $DryRun) { $_.Custom.Invoke() }
   }
 }
 
