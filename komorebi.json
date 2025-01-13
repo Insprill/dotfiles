@@ -16,5 +16,12 @@
     "stack": "#cba6f7",
     "monocle": "#cba6f7"
   },
-  "global_work_area_offset": { "bottom": 0, "left": 0, "right": 0, "top": 0 }
+  "global_work_area_offset": { "bottom": 0, "left": 0, "right": 0, "top": 0 },
+  "ignore_rules": [
+    {
+      "kind": "Title",
+      "id": "DesktopMate",
+      "matching_strategy": "Equals"
+    }
+  ]
 }
