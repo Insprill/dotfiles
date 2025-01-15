@@ -29,10 +29,11 @@ essentials=(
     "ffmpegthumbnailer" # Thumbnails in Dolphin
     "fish" # Shell
     "firefox-developer-edition" # W browser
+    "gamescope" # Valve magic
     "git"
     "git-lfs"
-    "gamescope" # Valve magic
     "gnome-keyring" # Keyring
+    "go" # Required for Neovim's Go LSP
     "hyprland" # Epic compositor
     "hyprlock" # Lockscreen for said epic compositor
     "hyprpolkitagent" # Authentication
@@ -72,6 +73,7 @@ essentials=(
     "pavucontrol-qt" # Audio settings
     "pkg-config" # Required to build Hyprland plugins
     "popsicle" # USB flasher
+    "python312" # Required for cmake-language-server
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
     "qt6-imageformats" # More thumbnails for Dolphin
@@ -131,7 +133,6 @@ development=(
     "docker-compose"
     "dotnet-sdk" # C#
     "github-cli" # Easy way to login to GitHub with Git
-    "go" # Inferior to Rust
     "jetbrains-toolbox" # IntelliJ/Rider/CLion/Feet
     "lazygit" # Epic git TUI
     "namcap" # Validating PKGBUILDs
