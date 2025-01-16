@@ -21,7 +21,7 @@ return {
     javascript = { "prettierd", "eslint_d", "rustywind" },
     typescript = { "prettierd", "eslint_d", "rustywind" },
     -- Text
-    markdown = { "cbfmt" },
+    markdown = { "mdformat" },
   },
 
   -- format_on_save = {
