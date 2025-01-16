@@ -15,6 +15,7 @@ return function()
     "hyprls",
     "jsonls",
     "lua_ls",
+    "marksman",
     "powershell_es",
     "pylyzer",
     "svelte",
