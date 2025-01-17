@@ -4,6 +4,8 @@ return {
       "node_modules",
       "Library",
       "Temp",
+      "build",
+      "target",
     },
   },
   git = {
