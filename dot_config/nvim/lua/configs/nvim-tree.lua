@@ -9,6 +9,7 @@ return {
   git = {
     enable = true,
     ignore = false,
+    timeout = 2500,
   },
   renderer = {
     highlight_git = true,
