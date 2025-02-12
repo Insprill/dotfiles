@@ -7,6 +7,7 @@ SendMode Input ; Recommended for new scripts due to its superior speed and relia
 return
 
 #Space::Run komorebic toggle-float,, Hide
+#f::Run komorebic toggle-maximize,, Hide
 
 ; Move focus with Super + h/j/k/l
 #h::Run komorebic focus left,, Hide
