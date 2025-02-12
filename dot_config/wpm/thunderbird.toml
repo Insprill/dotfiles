@@ -1,0 +1,16 @@
+[Unit]
+Name = "thunderbird"
+Description = "The email and productivity app that maximizes your freedoms"
+Requires = ["proton-mail-bridge"]
+
+[Service]
+#Autostart = true # minimize-thunderbird autostarts us
+
+[Service.ExecStart]
+Executable = "C:/Program Files/Mozilla Thunderbird/thunderbird.exe"
+
+[Service.Healthcheck.Command]
+# Required so Thunderbird fully loads before we minimize it.
+# Without this, the tray icon disappears.
+Executable = "timeout" # This is a super hacky workaround for the healthcheck failing, should be replaced with DelaySec once fixed!
+Arguments = ["1"]

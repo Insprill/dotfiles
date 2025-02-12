@@ -1,0 +1,15 @@
+[Unit]
+Name = "proton-mail-bridge"
+Description = "Adds end-to-end encryption to Thunderbird"
+
+[Service]
+# Autostart = true # thunderbird autostarts us
+
+[Service.ExecStart]
+Executable = "C:/Program Files/Proton AG/Proton Mail Bridge/bridge.exe"
+Arguments = ["--noninteractive"]
+
+[Service.Healthcheck.Command]
+# Required so Thunderbird doesn't start until bridge has connected
+Executable = "timeout" # This is a super hacky workaround for the healthcheck failing, should be replaced with DelaySec once fixed!
+Arguments = ["4"]

@@ -1,1 +1,0 @@
-pwsh.exe "%AppData%\AutoHotkey\startAllScripts.ps1"

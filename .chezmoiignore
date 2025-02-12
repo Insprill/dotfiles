@@ -17,6 +17,9 @@ bin/
 
 # Windows-only
 {{ if ne .chezmoi.os "windows" }}
+.config/autohotkey/
+.config/komorebi/
+.config/wpm/
 AppData/
 Documents/PowerShell/
 desktop.ini

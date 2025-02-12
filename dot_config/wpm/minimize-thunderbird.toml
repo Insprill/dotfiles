@@ -1,0 +1,15 @@
+[Unit]
+Name = "minimize-thunderbird"
+Description = "Minimizes Thunderbird"
+Requires = ["thunderbird"]
+
+[Service]
+Kind = "Oneshot"
+Autostart = true
+
+[Service.ExecStart]
+Executable = "taskkill.exe"
+Arguments = [
+  "/IM",
+  "thunderbird.exe"
+]
