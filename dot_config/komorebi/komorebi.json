@@ -15,22 +15,10 @@
     "floating_border": "Mauve",
     "unfocused_border": "Surface0"
   },
-  "ignore_rules": [
-    {
-      "kind": "Exe",
-      "id": "DesktopMate.exe",
-      "matching_strategy": "Equals"
-    }
-  ],
   "floating_applications": [
     {
       "kind": "Exe",
-      "id": "prime95.exe",
-      "matching_strategy": "Equals"
-    },
-    {
-      "kind": "Exe",
-      "id": "barrier.exe",
+      "id": "UnityBugReporter.exe",
       "matching_strategy": "Equals"
     }
   ]
