@@ -11,7 +11,7 @@ return {
   git = {
     enable = true,
     ignore = false,
-    timeout = 2500,
+    timeout = 10000,
   },
   renderer = {
     highlight_git = true,
