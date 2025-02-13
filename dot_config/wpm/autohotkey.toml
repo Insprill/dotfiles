@@ -1,0 +1,11 @@
+[Unit]
+Name = "autohotkey"
+Description = "The ultimate automation scripting language for Windows"
+
+[Service]
+Kind = "Oneshot"
+Autostart = true
+
+[Service.ExecStart]
+Executable = "pwsh"
+Arguments = ["$USERPROFILE/.config/autohotkey/startAllScripts.ps1"]
