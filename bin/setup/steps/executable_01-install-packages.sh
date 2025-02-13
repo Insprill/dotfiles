@@ -153,7 +153,7 @@ gaming=(
     "proton-ge-custom-bin" # Better Proton
     "protontricks"
     "protonup-qt" # GUI for managing Proton versions
-    "xone-dkms" # Wired/dongle xbox controller support
+    "xone-dkms-git" # Wired/dongle xbox controller support
     "xpadneo-dkms" # Wireles xbox controller support
 )
 intelgpu=(
