@@ -4,6 +4,9 @@ return function()
   local lspconfig = require "lspconfig"
   local nvlsp = require "nvchad.configs.lspconfig"
 
+  -- Merge nvim-lsp-file-operations capabilities
+  nvlsp.capabilities = vim.tbl_deep_extend("force", nvlsp.capabilities, require("lsp-file-operations").default_capabilities())
+
   -- :help lspconfig-all | https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
   local servers = {
     "bashls",

@@ -12,6 +12,17 @@ return {
   },
 
   {
+    "antosha417/nvim-lsp-file-operations",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-tree.lua",
+    },
+    config = function()
+      require("lsp-file-operations").setup()
+    end,
+  },
+
+  {
     "iamcco/markdown-preview.nvim",
     build = "cd app && yarn install",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -34,7 +45,7 @@ return {
   {
     "andweeb/presence.nvim",
     lazy = false,
-    opts = require "configs.presence"
+    opts = require "configs.presence",
   },
 
   {
@@ -71,7 +82,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = require("configs.treesitter").opts,
   },
-
 
   {
     "lewis6991/gitsigns.nvim",
