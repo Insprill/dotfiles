@@ -8,7 +8,7 @@ return {
     -- General Languages
     c = { "clang-format" },
     cpp = { "clang-format" },
-    csharp = { "csharpier" },
+    cs = { "csharpier" },
     go = { "gofmt" },
     python = { "black" },
     rust = { "rustfmt" },
