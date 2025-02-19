@@ -1,7 +1,7 @@
 function LsEza { eza --icons --hyperlink $args }
 Set-Alias -Name ls -Value LsEza
 
-function GitForcePush { git push -f }
+function GitForcePush { git push --force-with-lease }
 Set-Alias -Name yeet -Value GitForcePush
 
 function GitPush { git push }
