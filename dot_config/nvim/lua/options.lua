@@ -6,6 +6,9 @@ local g = vim.g
 -- General Options
 o.cursorlineopt = "both"
 o.relativenumber = true
+o.shiftwidth = 4
+o.tabstop = 4
+o.softtabstop = 4
 
 -- Windows-specific options
 if jit.os == "Windows" then
