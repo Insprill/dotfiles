@@ -22,16 +22,16 @@ return
 #+l::Run komorebic move right,, Hide
 
 ; Switch workspaces with Super + [0-9]
-#1::Run komorebic focus-workspace 0,, Hide
-#2::Run komorebic focus-workspace 1,, Hide
-#3::Run komorebic focus-workspace 2,, Hide
-#4::Run komorebic focus-workspace 3,, Hide
-#5::Run komorebic focus-workspace 4,, Hide
-#6::Run komorebic focus-workspace 5,, Hide
-#7::Run komorebic focus-workspace 6,, Hide
-#8::Run komorebic focus-workspace 7,, Hide
-#9::Run komorebic focus-workspace 8,, Hide
-#0::Run komorebic focus-workspace 9,, Hide
+#1::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 0",, Hide
+#2::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 1",, Hide
+#3::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 2",, Hide
+#4::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 3",, Hide
+#5::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 4",, Hide
+#6::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 5",, Hide
+#7::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 6",, Hide
+#8::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 7",, Hide
+#9::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 8",, Hide
+#0::Run, %ComSpec% /c "komorebic focus-monitor-at-cursor & komorebic focus-workspace 9",, Hide
 
 ; Move active window to a workspace with Super + SHIFT + [0-9]
 #+1::Run komorebic move-to-workspace 0,, Hide
