@@ -1,5 +1,6 @@
 return {
   config = {
+    filewatching = false,
     settings = {
       ["csharp|background_analysis"] = {
         background_analysis = {
