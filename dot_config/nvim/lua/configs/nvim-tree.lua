@@ -1,24 +1,30 @@
 return {
+  auto_reload_on_write = false, -- Slows down huge projects
   filesystem_watchers = {
     ignore_dirs = {
-      "node_modules",
-      "Library",
-      "Temp",
+      -- Generic
+      ".git",
       "build",
+      -- Rust
       "target",
+      -- Web
+      "node_modules",
+      -- Unity
+      "Library.*",
+      "Logs",
+      "MemoryCaptures",
+      "obj",
+      "ProfileAnalyzer",
+      "Temp",
     },
   },
   git = {
-    enable = true,
-    ignore = false,
-    timeout = 10000,
+    timeout = 1000,
   },
   renderer = {
     highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
-    },
+  },
+  filters = {
+    git_ignored = false,
   },
 }
