@@ -9,8 +9,5 @@ Requires = ["proton-mail-bridge"]
 [Service.ExecStart]
 Executable = "C:/Program Files/Mozilla Thunderbird/thunderbird.exe"
 
-[Service.Healthcheck.Command]
-# Required so Thunderbird fully loads before we minimize it.
-# Without this, the tray icon disappears.
-Executable = "timeout" # This is a super hacky workaround for the healthcheck failing, should be replaced with DelaySec once fixed!
-Arguments = ["1"]
+[Service.Healthcheck.Process]
+DelaySec = 3
