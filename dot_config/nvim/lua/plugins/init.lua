@@ -12,6 +12,14 @@ return {
   },
 
   {
+    "NMAC427/guess-indent.nvim",
+    lazy = false,
+    config = function()
+      require("guess-indent").setup()
+    end,
+  },
+
+  {
     "kdheepak/lazygit.nvim",
     lazy = false,
     cmd = {
