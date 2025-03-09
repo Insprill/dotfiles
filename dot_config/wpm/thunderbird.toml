@@ -10,4 +10,4 @@ Requires = ["proton-mail-bridge"]
 Executable = "C:/Program Files/Mozilla Thunderbird/thunderbird.exe"
 
 [Service.Healthcheck.Process]
-DelaySec = 3
+DelaySec = 5
