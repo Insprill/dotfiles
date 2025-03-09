@@ -104,7 +104,6 @@ essentials=(
     "wlogout" # Power menu
     "wpaperd" # Desktop background picker/randomizer
     "xorg-xeyes" # Useful for debugging XWayland issues
-    "xorg-xhost" # Fixes GParted not opening
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal-gtk"
     "yarn" # Installing Neovim plugins
