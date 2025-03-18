@@ -86,7 +86,7 @@
         },
         "exec-if": "which waybar-module-pacman-updates",
         "exec": "waybar-module-pacman-updates --no-zero-output --interval-seconds 10 --network-interval-seconds 3600 --tooltip-align-columns",
-        "on-click": "alacritty -e paru",
+        "on-click": "alacritty -e sh -c \"echo Updating packages... && paru\"",
         "cursor": true
     },
 
