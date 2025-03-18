@@ -1,0 +1,13 @@
+[Unit]
+Name = "masir"
+Description = "Focus follows mouse for Windows"
+Requires = ["komorebi"]
+
+[Service]
+Autostart = true
+
+[Service.ExecStart]
+Executable = "masir.exe"
+
+[Service.Healthcheck.Process]
+DelaySec = 1
