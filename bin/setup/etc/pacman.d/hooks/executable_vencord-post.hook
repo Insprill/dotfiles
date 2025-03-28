@@ -7,4 +7,4 @@ Target = discord
 [Action]
 Description = Install Vencord
 When = PostTransaction
-Exec = /usr/bin/vencordinstallercli -install -branch stable
+Exec = /usr/bin/VencordInstaller -install -branch stable

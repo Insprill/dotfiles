@@ -7,4 +7,4 @@ Target = discord
 [Action]
 Description = Ininstall Vencord
 When = PreTransaction
-Exec = /usr/bin/vencordinstallercli -uninstall -branch stable
+Exec = /usr/bin/VencordInstaller -uninstall -branch stable
