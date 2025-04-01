@@ -13,7 +13,6 @@ essentials=(
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
     "capitaine-cursors" # Cursor
-    "catppuccin-gtk-theme-mocha" # Catppuccin GTK theme (deprecated :pain:)
     "chezmoi" # Dotfile management
     "cmake" # Required to build Hyprland plugins
     "compsize" # View BTRFS compression ratios
@@ -33,7 +32,9 @@ essentials=(
     "git"
     "git-lfs"
     "gnome-keyring" # Keyring
+    "gnome-themes-extra" # Required for Colloid GTJ theme
     "go" # Required for Neovim's Go LSP
+    "gtk-engine-murrine" # Required for Colloid GTK theme
     "hyprland" # Epic compositor
     "hyprlock" # Lockscreen for said epic compositor
     "hyprpolkitagent" # Authentication
