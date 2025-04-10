@@ -1,5 +1,5 @@
 {
-  "__VERSION__": "209",
+  "__VERSION__": "219",
   "Main": {
     "Controls": [
       {
@@ -203,7 +203,7 @@
           "OneWayHysteresis": false,
           "Points": [
             "30,25",
-            "40,35",
+            "40,37",
             "50,100"
           ],
           "SelectedHysteresis": 0.0,
@@ -249,7 +249,7 @@
               "OneWayHysteresis": false,
               "Points": [
                 "30,25",
-                "40,35",
+                "40,37",
                 "50,100"
               ],
               "SelectedHysteresis": 0.0,
@@ -323,7 +323,7 @@
               "OneWayHysteresis": false,
               "Points": [
                 "30,25",
-                "40,35",
+                "40,37",
                 "50,100"
               ],
               "SelectedHysteresis": 0.0,
@@ -392,7 +392,7 @@
           "OneWayHysteresis": false,
           "Points": [
             "30,25",
-            "40,35",
+            "40,37",
             "50,100"
           ],
           "SelectedHysteresis": 0.0,
@@ -529,7 +529,7 @@
         "OneWayHysteresis": false,
         "Points": [
           "30,25",
-          "40,35",
+          "40,37",
           "50,100"
         ],
         "SelectedHysteresis": 0.0,
@@ -582,7 +582,7 @@
             "OneWayHysteresis": false,
             "Points": [
               "30,25",
-              "40,35",
+              "40,37",
               "50,100"
             ],
             "SelectedHysteresis": 0.0,
