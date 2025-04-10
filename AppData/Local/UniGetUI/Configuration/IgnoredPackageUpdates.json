@@ -1,0 +1,12 @@
+{
+  "winget\\Unity.Unity.2020": "*",
+  "winget\\Unity.Unity.2022": "*",
+  "winget\\Parsec.Parsec": "*",
+  "winget\\Unity.Unity.6000": "*",
+  "winget\\Microsoft.VCRedist.2013.x86": "*",
+  "winget\\Discord.Discord": "*",
+  "winget\\AutoHotkey.AutoHotkey": "*",
+  "winget\\Microsoft.VCRedist.2013.x64": "*",
+  "winget\\SomePythonThings.WingetUIStore.Pre-release": "3.1.0-beta2",
+  "winget\\Microsoft.EdgeWebView2Runtime": "*"
+}
