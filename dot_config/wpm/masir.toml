@@ -4,7 +4,7 @@ Description = "Focus follows mouse for Windows"
 Requires = ["komorebi"]
 
 [Service]
-Autostart = true
+#Autostart = true # Started by altsnap
 
 [Service.ExecStart]
 Executable = "masir.exe"

@@ -63,6 +63,7 @@ $gaming = @{
 $tiling = @{
   Name = "Tiling"
   Winget = @(
+    "AltSnap.AltSnap"
     "LGUG2Z.komorebi"
   )
 }

@@ -1,0 +1,13 @@
+[Unit]
+Name = "altsnap"
+Description = "Maintained continuation of Stefan Sundin's AltDrag"
+Requires = ["masir"]
+
+[Service]
+Autostart = true
+
+[Service.ExecStart]
+Executable = "$USERPROFILE/AppData/Roaming/AltSnap/AltSnap.exe"
+
+[Service.Healthcheck.Process]
+DelaySec = 1
