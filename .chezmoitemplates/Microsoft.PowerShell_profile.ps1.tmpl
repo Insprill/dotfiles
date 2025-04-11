@@ -1,20 +1,14 @@
+# Simple aliases
+function lg { lazygit $args }
+function yeet { git push --force-with-lease $args }
+function shipit { git push $args }
+function sure { git add . && git rebase --continue }
+function based { git rebase --committer-date-is-author-date $args }
+function rmrf { if ($args.length -gt 0) { Remove-Item $args[0] -Recurse -Force } }
+
+# Override aliases
 function LsEza { eza --icons --hyperlink $args }
 Set-Alias -Name ls -Value LsEza
 
-function GitForcePush { git push --force-with-lease }
-Set-Alias -Name yeet -Value GitForcePush
-
-function GitPush { git push }
-Set-Alias -Name shipit -Value GitPush
-
-function GitAddAndContinueRebase { git add . && git rebase --continue }
-Set-Alias -Name sure -Value GitAddAndContinueRebase
-
-function GitRebase { git rebase --committer-date-is-author-date $args }
-Set-Alias -Name based -Value GitRebase
-
-function RemoveRecursiveForce { if ($args.length -gt 0) { Remove-Item $args[0] -Recurse -Force } }
-Set-Alias -Name rmrf -Value RemoveRecursiveForce
-
+# Init logic
 Invoke-Expression (&starship init powershell)
-

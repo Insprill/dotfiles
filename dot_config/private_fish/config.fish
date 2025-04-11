@@ -1,6 +1,7 @@
 set -U fish_greeting
 
 # Aliases
+alias lg="lazygit"
 alias ls="eza --icons --hyperlink"
 alias pacdiff="sudo env DIFFPROG='nvim -d' pacdiff"
 alias yeet="git push --force-with-lease"
