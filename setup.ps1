@@ -26,6 +26,7 @@ $essentials = @{
     "REALiX.HWiNFO",
     "MartiCliment.UniGetUI",
     "twpayne.chezmoi",
+    "voidtools.Everything"
     "7zip.7zip"
   )
   Choco = @(
