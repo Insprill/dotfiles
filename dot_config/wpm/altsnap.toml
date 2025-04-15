@@ -8,6 +8,7 @@ Autostart = true
 
 [Service.ExecStart]
 Executable = "$USERPROFILE/AppData/Roaming/AltSnap/AltSnap.exe"
+Arguments = ["-h"] # No tray icon
 
 [Service.Healthcheck.Process]
 DelaySec = 1
