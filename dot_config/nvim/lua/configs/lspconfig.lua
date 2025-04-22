@@ -5,7 +5,8 @@ return function()
   local nvlsp = require "nvchad.configs.lspconfig"
 
   -- Merge nvim-lsp-file-operations capabilities
-  nvlsp.capabilities = vim.tbl_deep_extend("force", nvlsp.capabilities, require("lsp-file-operations").default_capabilities())
+  nvlsp.capabilities =
+    vim.tbl_deep_extend("force", nvlsp.capabilities, require("lsp-file-operations").default_capabilities())
 
   -- :help lspconfig-all | https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
   local servers = {
@@ -44,7 +45,7 @@ return function()
           editsNearCursor = true,
         },
       },
-      offsetEncoding =  'utf-16',
+      offsetEncoding = "utf-16",
     },
     on_init = nvlsp.on_init,
     on_attach = nvlsp.on_attach,
@@ -61,6 +62,9 @@ return function()
   lspconfig.rust_analyzer.setup {
     settings = {
       ["rust-analyzer"] = {
+        diagnostics = {
+          enable = false,
+        },
         cargo = {
           allFeatures = true,
         },
