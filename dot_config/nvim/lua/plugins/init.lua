@@ -35,22 +35,8 @@ return {
     },
     dependencies = {
       "nvim-telescope/telescope.nvim",
-      "nvim-lua/plenary.nvim",
     },
-    config = function()
-      require("telescope").load_extension "lazygit"
-      -- Using PowerShell causes a blank window
-      if jit.os == "Windows" then
-        vim.schedule(function()
-          vim.api.nvim_create_user_command("LazyGit", function()
-            local current = vim.opt.shell
-            vim.opt.shell = "cmd"
-            require("lazygit").lazygit()
-            vim.opt.shell = current
-          end, { force = true })
-        end)
-      end
-    end,
+    config = require "configs.lazygit",
     keys = {
       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
@@ -130,6 +116,11 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = require "configs.lspconfig",
+  },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    config = require "configs.telescope",
   },
 
   {

@@ -9,6 +9,7 @@ o.relativenumber = true
 o.shiftwidth = 4
 o.tabstop = 4
 o.softtabstop = 4
+o.winborder = "rounded"
 
 -- Windows-specific options
 if jit.os == "Windows" then
