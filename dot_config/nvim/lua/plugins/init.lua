@@ -8,16 +8,8 @@ return {
   },
 
   {
-    "sindrets/diffview.nvim",
-    lazy = false,
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-
-  {
     "NMAC427/guess-indent.nvim",
-    lazy = false,
+    event = "BufReadPost",
     config = function()
       require("guess-indent").setup()
     end,
@@ -25,16 +17,13 @@ return {
 
   {
     "kdheepak/lazygit.nvim",
-    lazy = false,
+    event = "VeryLazy",
     cmd = {
       "LazyGit",
       "LazyGitConfig",
       "LazyGitCurrentFile",
       "LazyGitFilter",
       "LazyGitFilterCurrentFile",
-    },
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
     },
     config = require "configs.lazygit",
     keys = {
@@ -63,12 +52,9 @@ return {
 
   {
     "iamcco/markdown-preview.nvim",
-    build = "cd app && yarn install",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
     ft = { "markdown" },
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
   },
 
   {
@@ -83,7 +69,7 @@ return {
 
   {
     "andweeb/presence.nvim",
-    lazy = false,
+    event = "VeryLazy",
     opts = require "configs.presence",
   },
 
@@ -95,7 +81,7 @@ return {
 
   {
     "ThePrimeagen/vim-be-good",
-    lazy = false,
+    event = "VeryLazy",
   },
 
   {
