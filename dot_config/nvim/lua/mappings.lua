@@ -2,9 +2,15 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+-- Misc
 map("n", ";", ":", { desc = "CMD enter command mode" })
-
 map("n", "<leader>km", ":Telescope keymaps<CR>")
+
+-- Git
+map("n", "<leader>gbl", ":Gitsigns blame_line<CR>")
+map("n", "<leader>gbf", ":Gitsigns blame<CR>")
+
+-- LSP
 map("n", "<leader>ds", ":Telescope diagnostics<CR>")
 map("n", "<leader>dt", function()
   local cfg = vim.diagnostic.config()
