@@ -14,6 +14,10 @@ M.base46 = {
   -- },
 }
 
+M.nvdash = {
+  load_on_startup = true,
+}
+
 -- This is super hacky, but necessary for nvim-treesitter to work
 -- properly on Windows. Using CC or GCC will cause Neovim to crash
 -- as soon as a treesitter is loaded. Using zig causes nothing to
@@ -23,7 +27,7 @@ M.base46 = {
 -- This ends up being the only way to get everything fully functional
 -- the first time nvim-treesitter is installed.
 if jit.os == "Windows" then
-  vim.fn.setenv('CC', 'clang')
+  vim.fn.setenv("CC", "clang")
 end
 
 return M
