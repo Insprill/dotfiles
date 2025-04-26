@@ -54,6 +54,8 @@ M.nvdash = {
   },
 }
 
+M.cheatsheet = {
+  theme = "simple", -- grid view goes off-screen
 }
 
 -- This is super hacky, but necessary for nvim-treesitter to work
