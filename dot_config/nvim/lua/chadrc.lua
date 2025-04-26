@@ -7,11 +7,17 @@ local M = {}
 
 M.base46 = {
   theme = "catppuccin",
+}
 
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+M.ui = {
+  cmp = {
+    icons_left = true,
+    style = "atom_colored",
+    abbr_maxwidth = 120,
+  },
+  telescope = {
+    style = "bordered",
+  },
 }
 
 M.nvdash = {
