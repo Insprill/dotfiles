@@ -1,39 +1,7 @@
-return function()
-  require("nvchad.configs.lspconfig").defaults()
-
-  local lspconfig = require "lspconfig"
-  local nvlsp = require "nvchad.configs.lspconfig"
-
-  -- Merge nvim-lsp-file-operations capabilities
-  nvlsp.capabilities =
-    vim.tbl_deep_extend("force", nvlsp.capabilities, require("lsp-file-operations").default_capabilities())
-
-  -- :help lspconfig-all | https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
-  local servers = {
-    "bashls",
-    "cmake",
-    "cssls",
-    "docker_compose_language_service",
-    "dockerls",
-    "gopls",
-    "hyprls",
-    "jdtls",
-    "jsonls",
-    "lua_ls",
-    "marksman",
-    "powershell_es",
-    "pylyzer",
-    "svelte",
-    "tailwindcss",
-    "ts_ls",
-    "yamlls",
-  }
-
-  -- lsps with default config
-  vim.lsp.enable(servers)
-
-  -- clangd
-  lspconfig.clangd.setup {
+-- :help lspconfig-all | https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
+local servers = {
+  bashls = {},
+  clangd = {
     capabilities = {
       textDocument = {
         completion = {
@@ -42,19 +10,24 @@ return function()
       },
       offsetEncoding = "utf-16",
     },
-    on_init = nvlsp.on_init,
-    on_attach = nvlsp.on_attach,
-  }
-
-  lspconfig.harper_ls.setup {
+  },
+  crates = {},
+  cmake = {},
+  cssls = {},
+  docker_compose_language_service = {},
+  dockerls = {},
+  gopls = {},
+  harper_ls = {
     filetypes = { "markdown", "text", "gitcommit" },
-    capabilities = nvlsp.capabilities,
-    on_init = nvlsp.on_init,
-    on_attach = nvlsp.on_attach,
-  }
-
-  -- Rust | Enable all features by default
-  lspconfig.rust_analyzer.setup {
+  },
+  hyprls = {},
+  jdtls = {},
+  jsonls = {},
+  lua_ls = {},
+  marksman = {},
+  powershell_es = {},
+  pylyzer = {},
+  rust_analyzer = {
     settings = {
       ["rust-analyzer"] = {
         cargo = {
@@ -62,27 +35,32 @@ return function()
         },
       },
     },
-    capabilities = nvlsp.capabilities,
-    on_init = nvlsp.on_init,
-    on_attach = nvlsp.on_attach,
-  }
+  },
+  svelte = {},
+  tailwindcss = {},
+  ts_ls = {},
+  yamlls = {},
+}
 
-  -- Crates | Rust crate version checking
-  require("crates").setup {
-    lsp = {
-      on_attach = nvlsp.on_attach,
-      enabled = true,
-      actions = true,
-      completion = true,
-      hover = true,
-    },
-  }
+vim.diagnostic.config {
+  virtual_lines = {
+    current_line = true,
+  },
+  virtual_text = {
+    current_line = false,
+  },
+}
 
-  require("roslyn").setup {
-    config = {
-      on_attach = nvlsp.on_attach,
-      on_init = nvlsp.on_init,
-      capabilities = nvlsp.capabilities,
-    },
-  }
+return function()
+  require("nvchad.configs.lspconfig").defaults()
+
+  -- Merge nvim-lsp-file-operations capabilities
+  local nvlsp = require "nvchad.configs.lspconfig"
+  nvlsp.capabilities =
+    vim.tbl_deep_extend("force", nvlsp.capabilities, require("lsp-file-operations").default_capabilities())
+
+  for name, opts in pairs(servers) do
+    vim.lsp.enable(name)
+    vim.lsp.config(name, opts)
+  end
 end
