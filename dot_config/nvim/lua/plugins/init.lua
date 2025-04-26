@@ -56,7 +56,7 @@ return {
     -- Must be before nvim-lspconfig!
     "nvim-java/nvim-java",
     config = function()
-      require('java').setup()
+      require("java").setup()
     end,
   },
 
@@ -106,6 +106,12 @@ return {
   {
     "ThePrimeagen/vim-be-good",
     lazy = false,
+  },
+
+  {
+    "mcauley-penney/visual-whitespace.nvim",
+    config = true,
+    event = "ModeChanged *:[vV\22]",
   },
 
   --
