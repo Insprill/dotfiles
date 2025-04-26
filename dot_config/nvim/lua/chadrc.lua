@@ -7,6 +7,14 @@ local M = {}
 
 M.base46 = {
   theme = "catppuccin",
+  changed_themes = {
+    catppuccin = {
+      base_30 = {
+        blue = "#CBA6F7",
+        folder_bg = "#CBA6F7",
+      },
+    },
+  },
 }
 
 M.ui = {
