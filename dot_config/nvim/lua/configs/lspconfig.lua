@@ -42,15 +42,6 @@ local servers = {
   yamlls = {},
 }
 
-vim.diagnostic.config {
-  virtual_lines = {
-    current_line = true,
-  },
-  virtual_text = {
-    current_line = false,
-  },
-}
-
 return function()
   require("nvchad.configs.lspconfig").defaults()
 
