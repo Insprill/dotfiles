@@ -17,9 +17,7 @@ local servers = {
   docker_compose_language_service = {},
   dockerls = {},
   gopls = {},
-  harper_ls = {
-    filetypes = { "markdown", "text", "gitcommit" },
-  },
+  harper_ls = {},
   hyprls = {},
   jdtls = {},
   jsonls = {},
