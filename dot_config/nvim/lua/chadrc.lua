@@ -7,6 +7,7 @@ local M = {}
 
 M.base46 = {
   theme = "catppuccin",
+  ---@diagnostic disable: missing-fields
   changed_themes = {
     catppuccin = {
       base_30 = {
@@ -15,6 +16,7 @@ M.base46 = {
       },
     },
   },
+  ---@diagnostic enable: missing-fields
 }
 
 M.ui = {
