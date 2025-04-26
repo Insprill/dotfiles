@@ -1,0 +1,3 @@
+notARepository: "skip"
+git:
+  overrideGpg: true
