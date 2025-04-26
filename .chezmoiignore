@@ -4,15 +4,16 @@ LICENSE
 
 # Linux-only
 {{ if ne .chezmoi.os "linux" }}
-.config/
 .local/
 bin/
 
 .bashrc
-.dmrc
 .gtkrc-2.0
-.xinitrc
-.Xresources
+{{ end }}
+
+# Linux/macOS
+{{ if and (ne .chezmoi.os "linux") (ne .chezmoi.os "darwin") }}
+.config/
 {{ end }}
 
 # Windows-only
