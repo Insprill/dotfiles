@@ -17,6 +17,7 @@ return function()
     "dockerls",
     "gopls",
     "hyprls",
+    "jdtls",
     "jsonls",
     "lua_ls",
     "marksman",

@@ -53,6 +53,14 @@ return {
   },
 
   {
+    -- Must be before nvim-lspconfig!
+    "nvim-java/nvim-java",
+    config = function()
+      require('java').setup()
+    end,
+  },
+
+  {
     "antosha417/nvim-lsp-file-operations",
     dependencies = {
       "nvim-lua/plenary.nvim",
