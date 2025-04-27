@@ -27,6 +27,7 @@ steps=(
     17-apply-gtk-theme
     18-disable-sss
     20-enable-clipping
+    80-services-to-sockets
     90-adjust-sys-clock
     97-update-grub
     98-rebuild-initramfs
