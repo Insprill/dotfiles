@@ -1,5 +1,12 @@
 return {
   auto_reload_on_write = false, -- Slows down huge projects
+  diagnostics = {
+    enable = true,
+    show_on_dirs = true,
+    severity = {
+      min = vim.diagnostic.severity.INFO,
+    },
+  },
   filesystem_watchers = {
     ignore_dirs = {
       -- Generic
@@ -18,13 +25,28 @@ return {
       "Temp",
     },
   },
+  filters = {
+    git_ignored = false,
+  },
   git = {
+    enable = true,
     timeout = 1000,
   },
   renderer = {
-    highlight_git = true,
+    full_name = true,
+    group_empty = true,
+    highlight_git = "name",
+    highlight_diagnostics = "icon",
   },
-  filters = {
-    git_ignored = false,
+  ui = {
+    confirm = {
+      trash = false,
+    },
+  },
+  view = {
+    width = {
+      max = 64,
+      padding = 0,
+    },
   },
 }
