@@ -27,6 +27,8 @@ steps=(
     17-apply-gtk-theme
     18-disable-sss
     20-enable-clipping
+    21-mkinitcpio-hooks
+    21-mkinitcpio-modules-decompress
     80-services-to-sockets
     90-adjust-sys-clock
     97-update-grub
