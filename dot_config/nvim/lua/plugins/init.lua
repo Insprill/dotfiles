@@ -48,6 +48,12 @@ return {
   },
 
   {
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    opts = { dir = vim.fn.stdpath "state" .. "/sessions/" }, -- Should be default but doesn't work
+  },
+
+  {
     "andweeb/presence.nvim",
     event = "VeryLazy",
     opts = require "configs.presence",
