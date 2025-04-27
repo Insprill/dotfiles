@@ -47,8 +47,11 @@ create_symlink "pacman.d/hooks/vencord-post.hook"
 # Polkit rules
 create_symlink "polkit-1/rules.d/10-power-management.rules"
 
-# Systemctl
-create_symlink "sysctl.d/fs.conf"
+# Security
+copy_file "security/limits.conf"
+
+# Sysctl
+copy_file "sysctl.d/99-fs.conf"
 
 # Sudo (cannot be linked, must be copied)
 copy_file "sudoers.d/20-insults"
