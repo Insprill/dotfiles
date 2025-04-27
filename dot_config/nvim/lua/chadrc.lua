@@ -30,32 +30,6 @@ M.ui = {
   },
 }
 
-M.nvdash = {
-  load_on_startup = true,
-  -- Copied from NvChad config, shortcuts modified.
-  -- https://github.com/NvChad/ui/blob/4466c87073c811c22b14215ba8a0cfc7d1b8b688/lua/nvconfig.lua#L62-L80
-  buttons = {
-    { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" },
-    { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" },
-    { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
-    { txt = "  Mappings", keys = "km", cmd = "Telescope keymaps" },
-
-    { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
-
-    {
-      txt = function()
-        local stats = require("lazy").stats()
-        local ms = math.floor(stats.startuptime) .. " ms"
-        return "  Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms
-      end,
-      hl = "NvDashFooter",
-      no_gap = true,
-    },
-
-    { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
-  },
-}
-
 M.cheatsheet = {
   theme = "simple", -- grid view goes off-screen
 }

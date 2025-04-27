@@ -1,6 +1,25 @@
 return {
   ---@class snacks.Config
   opts = {
+    dashboard = {
+      enabled = true,
+      formats = {
+        key = function(item)
+          return { { "[", hl = "special" }, { item.key, hl = "key" }, { "]", hl = "special" } }
+        end,
+      },
+      sections = {
+        -- Left Pane
+        { pane = 1, section = "header" },
+        { pane = 1, section = "keys", gap = 1, padding = 1 },
+        { pane = 1, section = "startup", padding = 1 },
+        -- Right Pane
+        { pane = 2, section = "recent_files", icon = " ", title = "Recent Files", indent = 2, padding = 1 },
+        { pane = 2, section = "projects", icon = " ", title = "Projects", indent = 2, padding = 1 },
+        { pane = 2, icon = " ", title = "Recent Files In ", file = vim.fn.fnamemodify(".", ":~") },
+        { pane = 2, section = "recent_files", cwd = true, indent = 2, padding = 1 },
+      },
+    },
     gitbrowse = { enabled = true },
     lazygit = { enabled = true },
     picker = { enabled = true },
