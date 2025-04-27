@@ -16,22 +16,6 @@ return {
   },
 
   {
-    "kdheepak/lazygit.nvim",
-    event = "VeryLazy",
-    cmd = {
-      "LazyGit",
-      "LazyGitConfig",
-      "LazyGitCurrentFile",
-      "LazyGitFilter",
-      "LazyGitFilterCurrentFile",
-    },
-    config = require "configs.lazygit",
-    keys = {
-      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
-    },
-  },
-
-  {
     "nvim-java/nvim-java",
   },
 
@@ -73,6 +57,13 @@ return {
     "seblj/roslyn.nvim",
     ft = "cs",
     opts = require "configs.roslyn",
+  },
+
+  {
+    "folke/snacks.nvim",
+    event = "VeryLazy", -- Initialize after we removed mappings!
+    keys = require("configs.snacks").keys,
+    opts = require("configs.snacks").opts,
   },
 
   {

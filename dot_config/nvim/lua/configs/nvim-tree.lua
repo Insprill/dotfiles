@@ -1,5 +1,6 @@
 return {
   auto_reload_on_write = false, -- Slows down huge projects
+  select_prompts = true,
   diagnostics = {
     enable = true,
     show_on_dirs = true,
