@@ -27,3 +27,11 @@ autocmd("BufReadPost", {
     end
   end,
 })
+
+-- Don't auto-insert comment leader when going to a newline.
+vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove { "r", "o" }
+  end,
+})
