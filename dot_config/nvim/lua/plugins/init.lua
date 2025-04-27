@@ -67,6 +67,11 @@ return {
   },
 
   {
+    "lambdalisue/vim-suda",
+    event = "BufReadPost",
+  },
+
+  {
     "ThePrimeagen/vim-be-good",
     event = "VeryLazy",
   },

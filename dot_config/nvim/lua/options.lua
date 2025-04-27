@@ -27,5 +27,8 @@ g.neovide_scale_factor = 0.8
 g.neovide_cursor_animation_length = 0.05
 g.neovide_cursor_train_size = 0.5
 
+-- Suda
+g.suda_smart_edit = 1
+
 -- Autocmds
 require "autocmds"
