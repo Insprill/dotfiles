@@ -25,6 +25,7 @@ steps=(
     15-set-vscode-passwd-store
     16-delete-unnecessary-folders
     17-apply-gtk-theme
+    18-disable-sss
     20-enable-clipping
     90-adjust-sys-clock
     97-update-grub
