@@ -3,11 +3,6 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 --
--- Misc
---
-map("n", ";", ":", { desc = "CMD enter command mode" })
-
---
 -- Git
 --
 map("n", "<leader>gb", ":Gitsigns blame_line<CR>")
