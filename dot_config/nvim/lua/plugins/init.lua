@@ -60,6 +60,11 @@ return {
   },
 
   {
+    "unblevable/quick-scope",
+    event = "BufReadPost",
+  },
+
+  {
     "seblj/roslyn.nvim",
     ft = "cs",
     opts = require "configs.roslyn",
