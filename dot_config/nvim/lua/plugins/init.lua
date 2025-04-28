@@ -39,9 +39,6 @@ return {
 
   {
     "vuki656/package-info.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
     event = { "BufRead package.json" },
     keys = require("configs.package-info").keys,
     opts = require("configs.package-info").opts,
@@ -55,7 +52,7 @@ return {
 
   {
     "andweeb/presence.nvim",
-    event = "VeryLazy",
+    event = "BufReadPost",
     opts = require "configs.presence",
   },
 
@@ -72,7 +69,12 @@ return {
 
   {
     "folke/snacks.nvim",
-    event = "VeryLazy", -- Initialize after we removed mappings!
+    -- This shouldn't be lazy loaded, but we need to
+    -- delete the NvChad Telescope binds before loading
+    -- or some of them will take precedence.
+    -- lazy = false,
+    -- priority = 1000,
+    event = "VeryLazy",
     keys = require("configs.snacks").keys,
     opts = require("configs.snacks").opts,
   },
@@ -84,7 +86,7 @@ return {
 
   {
     "ThePrimeagen/vim-be-good",
-    event = "VeryLazy",
+    cmd = "VimBeGood",
   },
 
   {
