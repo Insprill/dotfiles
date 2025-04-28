@@ -38,3 +38,25 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     end
   end,
 })
+
+-- Auto refresh codelens
+local codelens_augroup = vim.api.nvim_create_augroup("lsp_codelens_refresh", { clear = true })
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = codelens_augroup,
+  callback = function(args)
+    local buf = args.buf
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client ~= nil and client.server_capabilities and client.server_capabilities.codeLensProvider then
+      vim.api.nvim_clear_autocmds({
+        group = codelens_augroup,
+        buffer = buf,
+      })
+      vim.lsp.codelens.refresh()
+      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
+        group  = codelens_augroup,
+        buffer = buf,
+        callback = vim.lsp.codelens.refresh
+      })
+    end
+  end,
+})

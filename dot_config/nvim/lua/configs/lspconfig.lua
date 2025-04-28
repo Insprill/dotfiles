@@ -52,4 +52,6 @@ return function()
     vim.lsp.enable(name)
     vim.lsp.config(name, opts)
   end
+
+  vim.lsp.inlay_hint.enable()
 end
