@@ -45,6 +45,8 @@ return {
     },
   },
   view = {
+    number = true,
+    relativenumber = true,
     width = {
       max = 64,
       padding = 0,
