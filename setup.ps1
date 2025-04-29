@@ -64,9 +64,21 @@ $gaming = @{
 $tiling = @{
   Name = "Tiling"
   Winget = @(
-    "AltSnap.AltSnap"
+    "AltSnap.AltSnap",
     "LGUG2Z.komorebi"
   )
+  Custom = {
+    Write-Host "Installing LGUG2Z/wpm"
+    if ($DryRun) {
+      Write-Host "cargo install --git https://github.com/LGUG2Z/wpm wpmd"
+      Write-Host "cargo install --git https://github.com/LGUG2Z/wpm wpmctl"
+    } else {
+      Write-Host "Installing wpmd..."
+      cargo install --git https://github.com/LGUG2Z/wpm wpmd
+      Write-Host "Installing wpmctl..."
+      cargo install --git https://github.com/LGUG2Z/wpm wpmctl
+    }
+  }
 }
 
 $insprill = @{
@@ -74,7 +86,7 @@ $insprill = @{
   Winget = @(
     "LocalSend.LocalSend",
     "Mozilla.Thunderbird",
-    "Nextcloud.NextcloudDesktop"
+    "Nextcloud.NextcloudDesktop",
     "Python.Python.3.9", # Required for FanControl's liquidctl plugin
     "Rem0o.FanControl"
   )
@@ -95,7 +107,7 @@ function InstallAllWinget($group) {
 }
 
 function InstallAllChoco($group) {
-  $group.Winget | ForEach-Object {
+  $group.Choco | ForEach-Object {
     if ($DryRun) {
       Write-Host "choco install $_"
     } else {
@@ -143,6 +155,7 @@ $komorebicPath = "C:\Program Files\komorebi\bin\komorebic.exe"
 if (Test-Path $komorebicPath) {
   Write-Host "Updating komorebic applications"
   Start-Process -FilePath "$komorebicPath" -ArgumentList "fetch-asc"
+  Move-Item -Path "$env:USERPROFILE\applications.json" -Destination "$env:USERPROFILE\.config\komorebi\applications.json" -Force
 }
 
 Write-Host "Installing liquidctl"
