@@ -34,6 +34,8 @@
 	wsErrorHighlight = all
 [merge]
 	tool = unityyamlmerge
+[mergetool]
+	keepBackup = false
 [mergetool "unityyamlmerge"]
 	trustExitCode = false
 {{ if ne .chezmoi.os "windows" }}
