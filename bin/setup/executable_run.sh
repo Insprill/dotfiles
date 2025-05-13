@@ -26,7 +26,7 @@ steps=(
     16-delete-unnecessary-folders
     17-apply-gtk-theme
     18-disable-sss
-    20-enable-clipping
+    20-enable-screen-recording
     21-mkinitcpio-hooks
     21-mkinitcpio-modules-decompress
     80-services-to-sockets

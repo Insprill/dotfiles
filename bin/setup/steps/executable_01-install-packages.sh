@@ -146,7 +146,7 @@ development=(
 gaming=(
     "discord" # 🤓
     "gamemode" # Optimizations for games
-    "gpu-screen-recorder" # make a guess
+    "gpu-screen-recorder-ui" # make a guess
     "lact" # GPU monitoring / overclocking
     "mangohud" # Performance overlay
     "steam" # Good guy Valve
