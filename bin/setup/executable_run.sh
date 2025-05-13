@@ -28,7 +28,7 @@ steps=(
     18-disable-sss
     20-enable-screen-recording
     21-mkinitcpio-hooks
-    21-mkinitcpio-modules-decompress
+    22-mkinitcpio-modules-decompress
     80-services-to-sockets
     90-adjust-sys-clock
     97-update-grub
