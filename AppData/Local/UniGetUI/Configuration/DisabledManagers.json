@@ -1,1 +1,12 @@
-{"Scoop":true,"Npm":true,"Pip":true,".NET Tool":true,"PowerShell":true,"PowerShell7":true,"vcpkg":true}
+{
+  "Scoop": true,
+  "Npm": true,
+  "Pip": true,
+  ".NET Tool": true,
+  "PowerShell": true,
+  "PowerShell7": true,
+  "vcpkg": true,
+  "Winget": false,
+  "Chocolatey": false,
+  "Cargo": false
+}
