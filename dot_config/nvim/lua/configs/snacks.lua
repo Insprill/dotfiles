@@ -22,7 +22,28 @@ return {
     },
     gitbrowse = { enabled = true },
     lazygit = { enabled = true },
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      -- By default, tab/shift-tab SELECTS and moves to the next element.
+      -- This almost always results in the appearance of the picker opening
+      -- a completely random file instead of what you actually wanted :D
+      win = {
+        -- input window
+        input = {
+          keys = {
+            ["<S-Tab>"] = { "list_up", mode = { "i", "n" } },
+            ["<Tab>"] = { "list_down", mode = { "i", "n" } },
+          },
+        },
+        -- result list window
+        list = {
+          keys = {
+            ["<S-Tab>"] = { "list_up", mode = { "n", "x" } },
+            ["<Tab>"] = { "list_down", mode = { "n", "x" } },
+          },
+        },
+      },
+    },
     scroll = {
       enabled = true,
       animate = {
