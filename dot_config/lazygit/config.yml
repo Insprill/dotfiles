@@ -6,4 +6,3 @@ customCommands:
     command: "git mergetool \"$(git rev-parse --show-toplevel)/{{.SelectedFile.Name}}\""
     context: "files"
     loadingText: "opening git mergetool"
-    subprocess: yes
