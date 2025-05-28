@@ -21,6 +21,7 @@ local servers = {
   hyprls = {},
   jdtls = {},
   jsonls = {},
+  just = {},
   lua_ls = {},
   marksman = {},
   powershell_es = {},
