@@ -46,6 +46,7 @@ essentials=(
     "iotop" # Disk monitor
     "jq" # Json processing
     "kdegraphics-thumbnailers" # Thumbnails for various files in Dolphin
+    "kimageformats" # Thumbnails for avif images in Dolphin (probably others too)
     "kio-admin" # Open folder as admin in Dolphin
     "kitty" # Backup terminal
     "kvantum" # QT6 theme picker
