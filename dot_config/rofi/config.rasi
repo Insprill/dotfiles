@@ -19,6 +19,7 @@ configuration {
     display-drun:               " Apps";
     display-run:                " Run";
     display-calc:               " Calc";
+    display-emoji:              "󰞅 Emoji";
     display-filebrowser:        "󰉋 Files";
     display-window:             " Windows";
 	drun-display-format:        "{name}";

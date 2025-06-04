@@ -86,6 +86,7 @@ essentials=(
     "ripgrep" # Grep on cocaine
     "rofi-wayland" # Rofi with Wayland support
     "rofi-calc-git" # Rofi calculator. Must be git, stable doesn't work!
+    "rofi-emoji" # Rofi emoji picker
     "sddm" # Display manager
     "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
@@ -105,6 +106,7 @@ essentials=(
     "wl-clipboard" # xclip but wayland
     "wlogout" # Power menu
     "wpaperd" # Desktop background picker/randomizer
+    "wtype" # Required for rofi-emoji to insert the selected emoji
     "xorg-xeyes" # Useful for debugging XWayland issues
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal-gtk"
