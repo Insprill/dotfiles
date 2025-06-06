@@ -1,0 +1,21 @@
+#
+# Font
+#
+font-family = "MesloLGS Nerd Font"
+font-size = 10
+
+#
+# Theme
+#
+theme = "catppuccin-mocha"
+
+#
+# Window
+#
+# background-opacity doesn't effect applications like Neovim,
+# so we also apply this as a Hyprland windowrule.
+background-opacity = 0.95
+# Only effects macOS (and KDE). true = 20
+background-blur = true
+# None disables tabs but oh well, I like a clean terminal :)
+window-decoration = "none"
