@@ -1,6 +1,8 @@
 let mapleader=" "
 
+"""""""""""
 """ Options
+"""""""""""
 set number
 set relativenumber
 
@@ -8,36 +10,49 @@ set clipboard+=unnamedplus
 
 set ignorecase
 set smartcase
+set incsearch
+"set hlsearch "This simply never un-highlights your search lmao
 
 set NERDTree
 
 
-
+""""""""
 """ Keys
+""""""""
 
-noremap <leader>/ :action CommentByLineComment<CR>
-
-nnoremap gr :action ShowUsages<CR>
-
-nnoremap <C-s> :action SaveAll<CR>
-nnoremap <C-w>d :action ShowErrorDescription<CR>
-
-nnoremap <leader>ca :action ShowIntentionActions<CR>
-nnoremap <leader>cm :action ActivateVersionControlToolWindow<CR>:action Vcs.ShowTabbedFileHistory<CR>
-nnoremap <leader>e :action ActivateProjectToolWindow<CR>
-nnoremap <leader>ff :action SearchEverywhere<CR>
-nnoremap <leader>fw :action FindInPath<CR>
-nnoremap <leader>gt :action ActivateCommitToolWindow<CR>
-nnoremap <leader>h :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>ra :action RenameElement<CR>
-nnoremap <leader>x :action CloseEditor<CR>
-
+""" Window/Tabs
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
 nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
+nnoremap <leader>x :action CloseEditor<CR>
+nnoremap <leader>lg :action ActivateCommitToolWindow<CR>
+nnoremap <leader>cm :action ActivateVersionControlToolWindow<CR>:action Vcs.ShowTabbedFileHistory<CR>
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
+nnoremap <leader>h :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>SS :action GotoSymbol<CR>
 
+""" Find
+nnoremap <leader>ff :action GotoFile<CR>
+
+""" Search
+nnoremap <leader>sg :action FindInPath<CR>
+
+""" LSP
+nnoremap ga :action ShowIntentionActions<CR>
+nnoremap gr :action ShowUsages<CR>
+nnoremap <C-w>d :action ShowErrorDescription<CR>
+nnoremap <leader>ra :action RenameElement<CR>
+
+""" Text
+noremap <leader>/ :action CommentByLineComment<CR>
+nnoremap <C-s> :action SaveAll<CR>
 map<leader>fm :action ReformatCode<CR>
 
 
-
+"""""""""""
 """ Plugins
+"""""""""""
 set quickscope
