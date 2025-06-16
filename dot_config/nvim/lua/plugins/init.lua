@@ -133,4 +133,9 @@ return {
     "lewis6991/gitsigns.nvim",
     opts = require "configs.gitsigns",
   },
+
+  {
+    "mason-org/mason.nvim",
+    opts = require "configs.mason",
+  },
 }
