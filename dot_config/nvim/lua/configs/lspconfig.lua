@@ -18,6 +18,7 @@ local servers = {
   dockerls = {},
   gopls = {},
   harper_ls = {},
+  html = {},
   hyprls = {},
   jdtls = {},
   jsonls = {},
@@ -43,11 +44,6 @@ local servers = {
 
 return function()
   require("nvchad.configs.lspconfig").defaults()
-
-  -- Merge nvim-lsp-file-operations capabilities
-  local nvlsp = require "nvchad.configs.lspconfig"
-  nvlsp.capabilities =
-    vim.tbl_deep_extend("force", nvlsp.capabilities, require("lsp-file-operations").default_capabilities())
 
   for name, opts in pairs(servers) do
     vim.lsp.enable(name)
