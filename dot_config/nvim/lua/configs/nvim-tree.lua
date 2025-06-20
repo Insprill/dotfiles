@@ -9,6 +9,7 @@ return {
     },
   },
   filesystem_watchers = {
+    enable = true,
     ignore_dirs = {
       -- Generic
       ".git",
