@@ -20,6 +20,7 @@
         "cpu",
         "memory",
         "battery",
+        "pulseaudio",
         "wireplumber",
         "custom/power"
     ],
@@ -129,6 +130,13 @@
         "cursor": true
     },
 
+    "pulseaudio": {
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": " "
+    },
+
     "wireplumber": {
         "on-click": "pavucontrol-qt",
         "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -136,8 +144,6 @@
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "format": "{icon} {volume}%",
         "format-muted": "<span foreground='#f38ba8'> </span> {volume}%", // Red
-        "format-source": "",
-        "format-source-muted": "",
         "format-icons": {
             "headphone": " ",
             "hands-free": " ",

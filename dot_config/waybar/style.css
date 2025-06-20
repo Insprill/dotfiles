@@ -43,6 +43,7 @@ tooltip.background {
 #network,
 #temperature,
 #tray,
+#pulseaudio,
 #wireplumber,
 #workspaces
 {
@@ -117,6 +118,10 @@ tooltip.background {
 }
 
 #network.disconnected {
+  color: #f38ba8; /* Red */
+}
+
+#pulseaudio.source-muted {
   color: #f38ba8; /* Red */
 }
 
