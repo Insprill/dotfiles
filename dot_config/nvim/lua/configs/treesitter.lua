@@ -48,6 +48,7 @@ return {
       "nix",
       "nginx",
       "objdump",
+      "php",
       "powershell",
       "printf",
       "properties",
