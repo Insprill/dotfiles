@@ -37,6 +37,7 @@ essentials=(
     "gtk-engine-murrine" # Required for Colloid GTK theme
     "hyprland" # Epic compositor
     "hyprlock" # Lockscreen for said epic compositor
+    "hypridle" # Idle daemon for the still epic compositor
     "hyprpolkitagent" # Authentication
     "hyprpicker" # Color picker
     "hyprsysteminfo" # Show system/Hyprland info
