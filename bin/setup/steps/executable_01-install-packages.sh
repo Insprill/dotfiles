@@ -45,6 +45,7 @@ essentials=(
     "icoutils" # Creating desktop files for Wine applications
     "intel-ucode" # Intel CPU microcode
     "iotop" # Disk monitor
+    "jdsimpleautostart" # Easily edit autostart applications
     "jq" # Json processing
     "kdegraphics-thumbnailers" # Thumbnails for various files in Dolphin
     "kimageformats" # Thumbnails for avif images in Dolphin (probably others too)
