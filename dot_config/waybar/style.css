@@ -3,61 +3,42 @@
   font-family: "JetBrainsMono Nerd Font";
   font-size: 8pt;
   font-weight: 900;
-  margin: 0;
-  padding: 0;
   transition-property: background-color;
   transition-duration: 0.5s;
+  margin: 1.5px;
 }
 
-
-/* Reset all styles */
-* {
-    margin: 0.2em 0.2em 0.2em 0.2em;
-}
-
-/* The whole bar */
-#waybar {
+/* Main Bar */
+ window#waybar {
     background-color: transparent;
 }
 
 /* All Tooltips */
 tooltip * {
 	background:	transparent;
+  border-width: 1.5px;
+  border-radius: 10px;
+  border-color: #cba6f7; /* Mauve */
 }
 tooltip.background {
-  background: rgba(30, 30, 46, 0.9); /* Base */
-}
-
-/* Each module */
-#backlight,
-#battery,
-#bluetooth,
-#clock,
-#cpu,
-#custom-updates,
-#memory,
-#mpris,
-#network,
-#temperature,
-#tray,
-#pulseaudio,
-#wireplumber,
-#workspaces
-{
-  padding: 0px 10px;
-  color: #cdd6f4; /* Text */
+  background: rgba(30, 30, 46, 0.95); /* Base */
+  border-width: 1.5px;
   border-radius: 10px;
-  background-color: #1e1e2e; /* Base */
+  border-color: #cba6f7; /* Mauve */
 }
 
-#backlight {
-  /* color: #EBCB8B; */
-  color: #8fbcbb;
-}
-
-#battery {
+/* All Modules */
+.module
+{
   color: #cdd6f4; /* Text */
+  background-color: #1e1e2e; /* Base */
+  padding: 0 10px;
+  border-radius: 10px;
 }
+
+/** Individual Modules **/
+
+/* Battery */
 #battery.charging,
 #battery.full,
 #battery.plugged {
@@ -94,46 +75,44 @@ tooltip.background {
   }
 }
 
-#bluetooth {
-  color: #707d9d;
-}
-#bluetooth.disconnected {
-  color: #f53c3c;
-}
-
-#clock {
-  color: #c8d2e0;
+/* CPU (attached left of PPD) */
+#cpu {
+  margin-left: 0;
+  padding-left: 2.5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
+/* Power Profiles Daemon (attached right of CPU) */
+#power-profiles-daemon {
+  margin-right: 0;
+  padding-right: 2.5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Power Button */
 #custom-power {
+  padding: 0 5px;
   background: transparent;
 }
 
-#mpris {
-  background-color: #89b4fa; /* Blue */
-  color: #1e1e2e; /* Base */
-}
-
+/* Network */
 #network.disconnected {
   color: #f38ba8; /* Red */
 }
 
-#pulseaudio.source-muted {
+/* Audio */
+#wireplumber.muted {
   color: #f38ba8; /* Red */
 }
 
-#temperature.critical {
-  background-color: #f38ba8; /* Red */
-}
-
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
   background-color: #f38ba8; /* Red */
 }
 
+/* Workspaces */
 #workspaces button {
   color: #585b70; /* Surface 2 */
   background-color: transparent;

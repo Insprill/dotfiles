@@ -8,20 +8,20 @@
 
     "modules-left": [
         "hyprland/workspaces",
-        "custom/updates",
+        "power-profiles-daemon",
+        "cpu",
+        "memory",
         "network"
     ],
     "modules-center": [
         "clock",
-        "power-profiles-daemon"
+        "custom/updates"
     ],
     "modules-right": [
         "tray",
-        "cpu",
-        "memory",
         "battery",
-        "pulseaudio",
-        "wireplumber",
+        "wireplumber#source",
+        "wireplumber#sink",
         "custom/power"
     ],
 
@@ -47,19 +47,19 @@
 
     "clock": {
         "interval": 1,
-        "format": "  {:%H:%M:%S    %m/%d/%y}",
+        "format": "  {:%H:%M:%S    %a %m/%d}",
         "tooltip-format": "<big>{calendar}</big>",
         "today-format": "<b>{}</b>",
         "calendar": {
             "mode": "year",
             "mode-mon-col": 3,
-            "weeks-pos": "",
+            "weeks-pos": "left",
             "on-scroll": 1,
             "format": {
                 "months":   "<span color='#cba6f7'><b>{}</b></span>", // Mauve
                 "days":     "<span color='#cdd6f4'><b>{}</b></span>", // Text
                 "weeks":    "<span color='#89dceb'><b>W{}</b></span>", // Blue
-                "weekdays": "<span color='#fab387'><b>{}</b></span>", // Peach
+                "weekdays": "<span color='#a6e3a1'><b>{}</b></span>", // Peach
                 "today":    "<span color='#f38ba8'><b><big>{}</big></b></span>" // Red
             }
         }
@@ -67,14 +67,15 @@
 
     "cpu": {
         "interval": 1,
-        "format": "{icon} {usage}% | {max_frequency:0.1f}GHz",
+        "format": "{usage}% | {max_frequency:0.1f}GHz",
         "format-icons": ["󰾆 ", "󰾅 ", "󰓅 "],
         "on-click": "alacritty -e btop"
     },
 
     "custom/power": {
-        "format": " ",
+        "format": "",
         "on-click": "wlogout",
+        "on-click-right": "hyprlock",
         "tooltip": false
     },
 
@@ -86,7 +87,7 @@
             "updated": ""
         },
         "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates --no-zero-output --interval-seconds 10 --network-interval-seconds 3600 --tooltip-align-columns",
+        "exec": "waybar-module-pacman-updates --no-zero-output --interval-seconds 10 --network-interval-seconds 21600 --tooltip-align-columns",
         "on-click": "alacritty -e sh -c \"echo Updating packages... && paru\"",
         "cursor": true
     },
@@ -98,7 +99,7 @@
 
     "memory": {
         "interval": 1,
-        "format": "  {percentage}%",
+        "format": "  {percentage}% | {used} GiB",
         "tooltip-format": "⎯⎯ Memory ⎯⎯\nUsed: {used} GiB\nAvail: {avail} GiB\nTotal: {total} GiB\n⎯⎯ Swap ⎯⎯\nUsed: {swapUsed} GiB\nAvail: {swapAvail} GiB\nTotal: {swapTotal} GiB",
         "on-click": "alacritty -e btop"
     },
@@ -109,18 +110,17 @@
       "format-disconnected": "",
       "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}",
       "tooltip-format-wifi": "SSID: {essid}\nFreq: {frequency}GHz\nStrength: {signaldBm}dBm\nInterface: {ifname}\nIP: {ipaddr}",
-      "on-click": "alacritty -e btop",
-      "tooltip": true
+      "on-click": "alacritty -e btop"
     },
 
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power Profile: {profile}\nDriver: {driver}",
       "format-icons": {
-        "default": " ",
-        "performance": " ",
-        "balanced": " ",
-        "power-saver": " "
+        "default": " ",
+        "performance": "󰓅 ",
+        "balanced": "󰾅 ",
+        "power-saver": "󰾆 "
       }
     },
 
@@ -130,27 +130,23 @@
         "cursor": true
     },
 
-    "pulseaudio": {
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-        "format": "{format_source}",
-        "format-source": "",
-        "format-source-muted": " "
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+        "format": "",
+        "format-muted": " ",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
 
-    "wireplumber": {
+    "wireplumber#sink": {
         "on-click": "pavucontrol-qt",
         "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-scroll-up": "wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+",
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "format": "{icon} {volume}%",
-        "format-muted": "<span foreground='#f38ba8'> </span> {volume}%", // Red
+        "format-muted": "  {volume}%", // Red
         "format-icons": {
             "headphone": " ",
-            "hands-free": " ",
             "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
             "default": [" ", " ", " ", " "]
         }
     }
