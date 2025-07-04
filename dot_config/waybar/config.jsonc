@@ -20,7 +20,7 @@
     "modules-right": [
         "tray",
         "battery",
-        "wireplumber#source",
+        "pulseaudio",
         "wireplumber#sink",
         "custom/power"
     ],
@@ -130,10 +130,10 @@
         "cursor": true
     },
 
-    "wireplumber#source": {
-        "node-type": "Audio/Source",
-        "format": "",
-        "format-muted": " ",
+    "pulseaudio": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": " ",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
 

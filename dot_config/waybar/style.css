@@ -103,6 +103,7 @@ tooltip.background {
 }
 
 /* Audio */
+#pulseaudio.source-muted,
 #wireplumber.muted {
   color: #f38ba8; /* Red */
 }
