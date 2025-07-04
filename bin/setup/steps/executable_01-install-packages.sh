@@ -9,7 +9,6 @@ essentials=(
     "bluez" # Bluetooth
     "bluez-utils"
     "blueman" # Bluetooth GUI
-    "brightnessctl" # Controll screen brightness
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
     "capitaine-cursors" # Cursor
@@ -93,6 +92,7 @@ essentials=(
     "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
+    "swayosd" # Volume popup
     "ttf-meslo-nerd" # Fonts
     "ttf-jetbrains-mono-nerd"
     "ttf-nerd-fonts-symbols"

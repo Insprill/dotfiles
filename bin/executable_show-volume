@@ -1,5 +1,0 @@
-#!/bin/bash
-volume_status=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
-suffix=$(if echo "$volume_status" | grep -q "MUTED"; then echo "MUTED"; else echo ""; fi)
-volume_percentage=$(echo "$volume_status" | grep -oP '\d+\.\d+' | awk '{print int($1 * 100)}')
-dunstify -h string:x-dunst-stack-tag:audio "Volume: ${volume_percentage}% $suffix" -h int:value:"$volume_percentage" -t 900

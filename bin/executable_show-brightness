@@ -1,3 +1,0 @@
-#!/bin/bash
-
-dunstify -h string:x-dunst-stack-tag:brightness "Brightness: " -h int:value:"$(brightnessctl i | grep -oP '\d+(?=%)')" -t 900
