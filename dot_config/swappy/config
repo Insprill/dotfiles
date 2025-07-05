@@ -1,0 +1,3 @@
+[Default]
+save_dir=$HOME/Downloads
+early_exit=true

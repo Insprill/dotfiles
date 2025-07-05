@@ -92,6 +92,7 @@ essentials=(
     "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
+    "swappy" # Screenshot editing
     "swayosd" # Volume popup
     "ttf-meslo-nerd" # Fonts
     "ttf-jetbrains-mono-nerd"
