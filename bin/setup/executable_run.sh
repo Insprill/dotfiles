@@ -22,7 +22,6 @@ steps=(
     12-install-rust-toolchains
     13-install-git-lfs
     14-disable-ufw
-    15-set-vscode-passwd-store
     16-delete-unnecessary-folders
     17-apply-gtk-theme
     18-disable-sss
