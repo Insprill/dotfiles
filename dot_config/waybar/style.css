@@ -30,6 +30,9 @@ tooltip.background {
 /* All Modules */
 .module
 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cba6f7; /* Mauve */
   color: #cdd6f4; /* Text */
   background-color: #1e1e2e; /* Base */
   padding: 0 10px;
@@ -79,6 +82,7 @@ tooltip.background {
 #cpu {
   margin-left: 0;
   padding-left: 2.5px;
+  border-left-style: none;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -87,6 +91,7 @@ tooltip.background {
 #power-profiles-daemon {
   margin-right: 0;
   padding-right: 2.5px;
+  border-right-style: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -95,6 +100,7 @@ tooltip.background {
 #custom-power {
   padding: 0 5px;
   background: transparent;
+  border-style: none;
 }
 
 /* Network */
