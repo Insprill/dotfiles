@@ -31,9 +31,8 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = "NvimTree*",
   callback = function()
     local api = require "nvim-tree.api"
-    local view = require "nvim-tree.view"
 
-    if not view.is_visible() then
+    if not api.tree.is_visible() then
       api.tree.open()
     end
   end,
@@ -47,15 +46,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local buf = args.buf
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     if client ~= nil and client.server_capabilities and client.server_capabilities.codeLensProvider then
-      vim.api.nvim_clear_autocmds({
+      vim.api.nvim_clear_autocmds {
         group = codelens_augroup,
         buffer = buf,
-      })
+      }
       vim.lsp.codelens.refresh()
       vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
-        group  = codelens_augroup,
+        group = codelens_augroup,
         buffer = buf,
-        callback = vim.lsp.codelens.refresh
+        callback = vim.lsp.codelens.refresh,
       })
     end
   end,
