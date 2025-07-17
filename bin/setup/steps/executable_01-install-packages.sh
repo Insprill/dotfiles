@@ -193,6 +193,13 @@ vr=(
     "envision-xr-git" # Utility for setting up monado/opencomposite/wivrn
     "wlx-overlay-s-git" # Desktop view in VR
 )
+ime=(
+    "fcitx5"
+    "fcitx5-configtool"
+    "fcitx5-gtk"
+    "fcitx5-qt"
+    "fcitx5-mozc" # Google's Japanese IME
+)
 insprill=( # Stuff I use that I doubt anyone else cares about
     "feishin-bin"
     "thunderbird"
@@ -208,6 +215,7 @@ groups_list=(
     intelgpu
     nvidia
     vr
+    ime
     insprill
 )
 
