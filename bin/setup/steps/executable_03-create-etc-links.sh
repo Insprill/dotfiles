@@ -39,6 +39,9 @@ copy_file "hyprland/theme.conf"
 # Modprobe
 create_symlink "modprobe.d/nvidia.conf"
 
+# Modules
+copy_file "modules-load.d/ntsync.conf"
+
 # Pacman hooks
 create_symlink "pacman.d/hooks/hyprland-post.hook"
 create_symlink "pacman.d/hooks/vencord-pre.hook"
