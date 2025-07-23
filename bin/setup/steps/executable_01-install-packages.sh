@@ -40,6 +40,7 @@ essentials=(
     "hyprpolkitagent" # Authentication
     "hyprpicker" # Color picker
     "hyprsysteminfo" # Show system/Hyprland info
+    "grim" # Screenshot util, gets region from slurp
     "grimblast-git" # Screenshots
     "icoutils" # Creating desktop files for Wine applications
     "intel-ucode" # Intel CPU microcode
@@ -88,12 +89,15 @@ essentials=(
     "rofi-wayland" # Rofi with Wayland support
     "rofi-calc-git" # Rofi calculator. Must be git, stable doesn't work!
     "rofi-emoji" # Rofi emoji picker
+    "slurp" # Region selector, used with grim
     "sddm" # Display manager
     "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
     "swappy" # Screenshot editing
     "swayosd" # Volume popup
+    "tesseract" # OCR
+    "tesseract-data-eng" # OCR data
     "ttf-meslo-nerd" # Fonts
     "ttf-jetbrains-mono-nerd"
     "ttf-nerd-fonts-symbols"
