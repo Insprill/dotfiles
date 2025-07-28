@@ -62,10 +62,6 @@ copy_file "sudoers.d/20-insults"
 # SDDM
 create_symlink "sddm.conf.d/custom-settings.conf"
 
-# Uni-sync
-create_symlink "systemd/system/uni-sync.service"
-create_symlink "systemd/system/uni-sync.timer"
-
 # X11 settings
 create_symlink "X11/xorg.conf.d/50-mouse.conf"
 
