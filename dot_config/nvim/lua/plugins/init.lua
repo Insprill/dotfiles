@@ -98,6 +98,13 @@ return {
   --
   -- NvChad plugin overrides
   --
+
+  -- https://github.com/NvChad/NvChad/discussions/3244
+  { import = "nvchad.blink.lazyspec" },
+  {
+    "Saghen/blink.cmp",
+  },
+
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
