@@ -87,7 +87,7 @@
             "updated": ""
         },
         "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates --no-zero-output --interval-seconds 10 --network-interval-seconds 3600 --tooltip-align-columns",
+        "exec": "waybar-module-pacman-updates --no-zero-output --interval-seconds 10 --network-interval-seconds 3600 --tooltip-align-columns --color-semver-updates f38ba8,a6e3a1,b4befe,7f849c,cdd6f4", // Red, Green, Lavender, Overlay 1, Text
         "on-click": "alacritty -e sh -c \"echo Updating packages... && paru\"",
         "cursor": true
     },
