@@ -13,7 +13,7 @@
 	"UninstallCommand": "paru -Rs",
 	"SysUpgradeCommand": "paru",
 	"SearchMode": "Contains",
-	"SearchBy": "Name",
+	"SearchBy": "Name \u0026 Description",
 	"CacheExpiry": 10,
 	"DisableCache": false,
 	"ColorScheme": "Custom",
