@@ -3,7 +3,7 @@ function lg { lazygit $args }
 function yeet { git push --force-with-lease $args }
 function shipit { git push $args }
 function sure { git add . && git rebase --continue }
-function based { git rebase --committer-date-is-author-date $args }
+function based { git rebase --committer-date-is-author-date --rebase-merges $args }
 function rmrf { if ($args.length -gt 0) { Remove-Item $args[0] -Recurse -Force } }
 
 # Override aliases
