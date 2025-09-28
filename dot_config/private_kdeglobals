@@ -6,7 +6,7 @@ Theme=Tela-catppuccin
 
 [KDE]
 ShowDeleteCommand=false
-widgetStyle=qt6ct-style
+widgetStyle=kvantum
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -33,4 +33,4 @@ EnableRemoteFolderThumbnail=true
 MaximumRemoteSize=0
 
 [UiSettings]
-ColorScheme=qt6ct
+ColorScheme=*

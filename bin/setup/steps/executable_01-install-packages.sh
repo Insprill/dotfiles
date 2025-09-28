@@ -80,6 +80,7 @@ essentials=(
     "python312" # Required for cmake-language-server
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
+    "catppuccin-qt5ct-git" # Catppuccin QT theme (only used for colors)
     "qt6-imageformats" # More thumbnails for Dolphin
     "qt6-declarative" # SDDM theme stuff
     "qt6-svg" # More SDDM theme stuff
