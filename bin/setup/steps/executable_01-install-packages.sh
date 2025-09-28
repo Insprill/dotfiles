@@ -20,7 +20,6 @@ essentials=(
     "dex" # Autostart desktop files
     "dolphin" # File manager
     "dolphin-plugins" # things 'n stuff
-    "dunst" # Notifications
     "dust" # du on crack
     "eza" # ls on crack
     "fastfetch" # New neofetch
@@ -96,6 +95,7 @@ essentials=(
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
     "swappy" # Screenshot editing
+    "swaync" # Notifications
     "swayosd" # Volume popup
     "tesseract" # OCR
     "tesseract-data-eng" # OCR data
