@@ -91,7 +91,7 @@ essentials=(
     "rofi-emoji" # Rofi emoji picker
     "slurp" # Region selector, used with grim
     "sddm" # Display manager
-    "sddm-theme-catppuccin-git" # Catppuccin SDDM theme
+    "catppuccin-sddm-theme-mocha" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
     "swappy" # Screenshot editing
