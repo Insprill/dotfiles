@@ -106,7 +106,6 @@ essentials=(
     "ueberzugpp" # Show images in terminals
     "ungoogled-chromium-bin" # L browser
     "vulkan-tools"
-    "vdpauinfo"
     "waybar" # Bar
     "waybar-module-pacman-updates-git" # Show pacman updates in waybar
     "wine-ge-custom" # Better Wine
@@ -132,8 +131,6 @@ amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "xf86-video-amdgpu"
     "libva-mesa-driver"
     "lib32-libva-mesa-driver"
-    "mesa-vdpau"
-    "lib32-mesa-vdpau"
     "rocm-smi-lib" # Let btop access GPU info
     "vulkan-radeon"
     "lib32-vulkan-radeon"
@@ -174,8 +171,6 @@ intelgpu=(
     "mesa-utils"
     "libva-mesa-driver"
     "lib32-libva-mesa-driver"
-    "mesa-vdpau"
-    "lib32-mesa-vdpau"
     "vulkan-intel"
     "lib32-vulkan-intel"
     "intel-gpu-tools"
