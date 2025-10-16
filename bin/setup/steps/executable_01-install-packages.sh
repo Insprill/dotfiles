@@ -87,7 +87,7 @@ essentials=(
     "catppuccin-sddm-theme-mocha" # Catppuccin SDDM theme
     "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
-    "swappy" # Screenshot editing
+    "satty" # Screenshot editing
     "swaync" # Notifications
     "swayosd" # Volume popup
     "tesseract" # OCR
