@@ -3,7 +3,6 @@
 essentials=(
     "alacritty" # Primary terminal
     "amd-ucode" # AMD CPU microcode
-    "archlinux-xdg-menu" # Fix Dolphin file associations
     "ark" # Archive management
     "bat" # cat on steroids
     "bluez" # Bluetooth
@@ -18,12 +17,9 @@ essentials=(
     "cpio" # Required to build Hyprland plugins
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
-    "dolphin" # File manager
-    "dolphin-plugins" # things 'n stuff
     "dust" # du on crack
     "eza" # ls on crack
     "fastfetch" # New neofetch
-    "ffmpegthumbnailer" # Thumbnails in Dolphin
     "fish" # Shell
     "firefox-developer-edition" # W browser
     "gamescope" # Valve magic
@@ -33,6 +29,8 @@ essentials=(
     "gnome-themes-extra" # Required for Colloid GTJ theme
     "go" # Required for Neovim's Go LSP
     "gtk-engine-murrine" # Required for Colloid GTK theme
+    "gvfs" # Virtual filesystem (used by Thunar)
+    "gvfs-smb"
     "hyprland" # Epic compositor
     "hyprlock" # Lockscreen for said epic compositor
     "hypridle" # Idle daemon for the still epic compositor
@@ -46,9 +44,6 @@ essentials=(
     "iotop" # Disk monitor
     "jdsimpleautostart" # Easily edit autostart applications
     "jq" # Json processing
-    "kdegraphics-thumbnailers" # Thumbnails for various files in Dolphin
-    "kimageformats" # Thumbnails for avif images in Dolphin (probably others too)
-    "kio-admin" # Open folder as admin in Dolphin
     "kitty" # Backup terminal
     "kvantum" # QT6 theme picker
     "kvantum-theme-catppuccin-git" # Catppuccin QT theme
@@ -70,7 +65,6 @@ essentials=(
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
     "paccache-hook" # Remove cached versions of old/uninstalled packages
-    "packagekit-qt6" # Dolphin plugins
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
     "pavucontrol-qt" # Audio settings
@@ -80,7 +74,6 @@ essentials=(
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
     "catppuccin-qt5ct-git" # Catppuccin QT theme (only used for colors)
-    "qt6-imageformats" # More thumbnails for Dolphin
     "qt6-declarative" # SDDM theme stuff
     "qt6-svg" # More SDDM theme stuff
     "qt6-wayland" # QT6 Wayland support
@@ -99,6 +92,10 @@ essentials=(
     "swayosd" # Volume popup
     "tesseract" # OCR
     "tesseract-data-eng" # OCR data
+    "thunar" # File manager
+    "thunar-archive-plugin"
+    "thunar-media-tags-plugin"
+    "thunar-volman"
     "ttf-meslo-nerd" # Fonts
     "ttf-jetbrains-mono-nerd"
     "ttf-nerd-fonts-symbols"
