@@ -3,7 +3,6 @@
 essentials=(
     "alacritty" # Primary terminal
     "amd-ucode" # AMD CPU microcode
-    "ark" # Archive management
     "bat" # cat on steroids
     "bluez" # Bluetooth
     "bluez-utils"
@@ -18,6 +17,7 @@ essentials=(
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
     "dust" # du on crack
+    "engrampa" # Archive management
     "eza" # ls on crack
     "fastfetch" # New neofetch
     "fish" # Shell
