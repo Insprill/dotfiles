@@ -96,8 +96,8 @@ essentials=(
     "thunar-archive-plugin"
     "thunar-media-tags-plugin"
     "thunar-volman"
-    "ttf-meslo-nerd" # Fonts
-    "ttf-jetbrains-mono-nerd"
+    "ttf-jetbrains-mono-nerd" # Fonts
+    "ttf-ms-win11-auto"
     "ttf-nerd-fonts-symbols"
     "ttf-nerd-fonts-symbols-mono"
     "ueberzugpp" # Show images in terminals
