@@ -7,6 +7,7 @@ essentials=(
     "bluez" # Bluetooth
     "bluez-utils"
     "blueman" # Bluetooth GUI
+    "brave-bin" # W browser
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
     "capitaine-cursors" # Cursor
@@ -21,7 +22,6 @@ essentials=(
     "eza" # ls on crack
     "fastfetch" # New neofetch
     "fish" # Shell
-    "firefox-developer-edition" # W browser
     "gamescope" # Valve magic
     "git"
     "git-lfs"
