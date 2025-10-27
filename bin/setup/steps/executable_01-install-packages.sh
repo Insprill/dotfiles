@@ -35,6 +35,7 @@ essentials=(
     "hyprlock" # Lockscreen for said epic compositor
     "hypridle" # Idle daemon for the still epic compositor
     "hyprpolkitagent" # Authentication
+    "hyprpaper" # Wallpaper
     "hyprpicker" # Color picker
     "hyprsysteminfo" # Show system/Hyprland info
     "grim" # Screenshot util, gets region from slurp
@@ -108,7 +109,6 @@ essentials=(
     "wine-mono" # Mono support for Wine
     "wl-clipboard" # xclip but wayland
     "wlogout" # Power menu
-    "wpaperd" # Desktop background picker/randomizer
     "wtype" # Required for rofi-emoji to insert the selected emoji
     "xorg-xeyes" # Useful for debugging XWayland issues
     "xdg-desktop-portal-hyprland"
