@@ -92,6 +92,12 @@ if ! $repo_name/install.sh -c catppuccin; then
     exit 1
 fi
 
+if ! sudo $repo_name/install.sh -c catppuccin; then
+    echo "Error: Failed to install icon theme as root!"
+    rm -rf $repo_name
+    exit 1
+fi
+
 if ! rm -rf $repo_name; then
     echo "Warn: Failed to remove icon them directory '$repo_name'. You'll have to remove this yourself."
 fi
