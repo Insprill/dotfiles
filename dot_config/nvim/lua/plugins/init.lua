@@ -80,6 +80,11 @@ return {
   },
 
   {
+    "insprill/unity-nvim-adapter",
+    lazy = false,
+  },
+
+  {
     "lambdalisue/vim-suda",
     event = "BufReadPost",
   },
