@@ -13,22 +13,34 @@ return {
     ignore_dirs = {
       -- Generic
       ".git",
-      "build",
+      -- C#
+      "obj",
       -- Rust
       "target",
-      -- Web
-      "node_modules",
       -- Unity
       "Library.*",
-      "Logs",
-      "MemoryCaptures",
-      "obj",
-      "ProfileAnalyzer",
-      "Temp",
+      -- Web
+      "node_modules",
     },
   },
   filters = {
     git_ignored = false,
+    custom = {
+      -- Generic
+      ".git",
+      -- C#
+      "obj",
+      "*.csproj",
+      "*.sln",
+      "*.slnx",
+      -- Rust
+      "target",
+      -- Unity
+      "Library.*",
+      "*.meta",
+      -- Web
+      "node_modules",
+    },
   },
   git = {
     enable = true,
