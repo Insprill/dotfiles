@@ -22,10 +22,9 @@ vim.cmd [[
 ]]
 
 -- Neovide
-o.guifont = "JetBrainsMono Nerd Font"
-g.neovide_scale_factor = 0.8
-g.neovide_cursor_animation_length = 0.05
-g.neovide_cursor_train_size = 0.5
+o.guifont = "JetBrainsMono Nerd Font:h10"
+g.neovide_opacity = 0.95
+g.neovide_cursor_animation_length = 0.01
 
 -- Suda
 g.suda_smart_edit = 1
