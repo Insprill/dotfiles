@@ -12,34 +12,34 @@ return {
     enable = true,
     ignore_dirs = {
       -- Generic
-      ".git",
+      "^.git$",
       -- C#
-      "obj",
+      "^obj$",
       -- Rust
-      "target",
+      "^target$",
       -- Unity
       "Library.*",
       -- Web
-      "node_modules",
+      "^node_modules$",
     },
   },
   filters = {
     git_ignored = false,
     custom = {
       -- Generic
-      ".git",
+      "^.git$",
       -- C#
-      "obj",
+      "^obj$",
       "*.csproj",
       "*.sln",
       "*.slnx",
       -- Rust
-      "target",
+      "^target$",
       -- Unity
       "Library.*",
       "*.meta",
       -- Web
-      "node_modules",
+      "^node_modules$",
     },
   },
   git = {
