@@ -59,3 +59,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
+
+-- Set colorcolumn to editorconfig max line length
+vim.api.nvim_create_autocmd({"BufReadPost", "BufNewFile"}, {
+  callback = function()
+    local tw = vim.bo.textwidth
+    if tw > 0 then
+      vim.wo.colorcolumn = tostring(tw)
+    else
+      vim.wo.colorcolumn = ""
+    end
+  end,
+})
