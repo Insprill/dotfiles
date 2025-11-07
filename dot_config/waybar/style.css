@@ -113,6 +113,16 @@ tooltip.background {
   color: #f38ba8; /* Red */
 }
 
+/* Tray */
+
+#tray-expander {
+  /* Reset the tray so it doesn't get the .module style twice (container + modules) */
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
   background-color: #f38ba8; /* Red */
