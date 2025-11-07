@@ -104,7 +104,6 @@ essentials=(
     "ungoogled-chromium-bin" # L browser
     "vulkan-tools"
     "waybar" # Bar
-    "waybar-module-pacman-updates-git" # Show pacman updates in waybar
     "wine-ge-custom" # Better Wine
     "wine-mono" # Mono support for Wine
     "wl-clipboard" # xclip but wayland
