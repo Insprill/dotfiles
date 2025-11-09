@@ -17,6 +17,7 @@ essentials=(
     "cpio" # Required to build Hyprland plugins
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
+    "downgrade" # Saves your ass when a package update breaks things
     "dust" # du on crack
     "engrampa" # Archive management
     "eza" # ls on crack
