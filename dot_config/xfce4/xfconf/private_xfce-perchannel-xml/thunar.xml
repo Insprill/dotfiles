@@ -13,7 +13,7 @@
   <property name="shortcuts-icon-emblems" type="bool" value="true"/>
   <property name="misc-middle-click-in-tab" type="bool" value="true"/>
   <property name="misc-full-path-in-tab-title" type="bool" value="false"/>
-  <property name="misc-transfer-verify-file" type="string" value="THUNAR_VERIFY_FILE_MODE_REMOTE"/>
+  <property name="misc-transfer-verify-file" type="string" value="THUNAR_VERIFY_FILE_MODE_NEVER"/>
   <property name="misc-exec-shell-scripts-by-default" type="string" value="THUNAR_EXECUTE_SHELL_SCRIPT_ASK"/>
   <property name="hidden-bookmarks" type="array">
     <value type="string" value="computer:///"/>
