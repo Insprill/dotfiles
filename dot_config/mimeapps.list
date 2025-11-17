@@ -38,6 +38,7 @@ x-scheme-handler/webcal=userapp-Thunderbird-XD66I2.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-XD66I2.desktop;
 application/x-7z-compressed=engrampa.desktop;
 application/x-compressed-tar=engrampa.desktop;
+application/pgp-keys=neovide.desktop;
 
 [Default Applications]
 application/json=neovide.desktop;
@@ -89,3 +90,4 @@ x-scheme-handler/webcal=userapp-Thunderbird-XD66I2.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-XD66I2.desktop
 application/x-7z-compressed=engrampa.desktop
 application/x-compressed-tar=engrampa.desktop
+application/pgp-keys=neovide.desktop
