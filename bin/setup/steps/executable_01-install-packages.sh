@@ -38,7 +38,7 @@ essentials=(
     "hyprpolkitagent" # Authentication
     "hyprpaper" # Wallpaper
     "hyprpicker" # Color picker
-    "hyprsysteminfo" # Show system/Hyprland info
+    "hyprpwcenter" # Audio settings
     "grim" # Screenshot util, gets region from slurp
     "grimblast-git" # Screenshots
     "icoutils" # Creating desktop files for Wine applications
@@ -69,7 +69,6 @@ essentials=(
     "paccache-hook" # Remove cached versions of old/uninstalled packages
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
-    "pavucontrol-qt" # Audio settings
     "pkg-config" # Required to build Hyprland plugins
     "popsicle" # USB flasher
     "python312" # Required for cmake-language-server
