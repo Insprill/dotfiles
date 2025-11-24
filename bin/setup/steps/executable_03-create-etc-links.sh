@@ -56,6 +56,9 @@ copy_file "security/limits.conf"
 # Sysctl
 copy_file "sysctl.d/99-fs.conf"
 
+# Systemd Services
+copy_file "systemd/system/x3d-cache-mode.service"
+
 # Sudo (cannot be linked, must be copied)
 copy_file "sudoers.d/20-insults"
 

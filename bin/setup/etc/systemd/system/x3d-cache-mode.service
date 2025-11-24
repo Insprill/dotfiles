@@ -1,0 +1,6 @@
+[Unit]
+Description=X3D Cache Mode
+[Service]
+ExecStart=bash -c 'echo cache | tee /sys/bus/platform/drivers/amd_x3d_vcache/AMDI0101:00/amd_x3d_mode'
+[Install]
+WantedBy=multi-user.target
