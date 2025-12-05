@@ -82,7 +82,7 @@ essentials=(
     "ripgrep" # Grep on cocaine
     "rofi-wayland" # Rofi with Wayland support
     "rofi-calc-git" # Rofi calculator. Must be git, stable doesn't work!
-    "rofi-emoji" # Rofi emoji picker
+    "rofimoji" # Rofi emoji picker
     "slurp" # Region selector, used with grim
     "sddm" # Display manager
     "catppuccin-sddm-theme-mocha" # Catppuccin SDDM theme
@@ -108,7 +108,6 @@ essentials=(
     "wine-mono" # Mono support for Wine
     "wl-clipboard" # xclip but wayland
     "wlogout" # Power menu
-    "wtype" # Required for rofi-emoji to insert the selected emoji
     "xorg-xeyes" # Useful for debugging XWayland issues
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal-gtk"
