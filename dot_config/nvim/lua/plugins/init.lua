@@ -127,11 +127,6 @@ return {
   },
 
   {
-    "nvim-telescope/telescope.nvim",
-    config = require "configs.telescope",
-  },
-
-  {
     "nvim-tree/nvim-tree.lua",
     opts = require "configs.nvim-tree",
   },
