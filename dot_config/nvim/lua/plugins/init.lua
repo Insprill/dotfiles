@@ -1,5 +1,12 @@
 return {
   {
+    "xzbdmw/colorful-menu.nvim",
+    dependencies = {
+      "Saghen/blink.cmp",
+    },
+  },
+
+  {
     "saecki/crates.nvim",
     event = { "BufRead Cargo.toml" },
     config = function()
@@ -108,17 +115,13 @@ return {
   { import = "nvchad.blink.lazyspec" },
   {
     "Saghen/blink.cmp",
+    opts = require "configs.blink",
   },
 
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
-  },
-
-  {
-    "hrsh7th/nvim-cmp",
-    opts = require "configs.cmp",
   },
 
   {
