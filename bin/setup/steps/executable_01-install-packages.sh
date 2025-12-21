@@ -82,7 +82,7 @@ essentials=(
     "ripgrep" # Grep on cocaine
     "rofi-wayland" # Rofi with Wayland support
     "rofi-calc-git" # Rofi calculator. Must be git, stable doesn't work!
-    "rofimoji" # Rofi emoji picker
+    "rofi-emoji" # Rofi emoji picker
     "slurp" # Region selector, used with grim
     "sddm" # Display manager
     "catppuccin-sddm-theme-mocha" # Catppuccin SDDM theme
