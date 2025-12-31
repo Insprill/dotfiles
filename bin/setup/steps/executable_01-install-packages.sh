@@ -27,7 +27,7 @@ essentials=(
     "git"
     "git-lfs"
     "gnome-keyring" # Keyring
-    "gnome-themes-extra" # Required for Colloid GTJ theme
+    "gnome-themes-extra" # Required for Colloid GTK theme
     "go" # Required for Neovim's Go LSP
     "gtk-engine-murrine" # Required for Colloid GTK theme
     "gvfs" # Virtual filesystem (used by Thunar)
@@ -137,10 +137,7 @@ development=(
     "github-cli" # Easy way to login to GitHub with Git
     "jetbrains-toolbox" # IntelliJ/Rider/CLion/Feet
     "lazygit" # Epic git TUI
-    "namcap" # Validating PKGBUILDs
-    "pnpm" # Better than npm
     "posting" # Terminal API client
-    "powershell-bin" # W
     "rustup" # RUUUUST
     "tokei" # Epic line counts
     "visual-studio-code-bin" # Notepad+++
@@ -152,11 +149,10 @@ gaming=(
     "lact" # GPU monitoring / overclocking
     "mangohud" # Performance overlay
     "steam" # Good guy Valve
-    "steam-native-runtime"
     "proton-ge-custom-bin" # Better Proton
     "protontricks"
     "protonup-qt" # GUI for managing Proton versions
-    "xone-dkms-git" # Wired/dongle xbox controller support
+    "xone-dkms" # Wired/dongle xbox controller support
     "xpadneo-dkms" # Wireles xbox controller support
 )
 intelgpu=(
@@ -169,23 +165,21 @@ intelgpu=(
     "lib32-vulkan-intel"
     "intel-gpu-tools"
 )
-nvidia=( # https://wiki.archlinux.org/title/NVIDIA
-    "nvidia-dkms"
+nvidia_modern=( # https://wiki.archlinux.org/title/NVIDIA
+    "nvidia-open-dkms"
     "nvidia-utils"
     "lib32-nvidia-utils"
     "opencl-nvidia"
     "lib32-opencl-nvidia"
     "libva-nvidia-driver"
 )
-vr=(
-    "avahi" # WiVRn auto-discovery
-    "cli11" # OpenComposite dependency
-    "glib2-devel" # OpenComposite dependency
-    "nlohmann-json" # OpenComposite dependency
-    "monado-git" # OpenXR Runtime
-    "monado-vulkan-layers-git" # Required for Nvidia (otherwise segfault on launch)
-    "envision-xr-git" # Utility for setting up monado/opencomposite/wivrn
-    "wlx-overlay-s-git" # Desktop view in VR
+nvidia_legacy=( # https://wiki.archlinux.org/title/NVIDIA
+    "nvidia-580xx-dkms"
+    "nvidia-580xx-utils"
+    "lib32-nvidia-580xx-utils"
+    "opencl-nvidia-580xx"
+    "lib32-opencl-nvidia-580xx"
+    "libva-nvidia-driver"
 )
 ime=(
     "fcitx5"
@@ -196,9 +190,11 @@ ime=(
 )
 insprill=( # Stuff I use that I doubt anyone else cares about
     "feishin-bin"
-    "thunderbird"
+    "electronmail-bin"
     "unityhub"
     "gconf"
+    "powershell-bin"
+    "namcap" # Validating PKGBUILDs
 )
 
 groups_list=(
@@ -208,7 +204,6 @@ groups_list=(
     gaming
     intelgpu
     nvidia
-    vr
     ime
     insprill
 )
