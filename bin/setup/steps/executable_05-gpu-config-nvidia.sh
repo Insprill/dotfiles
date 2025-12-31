@@ -18,9 +18,7 @@ else
 fi
 
 echo "Enabling Nvidia-specific Hyprland options"
-if ! sudo sed -i "s|^# source=/etc/hyprland/nvidia.conf|source=/etc/hyprland/nvidia.conf|" /etc/hyprland/common.conf; then
-    echo "Warning: Failed to enable Nvidia Hyprland options. Are they already enabled?"
-fi
+sed -i "s|^# source=./land/nvidia.conf|source=./land/nvidia.conf|" "$HOME/.config/hypr/hyprland.conf"
 
 exit 0
 
