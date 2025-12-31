@@ -31,10 +31,9 @@ copy_file() {
 }
 
 # Hyprland (linking breaks sddm)
+copy_file "hyprland/catppuccin.conf"
 copy_file "hyprland/common.conf"
-copy_file "hyprland/monitors.conf"
-copy_file "hyprland/nvidia.conf"
-copy_file "hyprland/theme.conf"
+copy_file "hyprland/monitors"
 
 # Modprobe
 create_symlink "modprobe.d/nvidia.conf"
