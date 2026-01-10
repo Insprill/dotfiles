@@ -63,3 +63,19 @@ winget install twpayne.chezmoi
 chezmoi init Insprill && chezmoi apply
 ```
 4. Navigate to your home directory, and run the `setup.ps1` script with PowerShell as an Administrator.
+
+
+
+
+## Secure Boot
+
+To setup Secure Boot, follow [this](https://github.com/basecamp/omarchy/discussions/2296) guide,
+while skipping Phase 1 steps 2 and 3, and Phase 3.
+
+At the end of Phase 2, if it seems like it didn't work (Only the Windows keys are visible and Setup Mode is still Enabled),
+continue with the setup as normal. It's probably fine, but the status won't update until after a reboot.
+
+After Phase 2, run the following command to ensure all EFIs are signed.
+```shell
+sudo sbctl verify | sed -nE 's|^✗ (/.+) is not signed$|sbctl sign -s "\1"|p' | sudo sh
+```
