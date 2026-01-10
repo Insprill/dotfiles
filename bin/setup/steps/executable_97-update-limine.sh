@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setting Limine theme"
+echo "Applying default Limine config"
 if ! sudo tee /boot/efi/limine.conf > /dev/null << EOL
 ### Read more at config document: https://codeberg.org/Limine/Limine/src/branch/v10.x/CONFIG.md
 
@@ -17,6 +17,10 @@ term_background: 1e1e2e
 term_foreground: cdd6f4
 term_background_bright: 585b70
 term_foreground_bright: cdd6f4
+
+/Memtest86+
+    protocol: efi
+    path: boot():/memtest86+/memtest.efi
 
 EOL
 then
