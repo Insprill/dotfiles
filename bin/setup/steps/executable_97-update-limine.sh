@@ -18,10 +18,6 @@ term_foreground: cdd6f4
 term_background_bright: 585b70
 term_foreground_bright: cdd6f4
 
-/Memtest86+
-    protocol: efi
-    path: boot():/memtest86+/memtest.efi
-
 EOL
 then
     echo "Error: Failed to set Limine theme!"

@@ -54,7 +54,6 @@ essentials=(
     "luarocks" # Neovim config editing
     "libva-utils"
     "localsend" # Epic file sharing between devices
-    "memtest86+-efi"
     "meson" # Required to build Hyprland plugins
     "mkinitcpio" # Must be before the kernel
     "mpv" # Video player
