@@ -13,7 +13,6 @@ steps=(
     03-create-etc-links
     04-gpu-config-amd
     05-gpu-config-nvidia
-    06-theme-grub
     07-install-icon-theme
     08-rebuild-bat-cache
     09-enable-sddm
@@ -29,7 +28,7 @@ steps=(
     22-mkinitcpio-modules-decompress
     80-services-to-sockets
     90-adjust-sys-clock
-    97-update-grub
+    97-update-limine
     98-rebuild-initramfs
     99-reboot
 )

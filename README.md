@@ -22,7 +22,7 @@ for whatever reason, and so I don't forget, here's how to get the system setup.
 1. If you're using a laptop, ensure it's plugged in.
 1. Connect to the internet (required).
 1. In the `CachyOS Hello` window, click `Launch installer`.
-1. Select `Grub` as your bootloader.
+1. Select `Limine` as your bootloader.
 1. Wait for the installer window to open. This may take a moment.
 1. Proceed through the installer to the `Desktop` step as normal.
 1. Once on the `Desktop` step, select `No Desktop`.
