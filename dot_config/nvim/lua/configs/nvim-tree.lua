@@ -18,7 +18,8 @@ return {
       -- Rust
       "^target$",
       -- Unity
-      "Library.*",
+      "^Library.*",
+      "^Temp$",
       -- Web
       "^node_modules$",
     },
