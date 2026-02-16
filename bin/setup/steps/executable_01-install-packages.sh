@@ -38,6 +38,7 @@ essentials=(
     "hyprpolkitagent" # Authentication
     "hyprpaper" # Wallpaper
     "hyprpicker" # Color picker
+    "hyprshutdown" # Graceful shutdown
     "grim" # Screenshot util, gets region from slurp
     "grimblast-git" # Screenshots
     "icoutils" # Creating desktop files for Wine applications
