@@ -15,6 +15,8 @@ return {
       "^.git$",
       -- C#
       "^obj$",
+      -- Java
+      "^\\.gradle$",
       -- Rust
       "^target$",
       -- Unity
