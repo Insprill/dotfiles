@@ -2,7 +2,9 @@
 [[ $- != *i* ]] && return
 
 # Aliases
+alias lg="lazygit"
 alias ls="eza --icons --hyperlink"
+alias rg="rg -uuS"
 alias pacdiff="sudo env DIFFPROG='nvim -d' pacdiff"
 
 # Bins
