@@ -23,6 +23,7 @@ steps=(
     14-disable-ufw
     16-delete-unnecessary-folders
     17-apply-gtk-theme
+    18-disable-discord-update-checker
     20-enable-screen-recording
     21-mkinitcpio-hooks
     22-mkinitcpio-modules-decompress
