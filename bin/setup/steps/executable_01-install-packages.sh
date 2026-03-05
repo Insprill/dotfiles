@@ -3,6 +3,7 @@
 essentials=(
     "alacritty" # Primary terminal
     "amd-ucode" # AMD CPU microcode
+    "ark" # Archive manager for Dolphin
     "bat" # cat on steroids
     "bluez" # Bluetooth
     "bluez-utils"
@@ -17,11 +18,13 @@ essentials=(
     "cpio" # Required to build Hyprland plugins
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
+    "dolphin" # File browser
     "downgrade" # Saves your ass when a package update breaks things
     "dust" # du on crack
     "engrampa" # Archive management
     "eza" # ls on crack
     "fastfetch" # New neofetch
+    "ffmpegthumbs" # Video thumbnails for Dolphin
     "fish" # Shell
     "gamescope" # Valve magic
     "git"
@@ -30,8 +33,6 @@ essentials=(
     "gnome-themes-extra" # Required for Colloid GTK theme
     "go" # Required for Neovim's Go LSP
     "gtk-engine-murrine" # Required for Colloid GTK theme
-    "gvfs" # Virtual filesystem (used by Thunar)
-    "gvfs-smb"
     "hyprland" # Epic compositor
     "hyprlock" # Lockscreen for said epic compositor
     "hypridle" # Idle daemon for the still epic compositor
@@ -46,6 +47,8 @@ essentials=(
     "iotop" # Disk monitor
     "jdsimpleautostart" # Easily edit autostart applications
     "jq" # Json processing
+    "kde-cli-tools" # Tools for Dolphin (e.g. setting file type associations)
+    "kdegraphics-thumbnailers" # Image thumbnails for Dolphin
     "kitty" # Backup terminal
     "kvantum" # QT6 theme picker
     "kvantum-theme-catppuccin-git" # Catppuccin QT theme
@@ -94,10 +97,6 @@ essentials=(
     "swayosd" # Volume popup
     "tesseract" # OCR
     "tesseract-data-eng" # OCR data
-    "thunar" # File manager
-    "thunar-archive-plugin"
-    "thunar-media-tags-plugin"
-    "thunar-volman"
     "ttf-jetbrains-mono-nerd" # Fonts
     "ttf-nerd-fonts-symbols"
     "ttf-nerd-fonts-symbols-mono"

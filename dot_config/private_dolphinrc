@@ -1,0 +1,48 @@
+[CompactMode]
+PreviewSize=16
+
+[ContentDisplay]
+DirectorySizeMode=ContentSize
+RecursiveDirectorySizeLimit=20
+
+[ContextMenu]
+ShowAddToPlaces=false
+ShowCopyToOtherSplitView=false
+ShowDuplicateHere=false
+ShowMoveToOtherSplitView=false
+ShowViewMode=false
+
+[DetailsMode]
+ExpandableFolders=false
+PreviewSize=16
+
+[General]
+AutoExpandFolders=true
+BrowseThroughArchives=false
+ConfirmClosingMultipleTabs=false
+DynamicView=true
+RememberOpenedTabs=false
+ShowFullPath=true
+ShowFullPathInTitlebar=true
+ShowSelectionToggle=false
+ShowStatusBar=FullWidth
+UseTabForSwitchingSplitView=true
+
+[IconsMode]
+IconSize=128
+MaximumTextLines=2
+PreviewSize=128
+TextWidthIndex=0
+
+[InformationPanel]
+dateFormat=ShortFormat
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[Notification Messages]
+ConfirmRenameFileType=false
+
+[PreviewSettings]
+Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,glycin-heif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,rawthumbnail,glycin-svg,svgthumbnail,ffmpegthumbs
