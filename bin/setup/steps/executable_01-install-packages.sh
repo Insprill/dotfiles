@@ -125,6 +125,7 @@ amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "xf86-video-amdgpu"
     "libva-mesa-driver"
     "lib32-libva-mesa-driver"
+    "opencl-mesa"
     "rocm-smi-lib" # Let btop access GPU info
     "vulkan-radeon"
     "lib32-vulkan-radeon"
@@ -162,6 +163,7 @@ intelgpu=(
     "mesa-utils"
     "libva-mesa-driver"
     "lib32-libva-mesa-driver"
+    "opencl-mesa"
     "vulkan-intel"
     "lib32-vulkan-intel"
     "intel-gpu-tools"
