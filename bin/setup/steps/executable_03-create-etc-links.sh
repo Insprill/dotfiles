@@ -66,6 +66,7 @@ create_symlink "sddm.conf.d/custom-settings.conf"
 
 # Udev rules
 create_symlink "udev/rules.d/60-ioschedulers.rules"
+create_symlink "udev/rules.d/99-8bitdo-xinput.rules"
 
 # X11 settings
 create_symlink "X11/xorg.conf.d/50-mouse.conf"

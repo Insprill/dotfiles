@@ -1,0 +1,4 @@
+# Udev Rule for XInput Compatibility with 8BitDo Ultimate 2C Wireless Controllers.
+# This rule sets proper permissions and ensures the xpad driver is loaded.
+# Without this, the controller will not work in 2.4G mode.
+ACTION=="add", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="310a", MODE="0666", RUN+="/sbin/modprobe xpad", RUN+="/bin/sh -c 'echo 2dc8 310a > /sys/bus/usb/drivers/xpad/new_id'"
