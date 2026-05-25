@@ -26,7 +26,6 @@ essentials=(
     "fastfetch" # New neofetch
     "ffmpegthumbs" # Video thumbnails for Dolphin
     "fish" # Shell
-    "gamescope" # Valve magic
     "git"
     "git-lfs"
     "gnome-keyring" # Keyring
@@ -75,7 +74,6 @@ essentials=(
     "pavucontrol-qt" # Audio settings
     "pkg-config" # Required to build Hyprland plugins
     "popsicle" # USB flasher
-    "python312" # Required for cmake-language-server
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
     "catppuccin-qt5ct-git" # Catppuccin QT theme (only used for colors)
@@ -100,12 +98,9 @@ essentials=(
     "ttf-jetbrains-mono-nerd" # Fonts
     "ttf-nerd-fonts-symbols"
     "ttf-nerd-fonts-symbols-mono"
-    "ueberzugpp" # Show images in terminals
     "ungoogled-chromium-bin" # L browser
     "vulkan-tools"
     "waybar" # Bar
-    "wine-ge-custom" # Better Wine
-    "wine-mono" # Mono support for Wine
     "wl-clipboard" # xclip but wayland
     "wlogout" # Power menu
     "xorg-xeyes" # Useful for debugging XWayland issues
@@ -146,11 +141,11 @@ development=(
 gaming=(
     "discord" # 🤓
     "gamemode" # Optimizations for games
+    "gamescope" # Valve magic
     "gpu-screen-recorder-ui" # make a guess
     "lact" # GPU monitoring / overclocking
     "mangohud" # Performance overlay
     "steam" # Good guy Valve
-    "proton-ge-custom-bin" # Better Proton
     "protontricks"
     "protonup-qt" # GUI for managing Proton versions
     "vosk-model-en-us" # Voice recognition for games using the Windows Speech API (e.g., VTOL VR)
