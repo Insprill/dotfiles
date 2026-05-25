@@ -50,11 +50,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
         group = codelens_augroup,
         buffer = buf,
       }
-      vim.lsp.codelens.refresh()
+      vim.lsp.codelens.enable(true)
       vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
         group = codelens_augroup,
         buffer = buf,
-        callback = vim.lsp.codelens.refresh,
+        callback = function()
+          vim.lsp.codelens.enable(true)
+        end,
       })
     end
   end,
