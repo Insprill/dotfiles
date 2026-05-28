@@ -1,3 +1,5 @@
+require "autocmds.roslyn"
+
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Restore cursor position
