@@ -131,6 +131,7 @@ development=(
     "docker-compose"
     "dotnet-sdk" # C#
     "github-cli" # Easy way to login to GitHub with Git
+    "inotify-tools" # Speeds up file watching in Neovim
     "jetbrains-toolbox" # IntelliJ/Rider/CLion/Feet
     "lazygit" # Epic git TUI
     "posting" # Terminal API client
