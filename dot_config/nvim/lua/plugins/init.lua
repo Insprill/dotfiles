@@ -70,8 +70,8 @@ return {
 
   {
     "seblj/roslyn.nvim",
-    ft = "cs",
-    opts = require "configs.roslyn",
+    ft = { "cs", "solution" },
+    opts = require ("configs.roslyn").opts,
   },
 
   {

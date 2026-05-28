@@ -50,5 +50,10 @@ return function()
     vim.lsp.config(name, opts)
   end
 
+  -- Roslyn https://github.com/seblyng/roslyn.nvim#example
+  vim.lsp.config("roslyn", {
+    settings = require("configs.roslyn").settings,
+  })
+
   vim.lsp.inlay_hint.enable()
 end
