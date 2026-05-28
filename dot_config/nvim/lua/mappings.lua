@@ -14,14 +14,13 @@ map("n", "<leader>gB", ":Gitsigns blame<CR>")
 map("n", "ga", function()
   vim.lsp.buf.code_action()
 end)
+local use_virtual_text = true
 map("n", "<leader>dt", function()
-  local cfg = vim.diagnostic.config()
-  ---@diagnostic disable: need-check-nil, assign-type-mismatch
+  use_virtual_text = not use_virtual_text
   vim.diagnostic.config {
-    virtual_text = not cfg.virtual_text,
-    virtual_lines = cfg.virtual_text,
+    virtual_text = use_virtual_text,
+    virtual_lines = not use_virtual_text,
   }
-  ---@diagnostic enable: need-check-nil, assign-type-mismatch
 end, { desc = "Toggle diagnostics: virtual text ↔ virtual lines" })
 
 ----------------------
