@@ -11,6 +11,7 @@ alias pacdiff="sudo env DIFFPROG='nvim -d' pacdiff"
 PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.cargo/bin
+PATH=$PATH:$HOME/.dotnet/tools
 
 # Starship
 eval "$(starship init bash)"

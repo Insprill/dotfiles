@@ -14,6 +14,7 @@ alias based="git rebase --committer-date-is-author-date --rebase-merges"
 fish_add_path $HOME/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.dotnet/tools
 
 # Zoxide https://github.com/ajeetdsouza/zoxide
 zoxide init fish | source
