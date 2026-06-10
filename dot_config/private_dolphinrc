@@ -41,6 +41,9 @@ dateFormat=ShortFormat
 Places Icons Auto-resize=false
 Places Icons Static Size=22
 
+[MainWindow]
+MenuBar=Disabled
+
 [Notification Messages]
 ConfirmRenameFileType=false
 
