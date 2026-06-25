@@ -148,6 +148,7 @@ gaming=(
     "protontricks"
     "protonup-qt" # GUI for managing Proton versions
     "vosk-model-en-us" # Voice recognition for games using the Windows Speech API (e.g., VTOL VR)
+    "vulkan-low-latency-layer" # Reduce latency of games (even more than windows!)
     "xone-dkms" # Wired/dongle xbox controller support
     "xpadneo-dkms" # Wireles xbox controller support
 )
