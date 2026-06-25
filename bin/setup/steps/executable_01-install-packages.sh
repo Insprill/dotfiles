@@ -32,6 +32,7 @@ essentials=(
     "gnome-themes-extra" # Required for Colloid GTK theme
     "go" # Required for Neovim's Go LSP
     "gtk-engine-murrine" # Required for Colloid GTK theme
+    "gwenview" # Image viewer
     "hyprland" # Epic compositor
     "hyprlock" # Lockscreen for said epic compositor
     "hypridle" # Idle daemon for the still epic compositor
@@ -64,7 +65,6 @@ essentials=(
     "neovide" # Editor but Rust
     "network-manager-applet" # Tray icon for network connectivity
     "nmap" # Network shenanigans
-    "nomacs" # Image viewer
     "npm" # Installing Neovim plugins
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
