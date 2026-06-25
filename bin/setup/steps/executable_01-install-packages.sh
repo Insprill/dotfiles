@@ -8,7 +8,7 @@ essentials=(
     "bluez" # Bluetooth
     "bluez-utils"
     "blueman" # Bluetooth GUI
-    "brave-bin" # W browser
+    "brave-origin-bin" # W browser
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
     "capitaine-cursors" # Cursor
@@ -88,7 +88,6 @@ essentials=(
     "slurp" # Region selector, used with grim
     "sddm" # Display manager
     "catppuccin-sddm-theme-mocha" # Catppuccin SDDM theme
-    "speech-dispatcher" # Used by Firefox and others for text-to-speech
     "starship" # Shell prompt
     "satty" # Screenshot editing
     "swaync" # Notifications
@@ -98,7 +97,6 @@ essentials=(
     "ttf-jetbrains-mono-nerd" # Fonts
     "ttf-nerd-fonts-symbols"
     "ttf-nerd-fonts-symbols-mono"
-    "ungoogled-chromium-bin" # L browser
     "vulkan-tools"
     "waybar" # Bar
     "wl-clipboard" # xclip but wayland
