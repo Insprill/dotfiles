@@ -68,6 +68,7 @@ essentials=(
     "npm" # Installing Neovim plugins
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
+    "okular" # PDF viewer/editor
     "paccache-hook" # Remove cached versions of old/uninstalled packages
     "pacseek" # Util for looking up packages
     "paru" # AUR helper

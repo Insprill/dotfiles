@@ -1,7 +1,7 @@
 [Added Associations]
 application/gzip=org.kde.ark.desktop;
 application/json=neovide.desktop;
-application/pdf=firefox-developer-edition;brave-origin.desktop;
+application/pdf=okularApplication_pdf.desktop;brave-origin.desktop;
 application/pgp-keys=neovide.desktop;
 application/vnd.ms-publisher=neovide.desktop;
 application/x-7z-compressed=org.kde.ark.desktop;
@@ -41,7 +41,7 @@ x-scheme-handler/mailto=electron-mail.desktop;
 [Default Applications]
 application/gzip=org.kde.ark.desktop;
 application/json=neovide.desktop;
-application/pdf=firefox-developer-edition.desktop;
+application/pdf=okularApplication_pdf.desktop;
 application/pgp-keys=neovide.desktop
 application/vnd.ms-publisher=neovide.desktop;
 application/x-7z-compressed=org.kde.ark.desktop;
