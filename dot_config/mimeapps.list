@@ -88,6 +88,7 @@ x-scheme-handler/sgnl=signal.desktop
 x-scheme-handler/sidequest=SideQuest.desktop
 x-scheme-handler/signalcaptcha=signal.desktop
 x-scheme-handler/web+bsmap=bs-manager.desktop
+x-scheme-handler/unityhub=unityhub.desktop
 
 [Removed Associations]
 application/pdf=gimp.desktop;
