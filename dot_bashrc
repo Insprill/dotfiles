@@ -3,7 +3,7 @@
 
 # Aliases
 alias lg="lazygit"
-alias ls="eza --icons --hyperlink"
+alias ls="eza --icons --hyperlink auto"
 alias rg="rg -uuS"
 alias pacdiff="sudo env DIFFPROG='nvim -d' pacdiff"
 
