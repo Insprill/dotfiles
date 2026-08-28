@@ -1,17 +1,11 @@
 #!/bin/bash
 
-if ! command -v hyprpm >/dev/null 2>&1; then
-    echo "Hyprland not installed, skipping step"
-    exit 0
-fi
-
-echo "Updating hyprpm"
-if ! hyprpm update; then
-    echo "Error: Failed to update hyprpm! Hyprland plugins cannot be installed."
-    exit 1
-fi
+PLUGINS_DIR="$HOME/.config/hypr/plugins"
+mkdir -p "$PLUGINS_DIR"
 
 # Per-monitor workspaces
 echo "Installing split-monitor-workspaces"
-hyprpm add https://github.com/Duckonaut/split-monitor-workspaces
-hyprpm enable split-monitor-workspaces
+if ! git clone https://github.com/zjeffer/split-monitor-workspaces "$PLUGINS_DIR/split-monitor-workspaces"; then
+    echo "Error: Failed to clone split-monitor-workspaces!"
+    exit 1
+fi

@@ -1,0 +1,20 @@
+-- Valve's Wine/Proton checks `/usr/share/vosk` for models,
+-- but the `vosk-model-en-us` AUR package installs to `/usr/share/vosk-models`,
+-- so we just set the env var globally so the models don't need to be manually installed.
+-- https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=vosk-model-en-us
+-- https://github.com/ValveSoftware/wine/blob/b8fdff8e1f855b5276ec4ddca0f31b2792554322/dlls/windows.media.speech/unixlib.c#L244
+hl.env("VOSK_MODEL_PATH", "/usr/share/vosk-models")
+
+-- Allow Proton games to properly interact with Discord
+hl.env("PROTON_DISCORD_BRIDGE", "1")
+
+-- Simple impl of VK_AMD_anti_lag, doesn't really do much
+-- hl.env("ENABLE_LAYER_MESA_ANTI_LAG", "1")
+
+-- Better impl of VK_AMD_anti_lag and VK_NV_low_latency2
+-- https://github.com/Korthos-Software/low_latency_layer
+hl.env("LOW_LATENCY_LAYER", "1")
+hl.env("LOW_LATENCY_LAYER_REFLEX", "1")
+
+-- Get access to Derail Valley dev tools
+hl.env("DERAIL_VALLEY_DEV", "1")

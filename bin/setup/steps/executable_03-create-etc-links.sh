@@ -31,9 +31,9 @@ copy_file() {
 }
 
 # Hyprland (linking breaks sddm)
-copy_file "hyprland/catppuccin.conf"
-copy_file "hyprland/common.conf"
-copy_file "hyprland/monitors"
+copy_file "hyprland/catppuccin.lua"
+copy_file "hyprland/common.lua"
+copy_file "hyprland/monitors.lua"
 
 # Modprobe
 create_symlink "modprobe.d/nvidia.conf"
@@ -42,7 +42,6 @@ create_symlink "modprobe.d/nvidia.conf"
 copy_file "modules-load.d/ntsync.conf"
 
 # Pacman hooks
-create_symlink "pacman.d/hooks/hyprland-post.hook"
 create_symlink "pacman.d/hooks/vencord-pre.hook"
 create_symlink "pacman.d/hooks/vencord-post.hook"
 
