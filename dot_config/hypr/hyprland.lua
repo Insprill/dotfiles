@@ -1,10 +1,10 @@
 require("/etc/hyprland/common.lua")
 
 require("defaults")
+require("./apps/*")
 require("env")
 require("keybinds")
 require("looknfeel")
-require("windowrules")
 require("plugins")
 require("wayland")
 require("autostart")
