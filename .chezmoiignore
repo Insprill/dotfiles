@@ -1,6 +1,7 @@
 # Global
 README.md
 LICENSE
+.config/hypr/plugins/
 
 # Linux-only
 {{ if ne .chezmoi.os "linux" }}
