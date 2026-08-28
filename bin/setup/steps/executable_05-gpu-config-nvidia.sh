@@ -17,8 +17,5 @@ else
     fi
 fi
 
-echo "Enabling Nvidia-specific Hyprland options"
-sed -i "s|^-- source=./land/nvidia.conf|require(\"nvidia\")|" "$HOME/.config/hypr/hyprland.lua"
-
 exit 0
 
