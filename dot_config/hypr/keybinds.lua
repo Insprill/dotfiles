@@ -3,9 +3,9 @@
 -- https://wiki.hypr.land/Configuring/Basics/Dispatchers/#dispatchers-1
 
 -- Applications
-hl.bind("SUPER + RETURN", hl.dsp.exec_cmd("alacritty"))
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(os.getenv("TERMINAL")))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("dolphin"))
-hl.bind("SUPER + B", hl.dsp.exec_cmd("brave-origin"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd(os.getenv("BROWSER")))
 hl.bind("SUPER + D", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd("rofi -show calc -modi calc -no-show-match -no-sort -calc-command \"wl-copy '{result}'\""))
 hl.bind("SUPER + PERIOD", hl.dsp.exec_cmd("rofi -show emoji -modi emoji -matching normal -emoji-mode copy"))

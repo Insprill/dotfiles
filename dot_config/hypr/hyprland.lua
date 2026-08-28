@@ -1,6 +1,5 @@
 require("/etc/hyprland/common.lua")
 
-require("defaults")
 require("./apps/*")
 require("env")
 require("keybinds")
