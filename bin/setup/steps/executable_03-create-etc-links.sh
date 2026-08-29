@@ -41,10 +41,6 @@ create_symlink "modprobe.d/nvidia.conf"
 # Modules
 copy_file "modules-load.d/ntsync.conf"
 
-# Pacman hooks
-create_symlink "pacman.d/hooks/vencord-pre.hook"
-create_symlink "pacman.d/hooks/vencord-post.hook"
-
 # Polkit rules
 create_symlink "polkit-1/rules.d/10-power-management.rules"
 
