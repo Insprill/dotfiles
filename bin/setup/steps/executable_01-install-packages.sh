@@ -41,8 +41,7 @@ essentials=(
     "hyprpicker" # Color picker
     "hyprshutdown" # Graceful shutdown
     "hyprsunset" # Blue light filter
-    "grim" # Screenshot util, gets region from slurp
-    "grimblast-git" # Screenshots
+    "grim" # Screenshot util, gets region from slurp (used for ocr)
     "icoutils" # Creating desktop files for Wine applications
     "intel-ucode" # Intel CPU microcode
     "iotop" # Disk monitor
@@ -70,6 +69,7 @@ essentials=(
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
     "okular" # PDF viewer/editor
+    "omasnap" # GOATed screenshot tool
     "paccache-hook" # Remove cached versions of old/uninstalled packages
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
@@ -91,7 +91,6 @@ essentials=(
     "sddm" # Display manager
     "catppuccin-sddm-theme-mocha" # Catppuccin SDDM theme
     "starship" # Shell prompt
-    "satty" # Screenshot editing
     "swaync" # Notifications
     "swayosd" # Volume popup
     "tesseract" # OCR

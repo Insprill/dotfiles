@@ -10,7 +10,7 @@ hl.bind("SUPER + D", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd("rofi -show calc -modi calc -no-show-match -no-sort -calc-command \"wl-copy '{result}'\""))
 hl.bind("SUPER + PERIOD", hl.dsp.exec_cmd("rofi -show emoji -modi emoji -matching normal -emoji-mode copy"))
 hl.bind("SUPER + P", hl.dsp.exec_cmd("hyprpicker -a"))
-hl.bind("Print", hl.dsp.exec_cmd("grimblast --freeze save area - | satty --initial-tool brush --early-exit --copy-command wl-copy --filename -"))
+hl.bind("Print", hl.dsp.exec_cmd("omasnap"))
 hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | tesseract - - -l eng | wl-copy"))
 hl.bind("SUPER + ALT + SHIFT + T", hl.dsp.exec_cmd("kitty"))
 
