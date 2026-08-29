@@ -2,7 +2,7 @@
 
 echo "Applying default Limine config"
 if ! sudo tee /boot/efi/limine.conf > /dev/null << EOL
-### Read more at config document: https://codeberg.org/Limine/Limine/src/branch/v10.x/CONFIG.md
+### Read more at config document: https://github.com/limine-bootloader/limine/blob/trunk/CONFIG.md
 
 timeout: 3
 default_entry: 2
