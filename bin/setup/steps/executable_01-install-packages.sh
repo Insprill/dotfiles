@@ -13,15 +13,12 @@ essentials=(
     "btop" # Resource monitor
     "capitaine-cursors" # Cursor
     "chezmoi" # Dotfile management
-    "cmake" # Required to build Hyprland plugins
     "compsize" # View BTRFS compression ratios
-    "cpio" # Required to build Hyprland plugins
     "devtools" # Required to edit package files with paru
     "dex" # Autostart desktop files
     "dolphin" # File browser
     "downgrade" # Saves your ass when a package update breaks things
     "dust" # du on crack
-    "engrampa" # Archive management
     "eza" # ls on crack
     "fastfetch" # New neofetch
     "ffmpegthumbs" # Video thumbnails for Dolphin
@@ -58,7 +55,6 @@ essentials=(
     "luarocks" # Neovim config editing
     "libva-utils"
     "localsend" # Epic file sharing between devices
-    "meson" # Required to build Hyprland plugins
     "mkinitcpio" # Must be before the kernel
     "mpv" # Video player
     "neovim" # Editor
@@ -74,7 +70,6 @@ essentials=(
     "pacseek" # Util for looking up packages
     "paru" # AUR helper
     "pavucontrol-qt" # Audio settings
-    "pkg-config" # Required to build Hyprland plugins
     "popsicle" # USB flasher
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
@@ -125,6 +120,7 @@ amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "lib32-vulkan-radeon"
 )
 development=(
+    "base-devel"
     "docker"
     "docker-buildx"
     "docker-compose"
@@ -188,12 +184,12 @@ ime=(
     "fcitx5-mozc" # Google's Japanese IME
 )
 insprill=( # Stuff I use that I doubt anyone else cares about
-    "feishin-bin"
+    "feishin"
     "electronmail-bin"
     "unityhub"
     "gconf"
-    "powershell-bin"
     "namcap" # Validating PKGBUILDs
+    "vencord-installer-git"
 )
 
 groups_list=(
@@ -202,7 +198,8 @@ groups_list=(
     development
     gaming
     intelgpu
-    nvidia
+    nvidia_legacy
+    nvidia_modern
     ime
     insprill
 )
