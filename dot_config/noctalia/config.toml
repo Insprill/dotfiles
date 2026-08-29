@@ -1,0 +1,162 @@
+config_version = 13
+
+[audio]
+enable_overdrive = true
+
+[bar.default]
+background_opacity = 0.75
+center = [ "notifications", "spacer_6", "bar", "clock", "spacer_7", "clipboard", "keybinds" ]
+end = [
+    "tray",
+    "spacer_5",
+    "network",
+    "bluetooth",
+    "spacer_8",
+    "input_volume",
+    "volume",
+    "spacer_3",
+    "battery",
+    "widget",
+    "session"
+]
+margin_ends = 0
+radius_top_left = 0
+radius_top_right = 0
+start = [ "wallhaven", "workspaces", "spacer_2", "cpu", "ram", "network_rx", "network_tx", "spacer_4", "media" ]
+
+[calendar]
+enabled = true
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[desktop_widgets]
+enabled = false
+
+[idle]
+pre_action_fade_seconds = 30
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = true
+
+[notification]
+history_retention_hours = 24
+
+[osd.kinds]
+media = false
+
+[plugin_settings."yuuto/arch-updater"]
+aur_helper = "paru"
+auto_check_hours = 24
+
+[plugins]
+enabled = [ "yuuto/arch-updater", "noctalia/wallhaven", "noctalia/world_clock" ]
+
+[shell]
+polkit_agent = true
+screen_time_enabled = true
+show_location = false
+
+    [shell.animation]
+    enabled = false
+
+    [shell.launcher]
+    compact = true
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    open_near_click_control_center = true
+    open_near_click_clipboard = true
+    open_near_click_session = true
+    session_placement = "attached"
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Catppuccin Mocha Mauve-Lavender"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+transition = []
+
+[weather]
+unit = "imperial"
+
+[widget.bar]
+type = "noctalia/world_clock:bar"
+
+[widget.clock]
+format = "%H:%M:%S %a %m/%d"
+
+[widget.input_volume]
+show_label = false
+
+    [widget.input_volume.actions]
+    left = "mic-mute"
+
+[widget.keybinds]
+type = "kenn/keybind-cheatsheet:keybinds"
+
+[widget.media]
+title_scroll = "on_hover"
+hide_when_no_media = true
+
+[widget.network]
+show_label = false
+vpn_status = "both"
+
+[widget.network_rx]
+network_speed_compact = true
+visualization = "none"
+
+[widget.network_tx]
+network_speed_compact = true
+visualization = "none"
+
+[widget.spacer_2]
+type = "spacer"
+
+[widget.spacer_3]
+type = "spacer"
+
+[widget.spacer_4]
+length = 40
+type = "spacer"
+
+[widget.spacer_5]
+type = "spacer"
+
+[widget.spacer_6]
+type = "spacer"
+
+[widget.spacer_7]
+type = "spacer"
+
+[widget.spacer_8]
+type = "spacer"
+
+[widget.tray]
+drawer = true
+drawer_item_size = 18.0
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.widget]
+type = "yuuto/arch-updater:widget"

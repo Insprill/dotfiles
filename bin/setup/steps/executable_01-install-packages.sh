@@ -7,7 +7,6 @@ essentials=(
     "bat" # cat on steroids
     "bluez" # Bluetooth
     "bluez-utils"
-    "blueman" # Bluetooth GUI
     "brave-origin-bin" # W browser
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
@@ -31,10 +30,7 @@ essentials=(
     "gtk-engine-murrine" # Required for Colloid GTK theme
     "gwenview" # Image viewer
     "hyprland" # Epic compositor
-    "hyprlock" # Lockscreen for said epic compositor
     "hypridle" # Idle daemon for the still epic compositor
-    "hyprpolkitagent" # Authentication
-    "hyprpaper" # Wallpaper
     "hyprpicker" # Color picker
     "hyprshutdown" # Graceful shutdown
     "hyprsunset" # Blue light filter
@@ -59,8 +55,8 @@ essentials=(
     "mpv" # Video player
     "neovim" # Editor
     "neovide" # Editor but Rust
-    "network-manager-applet" # Tray icon for network connectivity
     "nmap" # Network shenanigans
+    "noctalia" # The most fucking incredible thing ever (bar + more)
     "npm" # Installing Neovim plugins
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
@@ -79,24 +75,17 @@ essentials=(
     "qt6-wayland" # QT6 Wayland support
     "qt5-wayland" # QT5 Wayland support
     "ripgrep" # Grep on cocaine
-    "rofi-wayland" # Rofi with Wayland support
-    "rofi-calc-git" # Rofi calculator. Must be git, stable doesn't work!
-    "rofi-emoji" # Rofi emoji picker
     "slurp" # Region selector, used with grim
     "sddm" # Display manager
     "catppuccin-sddm-theme-mocha" # Catppuccin SDDM theme
     "starship" # Shell prompt
-    "swaync" # Notifications
-    "swayosd" # Volume popup
     "tesseract" # OCR
     "tesseract-data-eng" # OCR data
     "ttf-jetbrains-mono-nerd" # Fonts
     "ttf-nerd-fonts-symbols"
     "ttf-nerd-fonts-symbols-mono"
     "vulkan-tools"
-    "waybar" # Bar
     "wl-clipboard" # xclip but wayland
-    "wlogout" # Power menu
     "xorg-xeyes" # Useful for debugging XWayland issues
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal-gtk"

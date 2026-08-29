@@ -6,7 +6,7 @@ hl.env("GTK_THEME", "Colloid-Purple-Dark-Compact-Catppuccin")
 hl.config({
     general = {
         gaps_in = 1.5,
-        gaps_out = {0, 3, 3, 3},
+        gaps_out = 2,
         col = {
             active_border = mauve,
             inactive_border = surface0,
