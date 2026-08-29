@@ -7,6 +7,8 @@ enable_overdrive = true
 background_opacity = 0.75
 center = [ "notifications", "spacer_6", "bar", "clock", "spacer_7", "clipboard", "keybinds" ]
 end = [
+    "media",
+    "spacer_9",
     "tray",
     "spacer_5",
     "network",
@@ -22,7 +24,7 @@ end = [
 margin_ends = 0
 radius_top_left = 0
 radius_top_right = 0
-start = [ "wallhaven", "workspaces", "spacer_2", "cpu", "ram", "network_rx", "network_tx", "spacer_4", "media" ]
+start = [ "wallhaven", "drive_health_custom", "workspaces", "spacer_2", "cpu", "ram", "network_rx", "network_tx", "spacer_4" ]
 
 [calendar]
 enabled = true
@@ -64,8 +66,12 @@ media = false
 aur_helper = "paru"
 auto_check_hours = 24
 
+[plugin_settings."gustav0ar/drive-health"]
+drives_placement = "attached"
+system_collector_enabled = true
+
 [plugins]
-enabled = [ "yuuto/arch-updater", "noctalia/wallhaven", "noctalia/world_clock" ]
+enabled = [ "yuuto/arch-updater", "noctalia/wallhaven", "noctalia/world_clock", "gustav0ar/drive-health" ]
 
 [shell]
 polkit_agent = true
@@ -103,6 +109,13 @@ type = "noctalia/world_clock:bar"
 
 [widget.clock]
 format = "%H:%M:%S %a %m/%d"
+
+[widget.drive_health_custom]
+glyph = "database"
+type = "custom_button"
+
+    [widget.drive_health_custom.actions]
+    left = "panel-toggle gustav0ar/drive-health:drives"
 
 [widget.input_volume]
 show_label = false
@@ -149,6 +162,9 @@ type = "spacer"
 type = "spacer"
 
 [widget.spacer_8]
+type = "spacer"
+
+[widget.spacer_9]
 type = "spacer"
 
 [widget.tray]
