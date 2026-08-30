@@ -1,0 +1,5 @@
+{
+  "use_port_names": true,
+  "hypr_config_format": "lua",
+  "active_profile": "Main"
+}

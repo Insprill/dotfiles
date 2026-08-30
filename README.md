@@ -43,10 +43,20 @@ sudo pacman -Syu chezmoi
 chezmoi init Insprill && chezmoi apply
 ```
 5. Run the following command to begin system setup. Follow the prompts it gives you as it goes.
-Once it finishes, it will prompt you to reboot, and your system is completely setup.
+Once it finishes, it will prompt you to reboot, and your system is (mostly) setup.
 ```shell
 ~/bin/setup-system
 ```
+
+
+### Finalizing Setup
+
+After rebooting, there are a few things you'll need to do manually.
+
+#### Monitor Setup
+
+To configure your monitors how you'd like, use the "Monique" program.
+It's a fully GUI that lets you easily customize everything about your monitors from placement to scaling to color settings.
 
 
 

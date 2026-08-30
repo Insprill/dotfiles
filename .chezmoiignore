@@ -2,6 +2,7 @@
 README.md
 LICENSE
 .config/hypr/plugins/
+.config/hypr/monitors.lua
 
 # Linux-only
 {{ if ne .chezmoi.os "linux" }}

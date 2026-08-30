@@ -49,6 +49,7 @@ essentials=(
     "luarocks" # Neovim config editing
     "libva-utils" # VA-API debugging
     "localsend" # Epic file sharing between devices
+    "monique" # Hyprland monitor settings
     "mkinitcpio" # Must be before the kernel
     "mpv" # Video player
     "neovim" # Editor
