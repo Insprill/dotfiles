@@ -1,3 +1,12 @@
+cursorSize = 24
+cursorTheme = "capitaine-cursors"
+
+-- Wayland cursors
+hl.env("HYPRCURSOR_THEME", cursorTheme)
+hl.env("HYPRCURSOR_SIZE", tostring(cursorSize))
+-- XWayland cursors
+hl.env("XCURSOR_THEME", cursorTheme)
+hl.env("XCURSOR_SIZE", tostring(cursorSize))
 -- QT Theme
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 -- GTK theme. Some GTK4 applications don't get themed without this? (e.g. envision)

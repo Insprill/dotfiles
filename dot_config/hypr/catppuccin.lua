@@ -1,13 +1,3 @@
-cursorSize = 24
-cursorTheme = "capitaine-cursors"
-
--- Wayland cursors
-hl.env("HYPRCURSOR_THEME", cursorTheme)
-hl.env("HYPRCURSOR_SIZE", tostring(cursorSize))
--- XWayland cursors
-hl.env("XCURSOR_THEME", cursorTheme)
-hl.env("XCURSOR_SIZE", tostring(cursorSize))
-
 -- Catppuccin Mocha colors
 rosewaterAlpha = "f5e0dc"
 flamingoAlpha  = "f2cdcd"

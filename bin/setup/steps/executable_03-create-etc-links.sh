@@ -30,10 +30,8 @@ copy_file() {
     sudo cp "$src" "$dest"
 }
 
-# Hyprland (linking breaks sddm)
-copy_file "hyprland/catppuccin.lua"
-copy_file "hyprland/common.lua"
-copy_file "hyprland/monitors.lua"
+# greetd
+copy_file "pam.d/greetd"
 
 # Modprobe
 create_symlink "modprobe.d/nvidia.conf"
@@ -56,14 +54,15 @@ copy_file "systemd/system/x3d-cache-mode.service"
 # Sudo (cannot be linked, must be copied)
 copy_file "sudoers.d/20-insults"
 
-# SDDM
-create_symlink "sddm.conf.d/custom-settings.conf"
-
 # Udev rules
 create_symlink "udev/rules.d/60-ioschedulers.rules"
 create_symlink "udev/rules.d/99-8bitdo-xinput.rules"
 
 # X11 settings
 create_symlink "X11/xorg.conf.d/50-mouse.conf"
+
+# Noctalia Greeter (not etc but close enough)
+sudo rm /var/lib/noctalia-greeter/greeter.toml
+sudo cp -r $HOME/bin/setup/varlib/noctalia-greeter/greeter.toml /var/lib/noctalia-greeter/greeter.toml
 
 exit 0

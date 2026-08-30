@@ -47,7 +47,6 @@ essentials=(
     "kvantum-theme-catppuccin-git" # Catppuccin QT theme
     "kwallet-pam" # Unlock wallet
     "kwalletmanager"
-    "layer-shell-qt" # SDDM stuff
     "luarocks" # Neovim config editing
     "libva-utils"
     "localsend" # Epic file sharing between devices
@@ -57,6 +56,7 @@ essentials=(
     "neovide" # Editor but Rust
     "nmap" # Network shenanigans
     "noctalia" # The most fucking incredible thing ever (bar + more)
+    "noctalia-greeter" # Good looking login screen
     "npm" # Installing Neovim plugins
     "nvtop" # GPU resource monitor (works with AMD, Intel, and Nvidia)
     "nwg-look" # GTK theme picker
@@ -70,14 +70,10 @@ essentials=(
     "qdirstat" # WizTree for Linux
     "qt6ct" # QT6 theming
     "catppuccin-qt5ct-git" # Catppuccin QT theme (only used for colors)
-    "qt6-declarative" # SDDM theme stuff
-    "qt6-svg" # More SDDM theme stuff
     "qt6-wayland" # QT6 Wayland support
     "qt5-wayland" # QT5 Wayland support
     "ripgrep" # Grep on cocaine
     "slurp" # Region selector, used with grim
-    "sddm" # Display manager
-    "catppuccin-sddm-theme-mocha" # Catppuccin SDDM theme
     "starship" # Shell prompt
     "tesseract" # OCR
     "tesseract-data-eng" # OCR data

@@ -1,0 +1,15 @@
+# noctalia-greeter greeter.toml (declarative; Nix-safe; UI and Sync never write this)
+# Last-used session lives in sync.toml; UI/Sync also fall back to sync.toml for scheme
+# and output layout/transforms when not set here. Session power actions/menu entries are
+# Sync-only (sync.toml [session.power]/[[session.actions]]) and are not settable here.
+# https://docs.noctalia.dev/greeter/configuration/
+[idle]
+timeout = 300
+
+[appearance]
+scheme = "Catppuccin"
+hide_logo = true
+
+[cursor]
+theme = "capitaine-cursors"
+size = 24

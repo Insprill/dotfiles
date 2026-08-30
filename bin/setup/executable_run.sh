@@ -15,7 +15,7 @@ steps=(
     05-gpu-config-nvidia
     07-install-icon-theme
     08-rebuild-bat-cache
-    09-enable-sddm
+    09-enable-greetd
     10-set-shell
     11-install-hyprland-plugins
     12-install-rust-toolchains
