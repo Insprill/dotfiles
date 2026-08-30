@@ -58,10 +58,16 @@ After rebooting, there are a few things you'll need to do manually.
 To configure your monitors how you'd like, use the "Monique" program.
 It's a fully GUI that lets you easily customize everything about your monitors from placement to scaling to color settings.
 
+#### Wallpapers
+
+To set your wallpaper directory, go to the control center (right-click on bar),
+then click settings in the top right, go to the "Wallpaper" tab at the top left,
+then set the "Wallpaper Directory" to wherever you plan on storing your wallpapers.
+
 #### Drive Monitoring
 
 To enable full drive health monitoring,
-click on the database icon in the top left of the bar,
+click on "Drive Health" in the control center,
 and follow the setup instructions it shows.
 
 

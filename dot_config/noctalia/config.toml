@@ -4,11 +4,9 @@ config_version = 13
 enable_overdrive = true
 
 [bar.default]
-background_opacity = 0.75
-center = [ "notifications", "spacer_6", "bar", "clock", "spacer_7", "clipboard", "keybinds" ]
+start = [ "widget_2", "workspaces", "spacer_2", "cpu", "ram", "network_rx", "network_tx", "spacer_4" ]
+center = [ "notifications", "spacer_6", "bar", "clock", "spacer_7", "clipboard", "spacer_9", "media" ]
 end = [
-    "media",
-    "spacer_9",
     "tray",
     "spacer_5",
     "network",
@@ -24,22 +22,31 @@ end = [
 margin_ends = 0
 radius_top_left = 0
 radius_top_right = 0
-start = [ "wallhaven", "drive_health_custom", "workspaces", "spacer_2", "cpu", "ram", "network_rx", "network_tx", "spacer_4" ]
+background_opacity = 0.75
 
 [calendar]
 enabled = true
 
-[[control_center.shortcuts]]
-type = "wifi"
+[control_center]
+sidebar_section = "none"
 
-[[control_center.shortcuts]]
-type = "bluetooth"
+    [[control_center.shortcuts]]
+    type = "wifi"
 
-[[control_center.shortcuts]]
-type = "notification"
+    [[control_center.shortcuts]]
+    type = "bluetooth"
 
-[[control_center.shortcuts]]
-type = "power_profile"
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "yocraft/custom-shortcut:shortcut"
+
+    [[control_center.shortcuts]]
+    type = "noctalia/wallhaven:shortcut"
 
 [desktop_widgets]
 enabled = false
@@ -66,12 +73,24 @@ media = false
 aur_helper = "paru"
 auto_check_hours = 24
 
+[plugin_settings."yocraft/custom-shortcut"]
+icon = "database"
+label = "Drive Health"
+onclick_cmd = "noctalia msg panel-toggle gustav0ar/drive-health:drives"
+
 [plugin_settings."gustav0ar/drive-health"]
 drives_placement = "attached"
 system_collector_enabled = true
 
 [plugins]
-enabled = [ "yuuto/arch-updater", "noctalia/wallhaven", "noctalia/world_clock", "gustav0ar/drive-health" ]
+enabled = [
+    "yuuto/arch-updater",
+    "noctalia/wallhaven",
+    "noctalia/world_clock",
+    "gustav0ar/drive-health",
+    "blackbartblues/keymap",
+    "yocraft/custom-shortcut"
+]
 
 [shell]
 polkit_agent = true
@@ -108,6 +127,7 @@ unit = "imperial"
 type = "noctalia/world_clock:bar"
 
 [widget.clock]
+anchor = true
 format = "%H:%M:%S %a %m/%d"
 
 [widget.drive_health_custom]
@@ -166,6 +186,7 @@ type = "spacer"
 
 [widget.spacer_9]
 type = "spacer"
+length = 40
 
 [widget.tray]
 drawer = true
@@ -176,3 +197,6 @@ type = "noctalia/wallhaven:wallhaven"
 
 [widget.widget]
 type = "yuuto/arch-updater:widget"
+
+[widget.widget_2]
+type = "blackbartblues/keymap:widget"
