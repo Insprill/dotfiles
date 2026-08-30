@@ -65,6 +65,8 @@ enabled = true
 
 [notification]
 history_retention_hours = 24
+background_opacity = 0.75
+layer = "overlay"
 
 [osd.kinds]
 media = false
