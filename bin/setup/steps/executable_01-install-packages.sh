@@ -6,7 +6,6 @@ essentials=(
     "ark" # Archive manager for Dolphin
     "bat" # cat on steroids
     "bluez" # Bluetooth
-    "bluez-utils"
     "brave-origin-bin" # W browser
     "btrfs-assistant" # BTRFS management
     "btop" # Resource monitor
@@ -48,7 +47,7 @@ essentials=(
     "kwallet-pam" # Unlock wallet
     "kwalletmanager"
     "luarocks" # Neovim config editing
-    "libva-utils"
+    "libva-utils" # VA-API debugging
     "localsend" # Epic file sharing between devices
     "mkinitcpio" # Must be before the kernel
     "mpv" # Video player
@@ -96,9 +95,6 @@ amdgpu=( # https://wiki.archlinux.org/title/AMDGPU
     "mesa"
     "lib32-mesa"
     "mesa-utils"
-    "xf86-video-amdgpu"
-    "libva-mesa-driver"
-    "lib32-libva-mesa-driver"
     "opencl-mesa"
     "rocm-smi-lib" # Let btop access GPU info
     "vulkan-radeon"
@@ -138,8 +134,6 @@ intelgpu=(
     "mesa"
     "lib32-mesa"
     "mesa-utils"
-    "libva-mesa-driver"
-    "lib32-libva-mesa-driver"
     "opencl-mesa"
     "vulkan-intel"
     "lib32-vulkan-intel"
@@ -151,7 +145,6 @@ nvidia_modern=( # https://wiki.archlinux.org/title/NVIDIA
     "lib32-nvidia-utils"
     "opencl-nvidia"
     "lib32-opencl-nvidia"
-    "libva-nvidia-driver"
 )
 nvidia_legacy=( # https://wiki.archlinux.org/title/NVIDIA
     "nvidia-580xx-dkms"
@@ -159,7 +152,6 @@ nvidia_legacy=( # https://wiki.archlinux.org/title/NVIDIA
     "lib32-nvidia-580xx-utils"
     "opencl-nvidia-580xx"
     "lib32-opencl-nvidia-580xx"
-    "libva-nvidia-driver"
 )
 ime=(
     "fcitx5"
