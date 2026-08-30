@@ -58,6 +58,12 @@ After rebooting, there are a few things you'll need to do manually.
 To configure your monitors how you'd like, use the "Monique" program.
 It's a fully GUI that lets you easily customize everything about your monitors from placement to scaling to color settings.
 
+#### Drive Monitoring
+
+To enable full drive health monitoring,
+click on the database icon in the top left of the bar,
+and follow the setup instructions it shows.
+
 
 
 
