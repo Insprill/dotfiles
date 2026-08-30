@@ -1,3 +1,0 @@
-[Desktop Entry]
-Exec=/usr/bin/discord --url -- %u
-Mime=x-scheme-handler/discord;
