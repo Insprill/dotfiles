@@ -26,10 +26,10 @@ hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd(nipc .. "wallpaper-random"), { desc
 hl.bind("SUPER + ALT + SHIFT + L", hl.dsp.exec_cmd("hyprlock"), { description = "Lock" })
 
 -- Media controls
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { description = "Skip to the Previous Track" })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { description = "Skip to the Next Track" })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { description = "Play/Pause the Currently Playing Media" })
-hl.bind("XF86AudioStop", hl.dsp.exec_cmd("playerctl stop"), { release = true, description = "Stop the Currently Plaing Media" })
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd(nipc .. "media next"), { description = "Skip to the Previous Track" })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(nipc .. "media previous"), { description = "Skip to the Next Track" })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(nipc .. "media toggle"), { description = "Play/Pause the Currently Playing Media" })
+hl.bind("XF86AudioStop", hl.dsp.exec_cmd(nipc .. "media stop"), { release = true, description = "Stop the Currently Plaing Media" })
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd(nipc .. "volume-mute"), { description = "Toggle Volume Mute" })
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(nipc .. "volume-up"), { repeating = true, description = "Decrease Volume by 5%" })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(nipc .. "volume-down"), { repeating = true, description = "Increase Volume by 5%" })
