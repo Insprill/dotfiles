@@ -1,4 +1,4 @@
-config_version = 13
+config_version = 14
 
 [audio]
 enable_overdrive = true
@@ -59,6 +59,7 @@ auto_locate = true
 
 [lockscreen]
 blurred_desktop = true
+transition = []
 
 [lockscreen_widgets]
 enabled = true
