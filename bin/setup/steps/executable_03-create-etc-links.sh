@@ -32,6 +32,7 @@ copy_file() {
 
 # greetd
 copy_file "pam.d/greetd"
+copy_file "greetd/config.toml"
 
 # Modprobe
 create_symlink "modprobe.d/nvidia.conf"
