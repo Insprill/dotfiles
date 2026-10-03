@@ -91,13 +91,4 @@ chezmoi init Insprill && chezmoi apply
 
 ## Secure Boot
 
-To setup Secure Boot, follow [this](https://github.com/basecamp/omarchy/discussions/2296) guide,
-while skipping Phase 1 steps 2 and 3, and Phase 3.
-
-At the end of Phase 2, if it seems like it didn't work (Only the Windows keys are visible and Setup Mode is still Enabled),
-continue with the setup as normal. It's probably fine, but the status won't update until after a reboot.
-
-After Phase 2, run the following command to ensure all EFIs are signed.
-```shell
-sudo sbctl verify | sed -nE 's|^✗ (/.+) is not signed$|sbctl sign -s "\1"|p' | sudo sh
-```
+To setup Secure Boot, follow [the CachyOS guide](https://wiki.cachyos.org/configuration/secure_boot_setup/).
