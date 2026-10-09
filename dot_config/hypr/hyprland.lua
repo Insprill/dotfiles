@@ -2,14 +2,12 @@ require("catppuccin")
 
 require("autostart")
 require("./apps/*")
-require("env")
+require("./env/*")
 require("input")
 require("keybinds")
 require("looknfeel")
 require("plugins")
-require("wayland")
 require("nvidia") -- Only applied if actually Nvidia
-require("ime")
 
 -- Monitor settings
 require("monitors")
