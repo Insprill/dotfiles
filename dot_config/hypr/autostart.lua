@@ -4,7 +4,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
 
 	hl.exec_cmd("noctalia")
-	hl.exec_cmd("sleep 0.5 && noctalia msg wallpaper-random")
+	hl.exec_cmd("sleep 1.5 && noctalia msg wallpaper-random")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("hyprsunset")
 	hl.exec_cmd("dex -a")
