@@ -7,6 +7,7 @@ require("input")
 require("keybinds")
 require("looknfeel")
 require("plugins")
+require("render")
 require("nvidia") -- Only applied if actually Nvidia
 
 -- Monitor settings
