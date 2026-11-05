@@ -8,7 +8,7 @@ alias pacdiff="sudo env DIFFPROG='nvim -d' pacdiff"
 alias yeet="git push --force-with-lease"
 alias shipit="git push"
 alias sure="git add . && git rebase --continue"
-alias based="git rebase --committer-date-is-author-date --rebase-merges"
+alias based="git rebase --autostash --autosquash --rebase-merges --committer-date-is-author-date --update-refs"
 
 # Bins
 fish_add_path $HOME/bin
