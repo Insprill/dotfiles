@@ -1,6 +1,4 @@
 set -U fish_greeting
-set -g fish_key_bindings fish_vi_key_bindings
-bind -M insert -m default ctrl-c repaint-mode
 
 # Aliases
 alias lg="lazygit"
